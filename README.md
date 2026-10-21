@@ -1,6 +1,6 @@
 # Avia Editorial
 
-**Plantilla abierta de libros en LaTeX · Español por defecto · `memoir` · Formato 6 × 9 pulgadas**
+**Plantilla editorial 2.0 · Español · Interior monocromático · `memoir` · 6 × 9 pulgadas**
 
 Un punto de partida para libros de no ficción, relatos, divulgación y manuales didácticos. Busca el equilibrio entre la legibilidad de un libro comercial y algunos recursos de las ediciones ilustradas: márgenes con notas, epígrafes, figuras y recuadros discretos.
 
@@ -35,7 +35,9 @@ También puedes editar directamente archivos `.tex` desde la interfaz web de Git
 - **Idioma:** español (`babel`) por defecto; inglés disponible como segundo idioma.
 - **Formato:** 6 × 9 pulgadas, apropiado como base para libros comerciales.
 - **Motor:** LuaLaTeX; bibliografía con Biber.
-- **Perfiles:** `\AviaIllustratedtrue` (márgenes amplios) o `\AviaIllustratedfalse` (texto más ancho) en `config.tex`.
+- **Perfiles:** `\AviaIllustratedfalse` es el predeterminado: lectura comercial y notas a pie de página. `\AviaIllustratedtrue` habilita margen para notas y figuras.
+- **Interior:** blanco y negro, enlaces sin color y recuadros blancos con bordes finos.
+- **Impresión:** `twoside` y capítulos principales en página impar (`openright`); comprobar imposición y margen de encuadernación con la imprenta.
 - **Capítulos:** independientes para facilitar la escritura de obras largas.
 
 ## Estructura
@@ -75,6 +77,6 @@ Estas referencias son atribuciones de inspiración, no una afiliación o aprobac
 
 ## Publicación y límites
 
-Esta edición es una **base para escritura y pruebas**, no un PDF certificado para imprenta. Antes de imprimir revisa sangrado, márgenes interiores, fuentes, calidad de ilustraciones, grosor del volumen y el perfil requerido por la imprenta. El prototipo utiliza `oneside`; para producción a doble cara hay que revisar los márgenes par/impar y las notas laterales. Las notas pueden solaparse si se concentran en un mismo tramo.
+Esta edición es una **base para escritura y pruebas**, no un PDF certificado para imprenta. Antes de imprimir revisa sangrado, márgenes interiores, fuentes, calidad de ilustraciones, grosor del volumen y el perfil requerido por la imprenta. El documento usa `twoside`; para producción hay que revisar los márgenes par/impar, el margen interior exigido por la imprenta y las notas laterales en el perfil ilustrado. Las notas pueden solaparse si se concentran en un mismo tramo.
 
 EPUB requiere un flujo de exportación separado. En contenidos aeronáuticos, un manual no oficial no reemplaza los documentos aprobados aplicables a la aeronave.
