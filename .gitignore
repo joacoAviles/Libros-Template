@@ -1,0 +1,17 @@
+*.aux
+*.log
+*.toc
+*.out
+*.bcf
+*.bbl
+*.blg
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.lof
+*.lot
+*.ilg
+*.ind
+*.idx
+!assets/wing.pdf

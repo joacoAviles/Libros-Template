@@ -1,0 +1,22 @@
+% Cambia 'illustrated' por 'commercial' en config.tex para cambiar de estilo.
+\documentclass[11pt,oneside,openany]{memoir}
+\input{config.tex}
+\usepackage{avia-editorial}
+% Español predeterminado (títulos, fechas, guionado y tablas). Inglés disponible.
+\usepackage[english,spanish,es-tabla]{babel}
+\AtBeginDocument{\selectlanguage{\AviaLanguage}}
+\usepackage[backend=biber,style=authoryear,sorting=nyt,autolang=other]{biblatex}
+\addbibresource{references.bib}
+\title{Todo lo que aprendí de mi amigo Cessna}
+\booksubtitle{Edición de demostración en español}
+\author{Autor de ejemplo}
+\begin{document}
+\frontmatter
+\aviatitlepage
+\tableofcontents*
+\mainmatter
+\include{chapters/01-bienvenida}
+\include{chapters/02-sistemas}
+\backmatter
+\printbibliography[heading=bibintoc,title={Referencias}]
+\end{document}
