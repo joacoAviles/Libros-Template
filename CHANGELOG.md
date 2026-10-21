@@ -12,6 +12,7 @@ Base: commit 1539db5c05a48bd5b4f980ee3cc65b18224fb4cf (2.1).
 - Portada sin destinos PDF duplicados; español por defecto e inglés probado; versalitas reales para la fuente principal.
 - Demo independiente de un gráfico precompilado, con prosa, ecuaciones, tabla multipágina, referencias y diagramas monocromáticos.
 - Cachés de Luaotfload/TeX aisladas por caso para que las compilaciones paralelas no modifiquen dependencias compartidas. Los fallos inesperados muestran su diagnóstico en CI.
+- Los recursos sintéticos solo se generan dentro de casos de prueba, nunca sobre imágenes del manuscrito. Se aceptan extensiones de imágenes en mayúsculas.
 - Compilación limpia en directorios temporales: ningún auxiliar o PDF anterior puede sustituir el nuevo resultado.
 - Batería de 41 casos: 23 positivos y 18 negativos. Las pruebas sintéticas no se presentan como contenido de un libro.
 - Auditoría de logs, marcadores de contenido, fuentes incrustadas, enlaces internos (incluidos destinos nombrados), texto/vectores/imágenes fuera del papel, color y una prueba de contraste de texto oscuro sobre fondos oscuros.

@@ -6,9 +6,11 @@ LuaLaTeX, clase memoir, una columna, 6 × 9 pulgadas, español o inglés, cuerpo
 
 ## Qué se comprueba
 
+Antes de LaTeX, dos pruebas Python verifican que el manuscrito conserve sus imágenes (incluidos nombres que coincidan con recursos sintéticos y extensiones en mayúsculas) y que no se reutilicen PDF ni auxiliares antiguos. Se ejecutan con `python3 -m unittest discover -s tests -p 'test_*.py'`.
+
 `python3 scripts/build.py --tests` crea 41 casos limpios. `python3 scripts/qa.py` requiere que los 23 positivos compilen y superen el control, y que cada uno de los 18 negativos produzca la detección esperada. Un negativo que solo falle por otro motivo NO aprueba.
 
-Pruebas positivas: ambas cajas de varias páginas; caja al final de página; listas, fórmulas y nota local; cuatro combinaciones de perfil/doble cara; salto antes de ancho extendido; flotantes aplazados; imágenes altas/anchas y pies largos; notas extensas; márgenes pares/impares; tabla de 240 filas; índice con numeración 998–1002; bibliografía e índice alfabético; español/inglés; títulos y caracteres; tamaños 10/12; cajas vacías y carga de 420 páginas más preliminares.
+Pruebas positivas: ambas cajas de varias páginas; caja al final de página; listas, fórmulas y nota local; cuatro combinaciones de perfil/doble cara; salto antes de ancho extendido; flotantes aplazados; imágenes altas/anchas y pies largos; notas extensas; márgenes pares/impares; tabla de 240 filas; índice con numeración 998–1000; bibliografía e índice alfabético; español/inglés; títulos y caracteres; tamaños 10/12; cajas vacías y carga de 420 páginas más preliminares.
 
 Pruebas negativas: bloque extendido y nota excesivamente altos; nota dentro de caja; anidación de ancho extendido; imagen más ancha que columna/margen; pie excesivo; imagen inexistente; idioma/perfil inválidos; referencia sin resolver; etiqueta duplicada; glifo ausente; línea desbordada; vector fuera del papel; color; título oscuro ilegible; saturación del margen.
 

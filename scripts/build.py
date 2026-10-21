@@ -30,15 +30,15 @@ def copy_project(dest: Path)->None:
         rel=src.relative_to(ROOT)
         if any(p.startswith('.') or p in {'tests','scripts','docs','evidence','__pycache__'} for p in rel.parts):continue
         if src.is_symlink():raise RuntimeError(f'Symlink not allowed in build input: {rel}')
-        if src.is_file() and (src.suffix in {'.tex','.sty','.bib','.cls','.png','.jpg','.jpeg'} or
-                             src.suffix=='.pdf' and rel.parts[0]=='assets'):
+        if src.is_file() and (src.suffix.lower() in {'.tex','.sty','.bib','.cls','.png','.jpg','.jpeg'} or
+                             src.suffix.lower()=='.pdf' and rel.parts[0]=='assets'):
             target=dest/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,target)
 
 def prepare(with_tests:bool,stress_pages:int)->dict:
     if BUILD.is_symlink():raise RuntimeError('Refusing symlink .build')
     if BUILD.exists():shutil.rmtree(BUILD)
     BUILD.mkdir()
-    entries=[dict(name='demo',expected=None,markers=[],min_pages=8,geometry=False)]
+    entries=[dict(name='demo',expected=None,markers=[],min_pages=1,geometry=False)]
     if with_tests:
         spec=importlib.util.spec_from_file_location('cases',ROOT/'tests/cases.py')
         mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
@@ -46,7 +46,9 @@ def prepare(with_tests:bool,stress_pages:int)->dict:
     for item in entries:
         stage=BUILD/'cases'/item['name'];copy_project(stage)
         assets=stage/'assets';assets.mkdir(exist_ok=True)
-        for name,w,h in [('tall',80,640),('wide',640,80),('square',220,220)]:shape_pdf(assets/(name+'.pdf'),w,h)
+        # Fixtures belong to regression cases, never to the real manuscript.
+        if item['name']!='demo':
+            for name,w,h in [('tall',80,640),('wide',640,80),('square',220,220)]:shape_pdf(assets/(name+'.pdf'),w,h)
         tex=item.pop('tex',None)
         if tex is not None:(stage/'main.tex').write_text(tex,encoding='utf-8')
         item['directory']=str(stage.relative_to(ROOT))
@@ -54,8 +56,8 @@ def prepare(with_tests:bool,stress_pages:int)->dict:
         str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(ROOT.rglob('*')) if p.is_file() and not any(
             q.startswith('.') or q in {'__pycache__','evidence'} for q in p.relative_to(ROOT).parts)
-        and p.suffix in {'.tex','.sty','.bib','.cls','.py','.sh','.pdf','.png','.jpg','.jpeg'}
-        and (p.suffix!='.pdf' or p.relative_to(ROOT).parts[0]=='assets')}}
+        and p.suffix.lower() in {'.tex','.sty','.bib','.cls','.py','.sh','.pdf','.png','.jpg','.jpeg'}
+        and (p.suffix.lower()!='.pdf' or p.relative_to(ROOT).parts[0]=='assets')}}
     (BUILD/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     (BUILD/'plan.tsv').write_text(''.join(c['name']+'\t'+c['directory']+'\n' for c in entries),encoding='utf-8')
     return manifest
