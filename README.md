@@ -1,6 +1,6 @@
 # Avia Editorial
 
-**Plantilla editorial 2.0 · Español · Interior monocromático · `memoir` · 6 × 9 pulgadas**
+**Plantilla editorial 2.1 · Español · Interior monocromático · `memoir` · 6 × 9 pulgadas**
 
 Un punto de partida para libros de no ficción, relatos, divulgación y manuales didácticos. Busca el equilibrio entre la legibilidad de un libro comercial y algunos recursos de las ediciones ilustradas: márgenes con notas, epígrafes, figuras y recuadros discretos.
 
@@ -36,7 +36,7 @@ También puedes editar directamente archivos `.tex` desde la interfaz web de Git
 - **Formato:** 6 × 9 pulgadas, apropiado como base para libros comerciales.
 - **Motor:** LuaLaTeX; bibliografía con Biber.
 - **Perfiles:** `\AviaIllustratedfalse` es el predeterminado: lectura comercial y notas a pie de página. `\AviaIllustratedtrue` habilita margen para notas y figuras.
-- **Interior:** blanco y negro, enlaces sin color y recuadros blancos con bordes finos.
+- **Interior:** blanco y negro, diagramas sin colores y recuadros blancos con títulos sin bandas oscuras. Las notas se insertan después de la puntuación, no al principio de párrafos.
 - **Impresión:** `twoside` y capítulos principales en página impar (`openright`); comprobar imposición y margen de encuadernación con la imprenta.
 - **Capítulos:** independientes para facilitar la escritura de obras largas.
 
