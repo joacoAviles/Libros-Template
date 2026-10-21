@@ -1,26 +1,65 @@
-name: Compilar libro
+name: Compilar y validar Avia 2.2
 on:
   push:
-    branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: avia-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  pdf:
-    runs-on: ubuntu-latest
+  editorial:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      TEX_IMAGE: ghcr.io/xu-cheng/texlive-full@sha256:556e2e2caa7d489ce155de0eb3f43e324e6502ed4e9871aa400662b156cf00ad
+      AVIA_JOBS: '4'
     steps:
-      - name: Obtener el manuscrito
-        uses: actions/checkout@v4
-      - name: Compilar PDF con LuaLaTeX y Biber
-        uses: xu-cheng/latex-action@v4
+      - name: Obtener fuentes
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          root_file: main.tex
-          latexmk_use_lualatex: true
-          extra_system_packages: biber
-          pre_compile: 'cd assets && lualatex -interaction=nonstopmode -halt-on-error wing.tex && cd ..'
-      - name: Guardar el libro como artefacto
-        uses: actions/upload-artifact@v4
+          persist-credentials: false
+      - name: Preparar casos desde cero
+        run: python3 scripts/build.py --tests --prepare-only
+      - name: Descargar entorno TeX fijado
+        run: docker pull "$TEX_IMAGE"
+      - name: Compilar sin red ni shell escape
+        run: |
+          docker run --rm --network none --cap-drop=ALL \
+            --security-opt=no-new-privileges \
+            --user "$(id -u):$(id -g)" \
+            -e HOME=/tmp -e TEXMFVAR=/tmp/texmf-var -e TEXMFCONFIG=/tmp/texmf-config \
+            -e SOURCE_DATE_EPOCH="$(git show -s --format=%ct HEAD)" \
+            -e FORCE_SOURCE_DATE=1 -e AVIA_JOBS \
+            -v "$PWD:/work" -w /work --entrypoint /bin/bash \
+            "$TEX_IMAGE" scripts/compile.sh
+      - name: Instalar auditor PDF
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check -r requirements-qa.txt
+      - name: Auditar registros, contenido y geometria
+        run: .venv/bin/python scripts/qa.py
+      - name: Publicar exclusivamente el PDF aprobado
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: avia-editorial-pdf
-          path: main.pdf
+          name: avia-editorial-2.2-aprobado
+          path: .build/approved/
+          include-hidden-files: true
           if-no-files-found: error
+      - name: Conservar diagnosticos incluso si hay fallos
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: avia-editorial-2.2-diagnosticos
+          include-hidden-files: true
+          if-no-files-found: warn
+          path: |
+            .build/qa.json
+            .build/qa.md
+            .build/manifest.json
+            .build/environment.txt
+            .build/cases/*/compile.txt
+            .build/cases/*/main.log
+            .build/cases/*/main.blg
+            .build/cases/*/exit-code.txt

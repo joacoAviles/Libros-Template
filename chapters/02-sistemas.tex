@@ -1,20 +1,55 @@
-\chapter{Pensar en sistemas}
-\opening{Comprender un avión es comprender relaciones entre componentes.}
+\chapter{Ilustrar y comparar}
+Una ilustración puede explicar relaciones que resultan difíciles de describir con un párrafo. Su pie debe indicar qué representa y qué no permite deducir. En esta muestra se utilizan formas geométricas, no datos de performance ni fotografías de terceros.
 
-En un capítulo técnico conviene separar narración y recuadros didácticos.
+\section{Un diagrama dentro de la columna}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, every node/.style={draw,align=center,font=\small,inner sep=7pt}]
+\node (a) {Manuscrito};
+\node (b) [below=7mm of a] {Composición};
+\node (c) [below=7mm of b] {Verificación};
+\draw[->] (a)--(b); \draw[->] (b)--(c);
+\end{tikzpicture}
+\caption{Tres etapas distintas. La última controla el resultado de las anteriores.}
+\label{fig:flujo}
+\end{figure}
 
-\begin{technicalbox}[Precaución editorial]
-Esta obra es una guía educativa no oficial. No sustituye el manual de vuelo aprobado, las listas de verificación aplicables ni la instrucción aeronáutica certificada.
-\end{technicalbox}
+La figura~\ref{fig:flujo} tiene una leyenda numerada y puede citarse desde otro capítulo. Las referencias se resuelven durante las sucesivas pasadas de compilación. Si una etiqueta no existe o se repite, el control de calidad rechaza la entrega en lugar de permitir que aparezcan signos de interrogación o enlaces ambiguos.
 
-\section{Un ejemplo de ilustración}
+\section{Una tabla que sigue en otra página}
+Una tabla extensa debe conservar la cabecera cuando continúa. No se coloca dentro de un flotante ni dentro de un recuadro indivisible. El ejemplo siguiente compara responsabilidades, evitando reducir el tamaño del texto para que todo quepa a la fuerza.
 
-\widefigure[0.8\linewidth]{assets/wing.pdf}{Esquema conceptual de demostración, no apto para instrucción operacional.}
+\small
+\begin{longtable}{@{}p{.28\linewidth}p{.65\linewidth}@{}}
+\caption{Comprobaciones editoriales y su propósito.}\label{tab:control}\\
+\toprule Elemento & Qué se comprueba\\\midrule\endfirsthead
+\toprule Elemento & Qué se comprueba (continuación)\\\midrule\endhead
+\midrule\multicolumn{2}{r}{Continúa en la página siguiente.}\\\endfoot
+\bottomrule\endlastfoot
+Títulos & Que la jerarquía sea reconocible y el texto permanezca dentro de la caja de composición.\\
+Párrafos & Que la justificación no genere desbordamientos y el final de un capítulo no oculte líneas.\\
+Notas & Que su ancla sea clara y que no se acumulen en un margen más allá del espacio disponible.\\
+Recuadros & Que los títulos mantengan contraste y el contenido continúe en páginas sucesivas.\\
+Figuras & Que la relación de aspecto se conserve y el conjunto de imagen y pie no exceda la página.\\
+Tablas & Que las filas sean legibles y que las cabeceras se repitan cuando la tabla continúa.\\
+Bibliografía & Que las citas tengan entrada y que los datos correspondan a las fuentes empleadas.\\
+Índice & Que los números de página de tres o cuatro cifras no invadan los títulos.\\
+Enlaces & Que cada destino interno exista y las referencias no apunten fuera del documento.\\
+Fuentes & Que las tipografías utilizadas estén incrustadas y no falten caracteres.\\
+Márgenes & Que páginas pares e impares respeten el lomo y el borde exterior.\\
+Color & Que un interior monocromático no incorpore accidentalmente tinta de color.\\
+Entorno & Que la versión del motor y de las dependencias quede registrada junto al resultado.\\
+Impresión & Que el proveedor confirme dimensiones, papel, encuadernación y tratamiento de imágenes.\\
+\end{longtable}
+\normalsize
 
-La ilustración se guarda como archivo independiente y se reutiliza en distintos capítulos. La herramienta se puede adaptar a libros narrativos con ilustraciones ocasionales, manuales ilustrados y guías comerciales.
+Una tabla con una fila más alta que una página necesita una decisión del autor: dividir la fila o transformar su contenido en texto. El paquete no corta una explicación a mitad de una celda para ocultar el problema. El control de calidad detecta los desbordamientos que puedan producirse.
 
-Una referencia adicional ayuda a ofrecer contexto sin convertir cada página en un artículo académico.\sidecite[Una nota bibliográfica editorial]{Tufte, 2001}
+\section{Ancho extendido sin invadir el lomo}
+\begin{fullwidth}
+\begin{insightbox}[Un bloque exterior breve]
+En una página impar el bloque se amplía hacia la derecha; en una página par, hacia la izquierda. La comprobación utiliza la página en la que el bloque termina colocado. Este entorno es deliberadamente de una sola página: para explicaciones largas se utiliza un recuadro normal divisible.
+\end{insightbox}
+\end{fullwidth}
 
-\section{Una idea final}
-
-La plantilla distingue entre el contenido, que puede crecer cientos de páginas, y las decisiones de maquetación, que pueden cambiar antes de imprimir.
+El espacio adicional no se obtiene reduciendo el margen interior. En un libro a doble cara, el lado exterior cambia con la página. Una simple extensión constante hacia la derecha no es una solución correcta para ambos lados.

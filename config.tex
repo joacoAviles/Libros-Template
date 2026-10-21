@@ -1,21 +1,30 @@
-% Idioma predeterminado de toda la colección: español. Cambiar a english si hace falta.
-\def\AviaLanguage{spanish}
-% Perfil narrativo: columna amplia y notas a pie. Perfil ilustrado: márgenes laterales.
+% Avia Editorial 2.2.0. Valores de libro; no se cambian las macros del paquete.
+% Se puede definir AviaProfile / AviaLanguage antes de este archivo.
+\providecommand{\AviaProfile}{narrative} % narrative | illustrated
+\providecommand{\AviaLanguage}{spanish} % spanish | english
+\def\AviaConfigurationVersion{2.2.0}
+\RequirePackage{pdftexcmds}
 \newif\ifAviaIllustrated
-\AviaIllustratedfalse % perfil narrativo comercial por defecto
-% A 6x9 pulgadas: 152.4 x 228.6 mm. Perfil ilustrado sacrifica ancho de texto para margen.
+\ifnum\csname pdf@strcmp\endcsname{\AviaProfile}{illustrated}=0
+  \AviaIllustratedtrue
+\else
+  \ifnum\csname pdf@strcmp\endcsname{\AviaProfile}{narrative}=0
+    \AviaIllustratedfalse
+  \else
+    \errmessage{AVIA-E-PROFILE: use narrative or illustrated}
+  \fi
+\fi
 \setstocksize{9in}{6in}
 \settrimmedsize{9in}{6in}{*}
 \settrims{0pt}{0pt}
 \ifAviaIllustrated
-  \settypeblocksize{7.2in}{3.55in}{*}
-  \setlrmargins{0.67in}{*}{*}
-  \setmarginnotes{10pt}{0.9in}{10pt}
+  \settypeblocksize{7.15in}{3.55in}{*}
+  \setlrmargins{0.88in}{*}{*}
+  \setmarginnotes{9pt}{0.95in}{12pt}
 \else
   \settypeblocksize{7.15in}{4.35in}{*}
   \setlrmargins{0.88in}{*}{*}
-  \setmarginnotes{8pt}{0.3in}{10pt}
+  \setmarginnotes{8pt}{0.30in}{12pt}
 \fi
 \setulmargins{0.85in}{*}{*}
 \checkandfixthelayout
-% Impresión a doble cara; verificar margen de encuadernación según número de páginas e imprenta.

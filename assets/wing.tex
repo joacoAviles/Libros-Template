@@ -1,10 +1,13 @@
-\documentclass{standalone}
+% Recurso vectorial monocromático legado. El ejemplo principal no depende de él.
+\documentclass[border=0pt]{standalone}
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[line width=.8pt,scale=.7]
-\fill[black!5] (0,0) .. controls (2,.9) and (4,.5) .. (6,0) .. controls (4,-.3) and (2,-.5) .. cycle;
-\draw (0,0) .. controls (2,.9) and (4,.5) .. (6,0) .. controls (4,-.3) and (2,-.5) .. cycle;
-\draw[->,black] (2,-1.1)--(2,.8);
-\node[below] at (3,-.7){\scriptsize esquema conceptual};
+\begin{tikzpicture}[x=1bp,y=1bp,line width=.8bp]
+\path[use as bounding box] (0,0) rectangle (200,75);
+\fill[black!5] (10,35) .. controls (65,65) and (130,55) .. (190,35)
+  .. controls (130,27) and (65,20) .. (10,35);
+\draw (10,35) .. controls (65,65) and (130,55) .. (190,35)
+  .. controls (130,27) and (65,20) .. (10,35);
+\draw (70,10)--(70,62);\draw (65,55)--(70,62)--(75,55);
 \end{tikzpicture}
 \end{document}

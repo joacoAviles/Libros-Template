@@ -1,22 +1,31 @@
-% Avia Editorial 2.0: lectura comercial en blanco y negro por defecto.
 \documentclass[11pt,twoside,openright]{memoir}
 \input{config.tex}
 \usepackage{avia-editorial}
-% Español predeterminado (títulos, fechas, guionado y tablas). Inglés disponible.
-\usepackage[english,spanish,es-tabla]{babel}
-\AtBeginDocument{\selectlanguage{\AviaLanguage}}
-\usepackage[backend=biber,style=authoryear,sorting=nyt,autolang=other]{biblatex}
+\usepackage{amsmath,amssymb,longtable,booktabs,array,tikz}
+\usetikzlibrary{arrows.meta,positioning,babel}
+\usepackage[backend=biber,style=authoryear,sorting=nyt]{biblatex}
 \addbibresource{references.bib}
-\title{Todo lo que aprendí de mi amigo Cessna}
-\booksubtitle{Edición de demostración en español}
-\author{Autor de ejemplo}
+\AtBeginBibliography{\raggedright}
+\title{Avia Editorial}
+\booksubtitle{Edición 2.2\\Lectura, ilustraciones y pruebas de composición}
+\author{Una plantilla para escribir en español}
+\hypersetup{pdftitle={Avia Editorial 2.2},pdfauthor={Avia Editorial}}
 \begin{document}
 \frontmatter
 \aviatitlepage
+\chapter*{Antes de empezar}
+Esta muestra es un documento editorial y técnico, no un manual de aviación. Enseña los recursos del diseño con contenido original y separa la demostración de las pruebas sintéticas. Los archivos de pruebas fuerzan situaciones límite; no deben confundirse con capítulos de un libro ni contarse como texto pedagógico.
+
+El perfil narrativo es el predeterminado. Las notas aparecen al pie y la columna principal aprovecha el ancho de lectura. El perfil ilustrado reserva espacio para notas breves. Ambos mantienen el interior monocromático, la apertura de capítulos y la paginación exterior.
+
+\begin{insightbox}[Criterio de aceptación]
+Un proceso de compilación que termina no demuestra por sí solo que el PDF sea correcto. La entrega pasa también por controles de fuentes, referencias, contenido recortado, color y casos de regresión. Cada imprenta y cada libro necesitan, además, una comprobación editorial y física propias.
+\end{insightbox}
 \tableofcontents*
 \mainmatter
 \include{chapters/01-bienvenida}
 \include{chapters/02-sistemas}
+\include{chapters/03-pruebas}
 \backmatter
-\printbibliography[heading=bibintoc,title={Referencias}]
+\printbibliography[heading=bibintoc,title={Referencias del ejemplo}]
 \end{document}

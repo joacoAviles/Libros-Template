@@ -1,0 +1,19 @@
+\chapter{De la muestra a tu libro}
+\section{Escritura y compilación}
+El archivo principal define el título, el autor y el orden de capítulos. La configuración selecciona idioma y perfil. El estilo editorial contiene las macros reutilizables. Esta separación evita copiar correcciones de un capítulo a otro y permite cambiar el diseño sin reescribir el manuscrito.
+
+El flujo recomendado crea una carpeta de compilación limpia, conserva los registros y verifica el PDF antes de copiarlo a la carpeta de entregas aprobadas. Un fallo de la compilación actual no debe dejar disponible un PDF antiguo que parezca nuevo. Por eso el directorio de aprobación se vacía al comenzar cada ejecución.
+
+\section{Qué prueban las simulaciones}
+Las pruebas positivas incluyen recuadros extensos, ilustraciones altas, pies largos, notas al pie, notas marginales, páginas enfrentadas, tablas de varias páginas y un documento sintético de cientos de páginas. Los marcadores permiten comprobar que el texto inicial y final de cada caso no desaparece al componerlo.
+
+Las pruebas negativas introducen defectos de forma deliberada. Una referencia inexistente, un carácter sin glifo, un objeto fuera de la página o una nota marginal excesiva deben impedir la aprobación. Rechazar esos ejemplos es el resultado correcto: no se incluyen entre los PDF aprobados.
+
+\begin{technicalbox}[Un límite no es un fallo oculto]
+Los entornos de ancho extendido, las imágenes y las notas marginales son objetos con restricciones físicas. La versión 2.2 comprueba sus dimensiones y detiene usos incompatibles. Las cajas normales, en cambio, admiten contenido divisible. No se ocultan las advertencias del motor para obtener una marca verde.
+\end{technicalbox}
+
+\section{La revisión que no se automatiza}
+Un control geométrico no demuestra exactitud de una ilustración, calidad de un argumento ni legibilidad de una fotografía en un papel concreto. La prueba física y la revisión de contenido siguen siendo necesarias. El informe registra qué se ejecutó y con qué versiones; no certifica todas las combinaciones de paquetes que puedan añadirse después.
+
+Al crear un nuevo libro, conserva las pruebas del proyecto. Su función no es decorar el repositorio: permiten detectar cuando un cambio vuelve a introducir una pérdida de contenido o una extensión hacia el lado incorrecto de la hoja. La tabla~\ref{tab:control} resume qué responsabilidad corresponde a cada revisión.

@@ -1,48 +1,181 @@
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{avia-editorial}[2026/10/20 Avia Editorial memoir toolkit]
+\NeedsTeXFormat{LaTeX2e}[2023-11-01]
+\ProvidesPackage{avia-editorial}[2026/10/21 v2.2.0 Editorial monocromatica]
 \RequirePackage{iftex}
-\RequirePackage{xcolor}
-\RequirePackage{graphicx}
-\RequirePackage{marginnote}
-\RequirePackage{microtype}
-\RequirePackage{tcolorbox}
-\RequirePackage{csquotes}
-\RequirePackage{hyperref}
-\definecolor{AviaInk}{HTML}{111111}
-\definecolor{AviaBlue}{HTML}{222222}
-\definecolor{AviaSand}{HTML}{FFFFFF}
-\definecolor{AviaMuted}{HTML}{444444}
-\hypersetup{hidelinks,pdfcreator={Avia Editorial},pdflang={es-CL}}
-\ifPDFTeX\RequirePackage[T1]{fontenc}\RequirePackage[utf8]{inputenc}\RequirePackage{lmodern}\else
- \RequirePackage{fontspec}\setmainfont{Latin Modern Roman}\setsansfont{Latin Modern Sans}
+\ifLuaTeX\else
+  \PackageError{avia-editorial}{AVIA-E-ENGINE: use LuaLaTeX}{Only LuaLaTeX is supported by this release.}
 \fi
+\@ifclassloaded{memoir}{}{\PackageError{avia-editorial}{AVIA-E-CLASS: memoir required}{Use the memoir document class.}}
+\@ifundefined{AviaConfigurationVersion}{\PackageError{avia-editorial}{AVIA-E-CONFIG: input config.tex first}{Use the matching 2.2 configuration.}}{}
+\if@twocolumn\PackageError{avia-editorial}{AVIA-E-COLUMNS: one column required}{Two-column layout is not supported.}\fi
+\RequirePackage{fontspec}
+\setmainfont[SmallCapsFont=lmromancaps10-regular.otf]{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+% PDF/PNG/JPEG only: do not load an EPS converter that needs shell escape.
+\newcommand{\DoNotLoadEpstopdf}{}
+\RequirePackage{xcolor,graphicx,microtype,etoolbox,needspace}
+\ifdefstring{\AviaConfigurationVersion}{2.2.0}{}{\PackageError{avia-editorial}{AVIA-E-CONFIG-VERSION: config does not match 2.2.0}{Replace config.tex with the matching version.}}
+\tracinglostchars=3
+\RequirePackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\@ifpackageloaded{babel}{}{\RequirePackage[english,spanish,es-tabla]{babel}}
+\RequirePackage{csquotes,xurl}
+\RequirePackage{hyperref}
+\definecolor{AviaInk}{gray}{0}
+\definecolor{AviaBlue}{gray}{0} % alias compatible con 2.1
+\definecolor{AviaSand}{gray}{1}
+\definecolor{AviaMuted}{gray}{0.25}
+\hypersetup{hidelinks,pdfcreator={Avia Editorial 2.2.0},bookmarksopen=false}
+\ifdefstring{\AviaLanguage}{spanish}{\hypersetup{pdflang=es-CL}}{\hypersetup{pdflang=en}}
+\AtBeginDocument{%
+  \ifdefstring{\AviaLanguage}{spanish}{%
+    \selectlanguage{spanish}\spanishlcroman%
+  }{\ifdefstring{\AviaLanguage}{english}{%
+    \selectlanguage{english}\spanishlcroman%
+  }{\PackageError{avia-editorial}{AVIA-E-LANGUAGE: unsupported language}{Use spanish or english.}}}%
+}
 \setlength{\parindent}{1.15em}
 \setlength{\parskip}{0pt}
-\setlength{\marginparsep}{10pt}
-\setlength{\marginparpush}{10pt}
-\renewcommand*\marginfont{\footnotesize\sffamily\color{AviaMuted}}
-% Notes use marginpar and may float vertically; not a verbatim reproduction of Tufte.
-\newcommand{\sidenote}[1]{\ifAviaIllustrated\marginpar{\raggedright\footnotesize\sffamily\color{AviaMuted}#1}\else\footnote{#1}\fi}
-\newcommand{\sidecite}[2][]{\sidenote{Fuente: #2\if\relax\detokenize{#1}\relax\else; \emph{#1}\fi}}
-\newcommand{\aviamarginfigure}[3][0.97\marginparwidth]{\ifAviaIllustrated\marginpar{\centering\includegraphics[width=#1]{#2}\par\vspace{3pt}\raggedright\scriptsize\sffamily\color{AviaMuted}#3}\else\begin{figure}[htbp]\centering\includegraphics[width=.65\linewidth]{#2}\caption{#3}\end{figure}\fi}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+\clubpenalty=5000 \widowpenalty=5000 \displaywidowpenalty=5000
+% No se ocultan advertencias: no se modifican hbadness/vbadness/hfuzz/vfuzz.
+\strictpagecheck
+\setpnumwidth{3.2em}
+\setrmarg{4.2em}
+\setlength{\cftsectionnumwidth}{3.8em}
+\setlength{\cftchapternumwidth}{2.8em}
+\captionnamefont{\small\bfseries}
+\captiontitlefont{\small}
+\captionstyle{\raggedright}
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{6pt}
+\setbeforesecskip{-2.2ex plus -.4ex minus -.2ex}
+\setaftersecskip{1ex plus .2ex}
+\AtBeginEnvironment{thebibliography}{\raggedright}
+\newif\ifAviaInBox
+% Cajas divisibles, sin franjas oscuras ni herencia del color exterior.
+\newtcolorbox{insightbox}[1][]{%
+  enhanced jigsaw,breakable,before upper={\AviaInBoxtrue},colback=white,colframe=AviaMuted,
+  coltext=black,coltitle=black,colbacktitle=white,boxrule=.3pt,arc=0pt,
+  left=10pt,right=10pt,top=8pt,bottom=8pt,before skip=9pt,after skip=9pt,
+  title={#1},fonttitle=\bfseries\sffamily}
+\newtcolorbox{technicalbox}[1][]{%
+  enhanced jigsaw,breakable,before upper={\AviaInBoxtrue},colback=white,colframe=black,
+  coltext=black,coltitle=black,colbacktitle=white,boxrule=.5pt,arc=0pt,
+  left=10pt,right=10pt,top=8pt,bottom=8pt,before skip=9pt,after skip=9pt,
+  title={#1},fonttitle=\bfseries\sffamily}
+% Nota de margen: bloque corto. Si no cabe, detener, no recortar silenciosamente.
+\newsavebox{\AviaMarginBox}
+\long\def\AviaPutMargin#1{%
+  \ifAviaInBox\PackageError{avia-editorial}{AVIA-E-MARGIN-CONTEXT: margin in a box}{Use a footnote or text inside that box.}\fi
+  \ifinner
+    \PackageError{avia-editorial}{AVIA-E-MARGIN-CONTEXT: margin in a box}{Use a footnote or text inside that box.}%
+  \fi
+  \sbox{\AviaMarginBox}{\begin{minipage}[t]{\marginparwidth}\vspace{0pt}
+    \footnotesize\raggedright\color{AviaMuted}#1\end{minipage}}%
+  \ifdim\dimexpr\ht\AviaMarginBox+\dp\AviaMarginBox\relax>.48\textheight
+    \PackageError{avia-editorial}{AVIA-E-MARGIN-HEIGHT: margin item too tall}{Use a footnote or a figure in the text column.}%
+  \fi
+  \marginpar{\usebox{\AviaMarginBox}}%
+}
+\newcommand{\sidenote}[1]{\ifAviaIllustrated\AviaPutMargin{#1}\else\footnote{#1}\fi}
 \newcommand{\margintext}[1]{\sidenote{#1}}
-% full width includes side margin on outer edge in oneside layout; best for illustration profile.
-\newenvironment{fullwidth}{\begin{adjustwidth}{0pt}{-\dimexpr\marginparsep+\marginparwidth\relax}}{\end{adjustwidth}}
-\newcommand{\widefigure}[3][\linewidth]{\begin{figure}[htbp]\centering\includegraphics[width=#1]{#2}\caption{#3}\end{figure}}
-\newcommand{\fullwidthfigure}[2]{\begin{figure}[htbp]\begin{fullwidth}\centering\includegraphics[width=\linewidth]{#1}\par\smallskip\footnotesize\color{AviaMuted}#2\end{fullwidth}\end{figure}}
-\newcommand{\chapterquote}[2]{\begin{flushright}\begin{minipage}{.78\linewidth}\itshape\large ``#1''\par\smallskip\normalfont\footnotesize --- #2\end{minipage}\end{flushright}\vspace{1em}}
-\newtcolorbox{insightbox}[1][]{colback=white,colframe=AviaMuted,boxrule=.3pt,arc=0mm,left=12pt,right=12pt,top=10pt,bottom=10pt,title={#1},coltitle=AviaInk,colbacktitle=white,fonttitle=\bfseries\sffamily}
-\newtcolorbox{technicalbox}[1][]{colback=white,colframe=AviaBlue,boxrule=.6pt,arc=0mm,left=11pt,right=11pt,title={#1},coltitle=AviaInk,colbacktitle=white,fonttitle=\bfseries\sffamily}
-\newcommand{\opening}[1]{{\noindent\large\itshape\color{AviaBlue}#1\par\vspace{1.25em}}}
-\newcommand{\smallcaps}[1]{{\textsc{#1}}}
+\newcommand{\sidecite}[2][]{\sidenote{\iflanguage{spanish}{Fuente}{Source}: #2\ifblank{#1}{}{; \emph{#1}}}}
+% Extensión exterior de una sola página. Se recoge antes de colocarla;
+% el espacio se reserva ANTES de comprobar paridad. La etiqueta se escribe
+% al enviar la página, por lo que también sirve para flotantes aplazados.
+\newsavebox{\AviaWideBox}
+\newlength{\AviaWideExtra}
+\newlength{\AviaBlockHeight}
+\newif\ifAviaInFullwidth
+\NewDocumentEnvironment{fullwidth}{+b}{%
+  \par\begingroup
+  \ifAviaInFullwidth\PackageError{avia-editorial}{AVIA-E-NESTED-WIDE: nested fullwidth}{Do not nest fullwidth environments.}\fi
+  \AviaInFullwidthtrue
+  \ifdim\linewidth<\textwidth
+    \PackageError{avia-editorial}{AVIA-E-WIDE-CONTEXT: fullwidth in narrow container}{Place the block at the main column level.}%
+  \fi
+  \setlength{\AviaWideExtra}{\dimexpr\marginparsep+\marginparwidth\relax}%
+  \sbox{\AviaWideBox}{\begin{minipage}{\dimexpr\linewidth+\AviaWideExtra\relax}#1\end{minipage}}%
+  \setlength{\AviaBlockHeight}{\dimexpr\ht\AviaWideBox+\dp\AviaWideBox\relax}%
+  \ifdim\AviaBlockHeight>\dimexpr\textheight-4pt\relax
+    \PackageError{avia-editorial}{AVIA-E-WIDE-HEIGHT: fullwidth exceeds one page}{Split it into blocks; use a normal breakable box for long text.}%
+  \fi
+  \ifinner\else\Needspace{\dimexpr\AviaBlockHeight+\baselineskip\relax}\fi
+  \noindent\checkoddpage
+  \if@twoside
+    \ifoddpage\makebox[\linewidth][l]{\usebox{\AviaWideBox}}%
+    \else\makebox[\linewidth][r]{\usebox{\AviaWideBox}}\fi
+  \else\makebox[\linewidth][l]{\usebox{\AviaWideBox}}\fi
+  \par\endgroup
+}{}
+% Imagen y pie se miden por separado; la altura disponible incluye el pie.
+\newsavebox{\AviaCaptionBox}
+\newlength{\AviaImageHeight}
+\newlength{\AviaImageWidth}
+\newcommand{\AviaRenderFigure}[4]{%
+  \setlength{\AviaImageWidth}{#1}%
+  \ifdim\AviaImageWidth>\linewidth
+    \PackageError{avia-editorial}{AVIA-E-IMAGE-WIDTH: width exceeds container}{Choose a width no greater than linewidth.}%
+  \fi
+  \ifdim\AviaImageWidth<1pt
+    \PackageError{avia-editorial}{AVIA-E-IMAGE-WIDTH: nonpositive width}{Choose a positive width.}%
+  \fi
+  % Check wrapped caption height before memoir's one-line measurement.
+  \sbox{\AviaCaptionBox}{\begin{minipage}{\linewidth}\small\raggedright
+    \renewcommand{\footnote}[1]{\PackageError{avia-editorial}{AVIA-E-CAPTION-NOTE: footnote in caption}{Put the note in the body text.}}
+    #3\par\end{minipage}}%
+  \ifdim\dimexpr\ht\AviaCaptionBox+\dp\AviaCaptionBox\relax>.8\textheight
+    \PackageError{avia-editorial}{AVIA-E-CAPTION-HEIGHT: caption too long}{Move the explanation into the body.}%
+  \fi
+  \sbox{\AviaCaptionBox}{\begin{minipage}{\linewidth}\caption{#3}\ifblank{#4}{}{\label{#4}}\end{minipage}}%
+  \setlength{\AviaImageHeight}{\dimexpr\textheight-\ht\AviaCaptionBox-\dp\AviaCaptionBox-2\baselineskip\relax}%
+  \ifdim\AviaImageHeight<3\baselineskip
+    \PackageError{avia-editorial}{AVIA-E-CAPTION-HEIGHT: caption leaves no image space}{Shorten the caption; move explanation into the body.}%
+  \fi
+  \centering\includegraphics[width=\AviaImageWidth,height=\AviaImageHeight,keepaspectratio]{#2}\par
+  \nointerlineskip\usebox{\AviaCaptionBox}\par
+}
+\NewDocumentCommand{\widefigure}{O{\linewidth} m m O{}}{%
+  \begin{figure}[htbp]\AviaRenderFigure{#1}{#2}{#3}{#4}\end{figure}}
+\NewDocumentCommand{\fullwidthfigure}{m m O{}}{%
+  \begin{figure}[htbp]\begin{fullwidth}\AviaRenderFigure{\linewidth}{#1}{#2}{#3}\end{fullwidth}\end{figure}}
+\NewDocumentCommand{\aviamarginfigure}{O{.97\marginparwidth} m m}{%
+  \ifAviaIllustrated
+    \setlength{\AviaImageWidth}{#1}%
+    \ifdim\AviaImageWidth>\marginparwidth\PackageError{avia-editorial}{AVIA-E-IMAGE-WIDTH: margin image too wide}{Use a width within marginparwidth.}\fi
+    \ifdim\AviaImageWidth<1pt\PackageError{avia-editorial}{AVIA-E-IMAGE-WIDTH: nonpositive margin image}{Use a positive width.}\fi
+    \AviaPutMargin{\centering\includegraphics[width=#1,height=.28\textheight,keepaspectratio]{#2}\par\smallskip\raggedright #3}%
+  \else\widefigure[.65\linewidth]{#2}{#3}\fi}
+\newcommand{\chapterquote}[2]{%
+  \begin{flushright}\begin{minipage}{.78\linewidth}
+  \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+  \itshape\enquote{#1}\par\smallskip\normalfont\footnotesize --- #2
+  \end{minipage}\end{flushright}\vspace{1em}}
+\newcommand{\opening}[1]{\par\noindent{\large\itshape #1\par}\vspace{1em}}
+\newcommand{\smallcaps}[1]{\textsc{#1}}
 \newcommand{\booksubtitle}[1]{\def\AviaSubtitle{#1}}
 \def\AviaSubtitle{}
-\newcommand{\aviatitlepage}{\begin{titlingpage}\thispagestyle{empty}\vspace*{.22\textheight}\noindent{\rmfamily\Huge\bfseries\color{AviaInk}\thetitle\par}\vspace{1.3em}\noindent{\sffamily\Large\color{AviaBlue}\AviaSubtitle\par}\vfill\noindent{\sffamily\large\theauthor\par}\vspace{3em}\end{titlingpage}}
-\makechapterstyle{avia}{\renewcommand*{\chapnamefont}{\sffamily\small\color{AviaBlue}}\renewcommand*{\chapnumfont}{\sffamily\Huge\color{AviaBlue}}\renewcommand*{\chaptitlefont}{\rmfamily\Huge\bfseries\color{AviaInk}}\renewcommand*{\printchaptername}{}\renewcommand*{\printchapternum}{\chapnumfont\thechapter}\renewcommand*{\afterchapternum}{\par\vskip1.2em}\renewcommand*{\afterchaptertitle}{\par\vskip2em}}
+\newcommand{\aviatitlepage}{\hypersetup{pageanchor=false}\begin{titlingpage}\thispagestyle{empty}
+  \vspace*{.12\textheight}\raggedright
+  {\Huge\bfseries\thetitle\par}\vspace{1.2em}
+  {\Large\AviaSubtitle\par}\vfill{\large\theauthor\par}\vspace{2em}
+  \end{titlingpage}\clearpage\hypersetup{pageanchor=true}}
+\makechapterstyle{avia}{%
+  \setlength{\beforechapskip}{24pt}
+  \renewcommand*{\chapnumfont}{\sffamily\Huge}
+  \renewcommand*{\chaptitlefont}{\rmfamily\Huge\bfseries\raggedright}
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\printchapternum}{\chapnumfont\thechapter}
+  \renewcommand*{\afterchapternum}{\par\vskip1em}
+  \renewcommand*{\afterchaptertitle}{\par\vskip1.5em}}
 \chapterstyle{avia}
-\setsecheadstyle{\Large\sffamily\bfseries\color{AviaInk}}
-\setsubsecheadstyle{\large\sffamily\bfseries\color{AviaBlue}}
+\setsecheadstyle{\Large\sffamily\bfseries\raggedright}
+\setsubsecheadstyle{\large\sffamily\bfseries\raggedright}
 \makepagestyle{avia}
-\makeoddhead{avia}{}{}{}
+\makeoddhead{avia}{}{}{}\makeevenhead{avia}{}{}{}
 \makeoddfoot{avia}{}{}{\thepage}\makeevenfoot{avia}{\thepage}{}{}
+\aliaspagestyle{chapter}{avia}\aliaspagestyle{cleared}{empty}
 \pagestyle{avia}
+\endinput
