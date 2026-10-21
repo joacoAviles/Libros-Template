@@ -1,0 +1,21 @@
+% Idioma predeterminado de toda la colección: español. Cambiar a english si hace falta.
+\def\AviaLanguage{spanish}
+% Escoge un perfil. Ambos conservan una columna de margen para notas.
+\newif\ifAviaIllustrated
+\AviaIllustratedtrue % false para perfil narrativo compacto
+% A 6x9 pulgadas: 152.4 x 228.6 mm. Perfil ilustrado sacrifica ancho de texto para margen.
+\setstocksize{9in}{6in}
+\settrimmedsize{9in}{6in}{*}
+\settrims{0pt}{0pt}
+\ifAviaIllustrated
+  \settypeblocksize{7.2in}{3.55in}{*}
+  \setlrmargins{0.67in}{*}{*}
+  \setmarginnotes{10pt}{0.9in}{10pt}
+\else
+  \settypeblocksize{7.2in}{4.05in}{*}
+  \setlrmargins{0.70in}{*}{*}
+  \setmarginnotes{8pt}{0.46in}{10pt}
+\fi
+\setulmargins{0.85in}{*}{*}
+\checkandfixthelayout
+% Para narración muy extensa, comenta la línea settypeblocksize y ajusta los márgenes.
