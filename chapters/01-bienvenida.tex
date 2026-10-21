@@ -4,7 +4,7 @@
 
 Este es un capítulo de demostración, no un procedimiento de vuelo. Un libro de divulgación puede alternar relatos personales, observaciones y explicaciones técnicas sin convertirse en un manual operacional.
 
-Aquí aparece una nota al margen\sidenote{Las notas marginales son ideales para una definición corta, un dato o una referencia que no interrumpa el relato.}. La composición está inspirada en la tradición editorial de Edward Tufte, pero construida sobre \texttt{memoir}.
+Aquí aparece una nota complementaria.\sidenote{En el perfil narrativo estas notas aparecen al pie de página.} La composición está inspirada en la tradición editorial de Edward Tufte, pero construida sobre \texttt{memoir}.
 
 \section{La diferencia entre mirar y comprender}
 
@@ -14,14 +14,16 @@ La pregunta interesante no es solo qué hace una pieza, sino qué problema resue
 Una buena nota visual debe aclarar el contenido principal, no competir con él.
 \end{insightbox}
 
-\margintext{Una idea lateral puede leerse por separado, como segunda capa de contenido.}Un texto más largo permite comprobar el uso de notas y el espaciado entre líneas. La plantilla acepta capítulos independientes y bibliografía administrada por BibLaTeX. Una referencia de ejemplo puede citarse con \textcite{tufte2001}.
+Un texto más largo permite comprobar el uso de notas y el espaciado entre líneas.\margintext{En el perfil ilustrado, esta explicación aparece en el margen.} La plantilla acepta capítulos independientes y bibliografía administrada por BibLaTeX. Una referencia de ejemplo puede citarse con \textcite{tufte2001}.
 
 \section{Una imagen que explique}
 
-\aviamarginfigure{assets/wing.pdf}{Esquema simplificado, dibujado para demostrar una figura marginal.}La figura lateral no necesita ocupar una página completa. Puede acompañar una explicación breve sin interrumpir el párrafo.
+\aviamarginfigure{assets/wing.pdf}{Esquema simplificado, dibujado para demostrar una figura marginal.}
 
-\begin{fullwidth}
+La figura lateral no necesita ocupar una página completa. Puede acompañar una explicación breve sin interrumpir el párrafo.
+
+\ifAviaIllustrated\begin{fullwidth}\fi
 \begin{insightbox}[Lectura extendida]
 Este recuadro ocupa el ancho del texto y el margen lateral. Úsalo para conceptos relevantes, ilustraciones, resúmenes o fotografías panorámicas. En libros de impresión a doble cara es importante probar el diseño de márgenes interiores y exteriores.
 \end{insightbox}
-\end{fullwidth}
+\ifAviaIllustrated\end{fullwidth}\fi
