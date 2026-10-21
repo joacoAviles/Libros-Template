@@ -17,12 +17,24 @@ compile_one() {
   set +e
   (
     cd "$directory" || exit 2
+    # Luaotfload writes font caches. Never share writable caches between jobs:
+    # concurrent changes can keep latexmk dependencies from converging.
+    # Relative, non-hidden paths also respect TeX openout_any=p.
+    export TEXMFVAR="texmf-var"
+    export TEXMFCONFIG="texmf-config"
+    export TEXMFCACHE="texmf-cache"
+    mkdir -p "$TEXMFVAR" "$TEXMFCONFIG" "$TEXMFCACHE"
     latexmk -lualatex -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape main.tex
   ) > "$directory/compile.txt" 2>&1
   result=$?
   set -e
   printf '%s\n' "$result" > "$directory/exit-code.txt"
   printf '%s ... %s\n' "$name" "$result"
+  if ((result!=0)) && [[ "$name" != reject-* ]]; then
+    printf '\n--- Unexpected compiler failure: %s ---\n' "$name"
+    tail -n 60 "$directory/compile.txt"
+    printf '\n--- End diagnostics: %s ---\n' "$name"
+  fi
 }
 jobs="${AVIA_JOBS:-4}"
 [[ "$jobs" =~ ^[1-8]$ ]] || { echo 'AVIA_JOBS must be 1..8' >&2; exit 2; }

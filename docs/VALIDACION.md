@@ -22,7 +22,7 @@ Las notas laterales no tienen capacidad infinita. Si se acumulan y LaTeX las des
 
 ## Entorno y confianza
 
-`ci/toolchain.json` fija el contenedor TeX por digest y las acciones por SHA. El runner hospedado y el parche de Python siguen siendo suministrados por GitHub; no se afirma reproducción binaria bit a bit entre plataformas. `.build/environment.txt` registra el motor usado realmente.
+`ci/toolchain.json` fija el contenedor TeX por digest y las acciones por SHA. El runner hospedado y el parche de Python siguen siendo suministrados por GitHub; no se afirma reproducción binaria bit a bit entre plataformas. `.build/environment.txt` registra el motor usado realmente. Cada caso tiene sus propios TEXMFVAR, TEXMFCONFIG y TEXMFCACHE: no comparte cachés escribibles con otras compilaciones paralelas.
 
 El compilador de CI no tiene red y usa `-no-shell-escape`; no se le pasan secretos ni el socket de Docker. Esto reduce exposición, pero no convierte código TeX arbitrario de terceros en contenido confiable. Los scripts del repositorio también se ejecutan: revisa cambios de colaboradores antes de aprobarlos.
 
