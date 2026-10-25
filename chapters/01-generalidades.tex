@@ -1,0 +1,140 @@
+\chapter{Generalidades y datos descriptivos}
+\label{cap:generalidades}
+
+\opening{Un manual que no está al día no sirve para operar.}
+
+\section{Introducción al manual de operación}
+
+El Manual de Operación del Piloto (\emph{Pilot's Operating Handbook}, POH) es la guía de operación del R22. Contiene el material que los reglamentos 14 CFR partes 21 y 27 exigen entregar al piloto y datos complementarios del fabricante. Sus secciones 2, 3, 4 y 5 están aprobadas por la FAA y constituyen el \emph{Rotorcraft Flight Manual} que debe llevarse a bordo en todo momento.\fuente{POH, sección 1}
+
+El POH no sustituye una instrucción de vuelo adecuada y competente ni el conocimiento de las directivas de aeronavegabilidad vigentes, los reglamentos y las circulares de asesoramiento. Tampoco es una guía de instrucción básica ni un manual de entrenamiento, y no debe usarse para fines operacionales si no se mantiene actualizado.
+
+Asegurar que el helicóptero esté en condición aeronavegable es responsabilidad del propietario. El piloto al mando es responsable de determinar que el helicóptero está seguro para el vuelo y de mantenerse dentro de las limitaciones de operación indicadas por las marcas de los instrumentos, los letreros (\emph{placards}) y el manual.
+
+Como es muy difícil consultar un manual mientras se vuela un helicóptero, el piloto debe estudiar el manual completo y familiarizarse a fondo con las limitaciones, la performance, los procedimientos y las características de manejo del helicóptero \emph{antes} de volar.
+
+El POH está dividido en diez secciones numeradas. Las limitaciones y los procedimientos de emergencia van antes que los procedimientos normales y la performance para que sean más fáciles de encontrar. Algunos números de párrafo, figuras y páginas se omiten deliberadamente (``páginas intencionalmente en blanco'') para permitir futuras ampliaciones.
+
+\begin{nota}
+Suscripción a actualizaciones: Robinson ofrece una suscripción ``Clase A'' que envía los cambios del POH y las nuevas Safety Notices (45 USD por dos años, en \texttt{www.robinsonheli.com}). La fecha estampada en cada manual refleja la revisión con la que fue armado; consulte el sitio web para conocer la revisión más reciente.
+\end{nota}
+
+\section{Avisos y notas}
+
+Las \textbf{precauciones} (\emph{CAUTION}) indican que pueden producirse daños al equipo, lesiones o la muerte si no se sigue el procedimiento o la instrucción. Las \textbf{notas} (\emph{NOTE}) dan énfasis o información complementaria. En el Manual de Mantenimiento se agrega la \textbf{advertencia} (\emph{WARNING}): riesgo de lesión personal o muerte.
+
+\section{Dimensiones exteriores}
+
+\widefigure[0.82\linewidth]{assets/poh/dimensiones.png}{Dimensiones exteriores del R22 (aeronave de producción tardía). Radio del rotor principal 151~in (3,84~m); diámetro del rotor de cola 42~in (1,07~m); longitud del fuselaje y cono de cola 259~in (6,58~m); longitud total 345~in (8,76~m); altura del techo de cabina 69~in (1,75~m); altura total 107~in (2,72~m); ancho de cabina 44~in (1,12~m); trocha de patines 76~in (1,93~m).}
+
+\section{Datos descriptivos}
+
+\subsection{Rotor principal}
+\begin{checklist}
+\chk{Articulación}{Libre para balancear y conificar; rígido en el plano}
+\chk{Número de palas}{2}
+\chk{Diámetro}{25 ft 2 in (7,67 m)}
+\chk{Cuerda de la pala}{7,2 in interior; 7,7 in exterior}
+\chk{Torsión de la pala}{$-8^\circ$}
+\chk{Velocidad de punta a 104\,\% RPM}{698 ft/s}
+\end{checklist}
+
+\subsection{Rotor de cola}
+\begin{checklist}
+\chk{Articulación}{Libre para balancear; rígido en el plano}
+\chk{Número de palas}{2}
+\chk{Diámetro}{42 in (1,07 m)}
+\chk{Cuerda de la pala}{4 in (constante)}
+\chk{Torsión de la pala}{$0^\circ$}
+\chk{Ángulo de preconicidad}{1° 11'}
+\chk{Velocidad de punta a 104\,\% RPM}{622 ft/s}
+\end{checklist}
+
+\subsection{Sistema de transmisión}
+\begin{checklist}
+\chk{Motor a polea superior}{Dos correas en V dobles; reducción 0,8536:1}
+\chk{Polea superior a eje de transmisión}{Embrague de rueda libre tipo \emph{sprag}}
+\chk{Eje a rotor principal}{Engranajes cónicos espirales; reducción 11:47}
+\chk{Eje a rotor de cola}{Engranajes cónicos espirales; multiplicación 3:2}
+\end{checklist}
+
+\subsection{Grupo motor}
+
+Un motor Lycoming O-320 u O-360 de cuatro cilindros horizontalmente opuestos, de accionamiento directo, enfriado por aire, con carburador y de aspiración normal. Cilindrada 319,8~in³ (O-320) o 361,0~in³ (O-360). El enfriamiento lo provee un ventilador tipo jaula de ardilla de accionamiento directo.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Motores y potencias del R22.}
+\label{tab:motores}
+\begin{tabularx}{\linewidth}{@{}L{2.0cm}Y@{}}
+\toprule
+Motor & Potencia nominal y aplicación \\
+\midrule
+O-320-A2B o -A2C & 150 BHP a 2700 RPM (R22 Standard) \\
+O-320-B2C & 160 BHP a 2700 RPM (R22 HP, Alpha y Beta) \\
+O-360-J2A & 145 BHP (reducida) a 2700 RPM (R22 Beta II) \\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Potencias autorizadas en el R22}} \\
+MCP & 124 BHP a 2652 RPM (104\,\% en el tacómetro) \\
+TOP (5 min) & 131 BHP a 2652 RPM, solo Beta y Beta II \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Los grados y la capacidad de combustible están en el capítulo~\ref{cap:limitaciones}; los grados y la capacidad de aceite, en el capítulo~\ref{cap:manejo}.
+
+\section{Definiciones de performance}
+
+\begin{longtable}{@{}L{1.9cm}p{\dimexpr\linewidth-1.9cm-2\tabcolsep}@{}}
+\toprule
+Término & Significado \\
+\midrule
+\endhead
+KIAS & Velocidad indicada en nudos: la que muestra el anemómetro. \\
+KCAS & Velocidad calibrada en nudos: la indicada corregida por error de instrumento y de posición (ver la curva de calibración en el capítulo~\ref{cap:performance}). \\
+KTAS & Velocidad verdadera en nudos: velocidad respecto al aire no perturbado; es la KCAS corregida por altitud de presión y temperatura. \\
+\textsc{v}\textsubscript{NE} & Velocidad que nunca debe excederse. \\
+\textsc{v}\textsubscript{Y} & Velocidad de máxima razón de ascenso. \\
+Altitud MSL & Altitud sobre el nivel del mar indicada por el altímetro (corregido por errores de posición e instrumento) con la subescala barométrica ajustada a la presión existente al nivel del mar. \\
+Altitud de presión & Altitud indicada por el altímetro (corregido) con la subescala ajustada a 29,92~inHg (1013,2~mb). \\
+Altitud de densidad & Altitud, en condiciones ISA, a la que el aire tendría la misma densidad; es la altitud de presión corregida por la temperatura exterior. \\
+ISA & Atmósfera estándar internacional: 29,92~inHg y 15~°C al nivel del mar, con una disminución de temperatura de 1,98~°C cada 1000~ft. \\
+BHP & Potencia al freno: potencia real entregada por el motor. \\
+MAP & Presión de admisión: presión absoluta, en pulgadas de mercurio, en el múltiple de admisión del motor. \\
+RPM & Revoluciones por minuto del motor o del rotor principal. El tacómetro las muestra como porcentaje de 2550~RPM de motor o de 510~RPM de rotor. \\
+MCP & Potencia máxima continua. \\
+TOP & Potencia de despegue (normalmente por un máximo de 5 minutos). \\
+Altitud crítica & Altitud a la que el acelerador completamente abierto produce la máxima potencia permitida (MCP o TOP). \\
+TOGW & Peso bruto de despegue. \\
+OAT & Temperatura del aire exterior. \\
+CAT & Temperatura del aire del carburador. \\
+CHT & Temperatura de culata de cilindro. \\
+GPH & Galones por hora. \\
+AGL & Sobre el nivel del terreno. \\
+IGE & Con efecto suelo. \\
+OGE & Fuera del efecto suelo. \\
+ALT & Alternador. \\
+\bottomrule
+\end{longtable}
+
+\section{Definiciones de peso y balance}
+
+\begin{longtable}{@{}L{2.6cm}p{\dimexpr\linewidth-2.6cm-2\tabcolsep}@{}}
+\toprule
+Término & Significado \\
+\midrule
+\endhead
+Dato de referencia & Plano vertical desde el que se miden las distancias horizontales para el balance. En el R22, el dato longitudinal está 100~in por delante del eje del mástil del rotor principal. \\
+Estación & Ubicación longitudinal a lo largo del fuselaje, expresada en pulgadas desde el dato de referencia. \\
+Brazo & Distancia horizontal desde el dato de referencia hasta el centro de gravedad (CG) de un elemento. \\
+Momento & Peso del elemento multiplicado por su brazo. \\
+Centro de gravedad (CG) & Ubicación a lo largo del fuselaje (normalmente en pulgadas desde el dato) en la que el helicóptero quedaría en equilibrio. Se calcula dividiendo el momento total por el peso total. \\
+Límites de CG & Ubicaciones extremas del CG dentro de las que debe operarse el helicóptero para un peso dado. \\
+Combustible utilizable & Combustible disponible para la planificación del vuelo. \\
+Combustible no utilizable & Combustible que queda en el tanque y que no puede proporcionar un flujo ininterrumpido de manera confiable en la actitud de vuelo crítica. \\
+Peso vacío estándar & Peso del helicóptero estándar incluyendo el combustible no utilizable, todos los fluidos operativos y el aceite de motor completo. \\
+Peso vacío básico & Peso vacío estándar más el peso del equipamiento opcional instalado. \\
+Carga paga & Peso de ocupantes, carga y equipaje. \\
+Carga útil & Diferencia entre el peso bruto máximo y el peso vacío básico. \\
+\bottomrule
+\end{longtable}

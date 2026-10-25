@@ -1,0 +1,26 @@
+name: Compilar libro
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el manuscrito
+        uses: actions/checkout@v4
+      - name: Compilar PDF con LuaLaTeX y Biber
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          latexmk_use_lualatex: true
+          extra_system_packages: biber
+          pre_compile: 'cd assets && lualatex -interaction=nonstopmode -halt-on-error wing.tex && cd ..'
+      - name: Guardar el libro como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: avia-editorial-pdf
+          path: main.pdf
+          if-no-files-found: error

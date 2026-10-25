@@ -1,0 +1,200 @@
+\chapter{Sistema eléctrico, instrumentos, luces y aviónica}
+\label{cap:mm-electrico}
+
+\opening{Un sistema de 14 voltios, un tacómetro electrónico del que depende la seguridad y una consola tan compacta que cada cable nuevo puede interferir con los mandos.}
+
+\section{Sistema eléctrico}
+\fuente{MM, capítulos 14, 33 y 35}
+
+\begin{precaucion}
+La instalación de dispositivos eléctricos puede afectar la exactitud y fiabilidad del tacómetro electrónico.
+\end{precaucion}
+
+El sistema incluye un \textbf{alternador de 14~V y 60~A} (70~A opcional), relé de batería, unidad de control del alternador (ACU) y \textbf{batería de 14~V}. La batería va en una caja de fibra de vidrio, normalmente en el tubo inferior izquierdo del bastidor; opcionalmente en la nariz bajo la consola superior, y en algunos R22 HP en el compartimiento de equipaje del asiento izquierdo. Los disyuntores, del tipo ``empujar para rearmar'' y rotulados con función y amperaje, están en el reborde delante del asiento delantero izquierdo.
+
+El interruptor maestro controla el relé de batería, que la desconecta de todos los circuitos salvo el tacómetro y el reloj, alimentados directamente desde la batería a través de un terminal del interruptor del embrague.
+
+\textbf{Unidad de control del alternador}: detecta la tensión en el shunt del amperímetro mediante un cable de sensado remoto y cumple tres funciones:
+\begin{itemize}
+\item regula la salida para mantener la batería a \textbf{13,4--13,9~V};
+\item enciende la luz ALT si la tensión cae a \textbf{12,55--12,95~V};
+\item corta el campo del alternador por sobretensión a \textbf{15,75--16,25~V}.
+\end{itemize}
+
+En instalaciones sin A942-1, la tensión de salida (13,2--13,8~V en el terminal ``I'' del regulador con el motor en marcha) se ajusta con el tornillo de rango del regulador.
+
+El circuito del actuador del embrague tiene, además de su disyuntor, un fusible de bajo amperaje (1,5~A) para que una sobrecarga del motor no dispare el disyuntor y apague prematuramente la luz del embrague. Las luces de aterrizaje están cableadas a través del interruptor del embrague y se apagan al desacoplarlo. La luz de mapa está en el circuito de instrumentos como respaldo ante un cortocircuito del circuito de luces.
+
+\subsection{Batería}
+
+El mantenimiento de la batería sigue el manual del fabricante (Concorde). \textbf{Al desconectar, primero el cable negativo y luego el positivo; al conectar, primero el positivo y luego el negativo.} Pernos de terminales con el torque indicado en la etiqueta de la batería.
+
+\subsection{Actuador del embrague}
+
+Tras el arranque, el motor se acopla a la transmisión mediante las correas en V, tensadas al elevar la polea superior con un actuador eléctrico situado entre las poleas. El actuador detecta la carga de compresión (tensión de correas) y se detiene al alcanzar la tensión correcta. La luz CLUTCH se enciende siempre que el circuito está energizado (acoplando, desacoplando o retensando) y permanece encendida hasta que las correas están bien tensadas o totalmente sueltas.
+
+La holgura de las correas en el arranque debe permitir que \textbf{las palas empiecen a girar dentro de los 5 segundos} de conectado el embrague; una holgura excesiva puede hacer saltar las correas de las ranuras. Si el fusible se funde, el motor se detiene pero la luz queda encendida; con el disyuntor abierto no hay tensado ni luz.
+
+\begin{precaucion}
+Nunca despegue con la luz del embrague encendida.
+\end{precaucion}
+
+\subsection{Luces de advertencia y precaución}
+
+Embrague, sobretemperatura de la caja principal, virutas en caja principal y de cola, arranque conectado, bajo combustible, bajas RPM, alternador, baja presión de aceite, freno rotor, gobernador desconectado, monóxido de carbono (con calefacción) y acelerador a fondo. La luz y la bocina de bajas RPM indican \textbf{97\,\% o menos}. Las de baja presión de aceite y bajo combustible tienen sensores propios, independientes de los indicadores. Los detectores de virutas son magnéticos, en el tapón de drenaje de cada caja; la sobretemperatura la acciona un interruptor térmico cerca del piñón de entrada.
+
+\textbf{Luz de acelerador a fondo}: con la válvula de combustible cerrada y batería conectada, colectivo arriba, abra el acelerador hasta que se encienda: la separación entre el tope del acelerador y la esquina del tope de plena apertura del cuerpo debe ser \textbf{0,114--0,148~in}. Se ajusta girando la leva ranurada A607-2 (bajo el asiento del copiloto) para que el interruptor V3-1 actúe a unos 0,130~in.
+
+\textbf{Detector de monóxido de carbono}: sensor sobre la salida de calefacción del piloto. Al conectar la energía la luz parpadea dos veces (autoprueba); un destello cada 4 segundos indica falla del sensor. Si la luz se enciende: cierre la calefacción, abra ventilaciones, salga del estacionario; con síntomas (dolor de cabeza, somnolencia, mareo), aterrice de inmediato e inspeccione el escape antes del siguiente vuelo. Evite solventes, detergentes y aerosoles cerca del sensor y tape sus aberturas al limpiar la cabina.
+
+\textbf{Bocina de bajas RPM}: con el colectivo levantado \textbf{0,2--0,4~in} (en la empuñadura) sobre el tope inferior, la unidad debe activar bocina y luz a \textbf{97--96\,\%} y apagarlas por encima de 96--97\,\%. La unidad está dentro de la consola superior; se ajusta por un agujero de 3/8~in en el panel vertical izquierdo: A569-1 (circuito encapsulado) $\approx$ 1/16 de vuelta por 1\,\%; A569-5 (caja metálica) $\approx$ 2 vueltas por 1\,\%. Si no se logra, se reemplaza. Las aeronaves recientes tienen además una alerta de \textbf{altas RPM} (tono alternado al acercarse a 110\,\%) con botón de prueba.
+
+\subsection{ELT}
+
+Transmisor con batería interna en el bastidor superior (acceso por la puerta superior trasera del capó), antena externa e interruptor remoto con indicador a la izquierda del cíclico. Ambos interruptores en \textbf{AUTO/ARM} para el vuelo; ON para activarlo ante un aterrizaje de emergencia inminente; RESET para detener una activación accidental. Las pruebas siguen las instrucciones del fabricante.
+
+\subsection{Unidad de monitoreo del motor (EMU)}
+
+En aeronaves recientes, dentro de la caja del gobernador D270-1, registra RPM de motor y rotor, temperatura de aceite y CHT. Luz ámbar en el compartimiento de equipaje derecho: tras unos 10~s de autoprueba, \textbf{fija = normal}; \textbf{parpadeo lento} (cada 2~s) o apagada = falla de sensores o circuitos; \textbf{parpadeo rápido} (4 por segundo) = excedencia. Una falla o excedencia debe ser investigada y reseteada por un mecánico calificado antes del siguiente vuelo (la app EMU para iPad permite verla, no resetearla). Es solo una ayuda de mantenimiento: reportar excedencias sigue siendo responsabilidad del piloto.
+
+\subsection{Otros sistemas}
+
+\begin{itemize}
+\item \textbf{Protección de sobrevelocidad en el arranque} (S/N 4825 y posteriores): con el embrague desacoplado, si el motor supera 85--90\,\% con el rotor por debajo del 50\,\%, el tacómetro o el gobernador activan un relé que pone a masa los cables P de ambos magnetos. No requiere mantenimiento periódico ni evita todas las sobrevelocidades.
+\item \textbf{Encendido electrónico Lycoming (EIS)}: en aeronaves recientes reemplaza al magneto izquierdo de arranque y al vibrador; véase Lycoming SI 1569.
+\item \textbf{Cámara de cabina} opcional: graba video 4K, audio y GPS en una memoria extraíble; no retire la memoria mientras graba.
+\item \textbf{Sensores}: termistor de aceite A760 a 300~in-lb (terminal 20~in-lb) frenado con alambre de 0,032~in; sensor CHT en el cilindro \#4 a 70--80~in-lb; sensor OAT A760-4 a 18~in-lb; sensor de efecto Hall C143-1 a 96~in-lb.
+\item \textbf{Calibración del CHT}: con una resistencia de 32 $\pm$ 0,4~$\Omega$ (equivale a 500~°F) en lugar de la sonda, ajuste el potenciómetro de la placa C691-1 hasta que la aguja quede entre ``tocando el rojo'' y ``media aguja en el rojo'', y fíjelo con cinta de aluminio.
+\end{itemize}
+
+\subsection{Diagnóstico eléctrico}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Falla & Causa probable & Corrección \\
+\midrule
+Sin energía & Bornes corroídos, mala masa, disyuntor disparado, batería baja, alternador sin salida, cable o terminal defectuoso & Limpiar, verificar, recargar, revisar correa y ACU, reemplazar \\
+Arranca lento y no prende & Batería baja; poca holgura de correas; bornes sucios; relé de arranque & Cargar; ajustar tornillo de límite inferior del actuador; limpiar; reemplazar \\
+Gira pero no arranca & Llave de encendido, vibrador de arranque, retardo del magneto & Reemplazar o ajustar \\
+El arranque no funciona & Freno rotor aplicado; batería baja; disyuntores HORN START y CLUTCH START disparados; actuador no desacoplado del todo; conexiones & Soltar freno; cargar; rearmar; acoplar y desacoplar del todo; revisar cableado \\
+Retroceso del arrancador & Contacto de retardo del magneto izquierdo desplazado (debe medir 0,609 $\pm$ 0,10~in con leve rebote); cableado del vibrador; llave (SL-29); acoplamiento de impulso & Corregir; kit KI-4 \\
+Batería descargada o de vida corta & Batería agotada, régimen de carga incorrecto, equipo encendido, impurezas & Reemplazar, ajustar regulador, recargar \\
+Alternador no carga & Alternador, regulador, relé de sobretensión o interruptor & Reemplazar \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Actuador del embrague}: si no acopla o no desacopla, revise motor agarrotado, fusible de 1,5~A, circuito abierto, interruptor de sobrecarrera disparado, tensión en el disyuntor, interruptores de resorte o de límite superior y masa del cable -88. Luz que parpadea en vuelo: resorte de columna descalibrado, correas A190 no emparejadas, polea inferior mal apretada o rodamiento A184/A181 áspero. \textbf{Luz encendida 1--6~s en vuelo: normal} (retensado). \textbf{Más de 6~s}: correas estiradas más allá del interruptor de sobrecarrera (reemplazarlas) o interruptor accionado por una fuerza externa.
+
+\subsection{Valores de calibración}
+
+\begin{center}
+\small
+\begin{tabular}{lcc}
+\toprule
+Tacómetro A792 & RPM motor & RPM rotor \\
+\midrule
+97\,\% & 2471--2476 & 494--495 \\
+100\,\% & 2548--2552 & 509--510 \\
+104\,\% & 2649--2655 & 529--530 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Se verifican con equipo Vibrex 2000 o similar (resolución $\pm$1~rpm, calibrado en el último año). Solo puede ajustarse el lado del rotor: con el motor a 104\,\%, gire el tornillo trasero (1/8 de vuelta $\approx$ 1\,\%; horario aumenta) hasta que el rotor indique 104\,\%. Las agujas deben coincidir dentro del 1\,\%. El A792-1 antiguo no es ajustable.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Instrumento & Calibración \\
+\midrule
+Combustible (6246-00473) & 0,70~$\Omega$ = E; 21,2~$\Omega$ = 1/4; 42,0~$\Omega$ = 1/2; 67,5~$\Omega$ = 3/4; 90,0~$\Omega$ = F ($\pm$1 ancho de aguja). Potenciómetros ``Null'' (vacío a 0,7~$\Omega$) y ``Gain'' (mitad a 42~$\Omega$) bajo cinta de aluminio. \\
+Amperímetro (6246-00468) & $\pm$104~mV = $\pm$70~A; $\pm$52~mV = $\pm$35~A; 0~mV = 0~A \\
+CHT (6246-00088) & 745~$\Omega$ = 200~°F; 110~$\Omega$ = 350~°F; 34~$\Omega$ = 500~°F \\
+Presión de aceite (6246-00647, línea roja 115~psi) & 9~$\Omega$ = 0; 46~$\Omega$ = 25; 84~$\Omega$ = 55; 131~$\Omega$ = 95; 152~$\Omega$ = 115~psi \\
+Temperatura de aceite (6246-00090) & 903,5~$\Omega$ = 75~°F; 100~$\Omega$ = 180~°F; 36~$\Omega$ = 245~°F \\
+Temperatura del carburador (A604-2) & 77,40~$\Omega$ = $-$30~°C; 90,38~$\Omega$ = 0~°C; 103,36~$\Omega$ = 30~°C. Una sonda en hielo picado y agua debe medir 90,38~$\Omega$. Sonda a 3--4~in-lb (más la daña). \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Los instrumentos del grupo se calibran inclinados 20--25° respecto de la horizontal.
+
+\subsection{Carga eléctrica}
+
+La carga continua máxima del alternador de 60~A es \textbf{54~A}. La carga de una aeronave se calcula sumando las cargas continuas e intermitentes del equipo instalado (tabla del MM, \S\,33-120), o se mide en el borne de la batería con el alternador apagado y todo el equipo encendido, escalando por la relación entre tensión de batería y nominal. Algunos consumos típicos: luces de aterrizaje incandescentes 2 $\times$ 7,7~A; HID 2 $\times$ 2,9~A (9,52~A al encender); luces de posición incandescentes 3 $\times$ 2,2~A; Aspen 4,8~A; GTN~650 2,65~A; soplador de calefacción 7,5~A; motor de arranque 200~A intermitente.
+
+\begin{advertencia}
+La instalación de equipo electrónico fuera de fábrica puede ser peligrosa. La consola y el túnel de mandos son tan compactos que cualquier cable adicional puede interferir con los controles de vuelo, y los tacómetros, sistemas de advertencia y equipos de navegación son sensibles a interferencias. Un dispositivo no probado ni aprobado por RHC puede crear una condición peligrosa.
+\end{advertencia}
+
+Los diagramas de cableado completos están en los capítulos 14 y 35 del MM y no se reproducen aquí.
+
+\section{Instrumentos}
+\fuente{MM, capítulo 13}
+
+Instrumentos estándar: anemómetro, tacómetro doble de motor y rotor, altímetro, manifold, brújula; amperímetro, presión y temperatura de aceite, CHT, cantidad de combustible; reloj, temperatura del carburador y OAT digital. El horómetro, accionado por la presión de aceite, está delante del asiento del piloto. Con pantallas electrónicas puede usarse el filtro D327 para reducir reflejos nocturnos.
+
+\begin{precaucion}
+Proteja los instrumentos con espuma: trátelos ``como huevos''. No use herramientas magnetizadas cerca del tacómetro ni de las antenas.
+\end{precaucion}
+
+\subsection{Sistema pitot-estático}
+
+El tubo pitot está en el borde delantero del carenado del mástil; la toma estática, dentro del capó trasero junto a la bisagra de la puerta. El agua se drena retirando los tapones plásticos accesibles por el panel de inspección inferior de la cabina (solo si anemómetro o altímetro son erráticos). Inspeccione con frecuencia que no haya insectos u obstrucciones.
+
+\begin{precaucion}
+Nunca aplique succión al pitot ni presión a la estática; aplicar o soltar la succión bruscamente puede dañar anemómetro, altímetro y variómetro.
+\end{precaucion}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.44\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Prueba & Método & Fuga máxima \\
+\midrule
+Pitot & Tape el drenaje del codo; con una jeringa, presión lenta hasta 70~kt; golpee suavemente el vidrio & 10~kt en 1~min \\
+Estática & Altímetro a la elevación local; succión lenta hasta +500~ft & 100~ft en 1~min \\
+Manifold & Desconecte la línea A740-1 del motor; succión hasta 10~inHg & sube 1~inHg en 1~min \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Verificaciones de instrumentos}
+
+\begin{itemize}
+\item \textbf{Variómetro}: cero en estacionario.
+\item \textbf{Anemómetro}: solo correcto en vuelo hacia adelante; hasta 102~kt (línea roja).
+\item \textbf{Altímetro}: con el reglaje local, debe coincidir con la elevación del campo dentro de \textbf{70~ft}.
+\item \textbf{Manifold}: con el motor parado, dentro de \textbf{0,3~inHg} de la presión barométrica.
+\item \textbf{Temperatura del carburador}: con motor frío, aproximadamente igual a la OAT.
+\item \textbf{CHT}: termopar en el cilindro \#4.
+\item \textbf{Sonda OAT}: no se permite cortar ni empalmar sus cables (longitud calibrada).
+\item \textbf{Brújula}: compensación en rosa de vientos, a RPM gobernadas, cada 30°, con toda la aviónica, luces exteriores y dimmer al máximo: \textbf{error máximo 5°}; registre en la tarjeta y verifique los 4 cardinales con luces apagadas y solo COM1 y transpondedor.
+\item \textbf{Amperímetro inoperativo}: verifique los dos fusibles de 3~A en el conjunto B304-18 del shunt. \textbf{Reloj}: fusible AGC-3 en el cortafuego.
+\item \textbf{Aspen PFD}: ayuda de conciencia situacional junto con los instrumentos VFR requeridos; disyuntor EFIS 7,5~A; la \textbf{batería interna se prueba cada 12 meses}; tras reinstalarlo, prueba de fugas pitot-estática.
+\end{itemize}
+
+Ante indicaciones nulas o erráticas, el MM sigue el mismo patrón: buscar obstrucciones, agua, líneas sueltas, dobladas o rotas, hacer las pruebas de fugas y, si persiste, devolver el instrumento a RHC.
+
+\section{Luces}
+\fuente{MM, capítulo 24}
+
+Luz anticolisión roja en el cono de cola (interruptor STROBE, disyuntor 5~A); luces de posición a cada lado de la cabina y en la cola (NAV LTS, disyuntor LTS 5~A); iluminación de instrumentos por luces de poste (antiguas) o una luz en la parte superior del parabrisas (recientes), regulada con la perilla sobre el interruptor de luces; luz de mapa giratoria en el techo, utilizable como iluminación de emergencia del panel. Dos \textbf{luces de aterrizaje} en la nariz con distinto ángulo, con un solo interruptor; \textbf{solo funcionan con el interruptor del embrague en ``acoplado''} (disyuntor LAND LT 15~A con HID, 20~A con lámparas B196-26). Se recomienda el uso continuo de luces de aterrizaje y posición en vuelo para evitar colisiones.
+
+Al reinstalar la anticolisión rojo/blanca, el lente rojo va hacia adelante.
+
+\section{Aviónica}
+\fuente{MM, capítulo 34}
+
+\begin{itemize}
+\item Desde S/N 4591, 4650, 4651, 4656 y posteriores hay \textbf{interruptor de aviónica} (relé ``a prueba de fallas'': falla en ON); antes, un relé maestro de radio cortaba la barra de aviónica durante el arranque.
+\item \textbf{Transpondedor Garmin GTX 330 ES} (ADS-B Out por \emph{squitter} extendido de 1090~MHz, con posición del GPS principal; requerido en ciertos espacios aéreos de EE.\,UU.\ desde el 1 de enero de 2020). El sistema ADS-B del R22 requiere un GPS Garmin GTN serie 600 (solo en la consola del lado del piloto). Un cambio de matrícula puede requerir reprogramación.
+\item \textbf{COM Garmin GTR 225B} (14/28~V) y \textbf{audio Garmin GMA 350H} (audio 3D, comandos de voz).
+\item Los equipos Garmin instalados en fábrica son \textbf{``on condition''}: sin mantenimiento periódico; tienen autoprueba al encender. La inspección especial consiste en revisar equipo, bandeja, barras de cobre, disyuntor y cableado (sin cables sueltos, rozados o rotos ni señales de arco).
+\item \textbf{Antenas}: quite pintura e imprimación en las superficies de contacto para asegurar la masa; cordón de sellador B270-1 de máx.\ 0,1~in de alto en las esquinas.
+\item \textbf{Software}: solo versiones y configuraciones aprobadas por la FAA para Robinson; no actualice sin conocer su estado de aprobación y compatibilidad (puede requerir actualizar otros equipos). Mientras el equipo funcione bien, no hay requisito de verificar o actualizar; las actualizaciones obligatorias llegan por SB o AD. Las bases de datos (cartas, terreno) sí pueden actualizarse regularmente.
+\end{itemize}

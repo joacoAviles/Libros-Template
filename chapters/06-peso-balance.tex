@@ -1,0 +1,119 @@
+\chapter{Peso y balance}
+\label{cap:peso-balance}
+
+\opening{El combustible que se quema mueve el centro de gravedad hacia adelante: el cálculo debe cerrar al despegar y también con los tanques vacíos.}
+
+\section{Generalidades}
+\fuente{POH, sección 6, con las revisiones del 22 FEB 2024}
+
+El helicóptero debe volarse solo dentro de los límites de peso y balance especificados en el capítulo~\ref{cap:limitaciones}. Las cargas fuera de estos límites pueden dejar un recorrido de controles insuficiente para una operación segura.
+
+El centro de gravedad puede ajustarse agregando lastre removible (cualquier objeto de masa apropiado) en un compartimiento de equipaje bajo un asiento. Recalcule el peso y balance después de agregar lastre y verifique que el lastre cumpla los límites del compartimiento.
+
+El peso y balance del helicóptero cargado puede determinarse con el método de las instrucciones de carga. Conforme a los procedimientos de la FAA, los datos detallados de peso y balance de este capítulo no están sujetos a aprobación de la FAA; sin embargo, las instrucciones de carga sí han sido aprobadas por la FAA como cumplimiento de todos los requisitos sobre la carga del giroavión dentro de los límites aprobados de peso y centro de gravedad.
+
+\begin{precaucion}
+El consumo de combustible hace que el CG se desplace hacia adelante durante el vuelo. Determine siempre la carga segura con el combustible vacío además de con el combustible de despegue. La carga paga puede quedar limitada por el CG delantero a medida que se consume combustible.
+\end{precaucion}
+
+\section{Registro de peso y balance}
+
+El formulario de registro de peso y balance debe usarse para mantener un historial continuo del peso y balance del helicóptero. Cada vez que se retira o instala un elemento de equipo, debe hacerse una anotación y determinarse el nuevo CG vacío. El peso y balance original de fábrica y la lista de equipos se entregan con cada helicóptero en un formulario que se inserta al final de esta sección del POH; ese peso y balance es la primera anotación del registro.
+
+El registro tiene las columnas: fecha; descripción del artículo o modificación; cambio de peso agregado (+) o retirado ($-$) con su peso, brazo y momento longitudinal, y brazo y momento lateral (+ = lado derecho); y el peso vacío básico acumulado, con su peso, brazo y momento longitudinal, y brazo y momento lateral. La primera línea es ``helicóptero según pesaje''.
+
+\begin{nota}
+El CG calculado con combustible completo y un piloto de 135~lb (130~lb sin tanque auxiliar) debe quedar dentro de límites. Después de una modificación puede ser necesario ajustar el lastre fijo de la nariz. Vea el Manual de Mantenimiento.
+\end{nota}
+
+\section{Instrucciones de carga}
+
+La siguiente tabla puede usarse para calcular el peso y la posición del CG del helicóptero cargado.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Peso y CG de elementos comunes.}
+\label{tab:items-comunes}
+\begin{tabularx}{\linewidth}{@{}Yccc@{}}
+\toprule
+Elemento & Peso (lb) & Brazo long. (in) & Brazo lat. (in)\textsuperscript{a} \\
+\midrule
+Piloto y equipaje bajo el asiento derecho & --- & 78,0\textsuperscript{b} & +10,7 \\
+Pasajero y equipaje bajo el asiento izquierdo & --- & 78,0\textsuperscript{b} & $-9,3$ \\
+Combustible principal\textsuperscript{c} & --- & 108,6 & $-11,0$ \\
+Combustible auxiliar\textsuperscript{c} & --- & 103,8 & +11,2 \\
+Puertas & 5,2 c/u & 77,5 & $\pm 21,0$ \\
+Controles removibles (cíclico, colectivo, pedales) & 2,6 & 66,3 & $-12,9$ \\
+Elementos en las barras de montaje de accesorios & --- & 53,0 & $\pm 12,0$ \\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\begin{minipage}{.94\linewidth}\footnotesize
+\textsuperscript{a} + = lado derecho.\\
+\textsuperscript{b} Use 79,0~in en helicópteros anteriores al S/N 0256 con asientos del estilo antiguo. Si se usa un cojín de respaldo adicional, reste el espesor del cojín comprimido.\\
+\textsuperscript{c} Para el combustible principal y auxiliar combinados puede usarse un brazo longitudinal de 106,9~in. No use el valor combinado si calcula el brazo lateral.
+\end{minipage}
+\end{table}
+
+El cálculo de ejemplo muestra cómo determinar el peso y el CG del helicóptero cargado. El peso y balance calculado debe compararse con los límites de CG del capítulo~\ref{cap:limitaciones} para determinar si la carga es segura. Tanto la condición de despegue como la de combustible vacío deben quedar dentro de límites.
+
+El CG lateral suele quedar holgadamente dentro de límites con las cargas convencionales. Si se produce una instalación o carga lateral inusual, el CG lateral debe verificarse contra los límites. El dato de referencia lateral es el eje longitudinal de la aeronave, con los elementos a la derecha positivos y los de la izquierda negativos.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Cálculo de carga de ejemplo. El brazo del CG del helicóptero cargado se obtiene dividiendo el momento total por el peso total.}
+\label{tab:ejemplo-pyb}
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}Yrrrrr@{}}
+\toprule
+Elemento & Peso & Brazo & Brazo & Momento & Momento \\
+ & (lb) & long. & lat. & long. & lat. \\
+\midrule
+Peso vacío básico & 880 & 104,0 & $-0,1$ & 91\,520 & $-88$ \\
+Quitar puerta derecha & $-5,2$ & 77,5 & 21,0 & $-403$ & $-109$ \\
+Quitar puerta izquierda & --- & 77,5 & $-21,0$ & --- & --- \\
+Quitar controles del asiento izq. & --- & 66,3 & $-12,9$ & --- & --- \\
+Piloto y equipaje, asiento der. & 170 & 78,0 & 10,7 & 13\,260 & 1819 \\
+Pasajero y equipaje, asiento izq. & 160 & 78,0 & $-9,3$ & 12\,480 & $-1488$ \\
+Elementos en barras de accesorios & 5 & 53,0 & 12,0 & 265 & 60 \\
+\midrule
+\textbf{Peso y CG sin combustible utilizable} & \textbf{1209,8} & \textbf{96,8} & \textbf{0,2} & \textbf{117\,122} & \textbf{194} \\
+Combustible principal utilizable (6 lb/gal) & 101,4 & 108,6 & $-11,0$ & 11\,012 & $-1115$ \\
+Combustible auxiliar utilizable (6 lb/gal) & 56,4 & 103,8 & 11,2 & 5854 & 632 \\
+\midrule
+\textbf{Peso bruto y CG de despegue} & \textbf{1367,6} & \textbf{98,0} & $\mathbf{-0,2}$ & \textbf{133\,988} & $\mathbf{-289}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Planilla de cálculo}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Planilla de cálculo de carga para su helicóptero.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{@{}Yrrrrr@{}}
+\toprule
+Elemento & Peso & Brazo & Brazo & Momento & Momento \\
+ & (lb) & long. & lat. & long. & lat. \\
+\midrule
+Peso vacío básico & \hrulefill & \hrulefill & \hrulefill & \hrulefill & \hrulefill \\
+Quitar puerta derecha & \hrulefill & 77,5 & 21,0 & \hrulefill & \hrulefill \\
+Quitar puerta izquierda & \hrulefill & 77,5 & $-21,0$ & \hrulefill & \hrulefill \\
+Quitar controles del asiento izq. & \hrulefill & 66,3 & $-12,9$ & \hrulefill & \hrulefill \\
+Piloto y equipaje, asiento der. & \hrulefill & 78,0 & 10,7 & \hrulefill & \hrulefill \\
+Pasajero y equipaje, asiento izq. & \hrulefill & 78,0 & $-9,3$ & \hrulefill & \hrulefill \\
+Elementos en barras de accesorios & \hrulefill & 53,0 & $\pm 12,0$ & \hrulefill & \hrulefill \\
+\textbf{Peso y CG sin combustible utilizable} & \hrulefill & \hrulefill & \hrulefill & \hrulefill & \hrulefill \\
+Combustible principal (6 lb/gal) & \hrulefill & 108,6 & $-11,0$ & \hrulefill & \hrulefill \\
+Combustible auxiliar (6 lb/gal) & \hrulefill & 103,8 & 11,2 & \hrulefill & \hrulefill \\
+\textbf{Peso bruto y CG de despegue} & \hrulefill & \hrulefill & \hrulefill & \hrulefill & \hrulefill \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{insightbox}[Cómo leer el resultado]
+En el ejemplo, sin combustible utilizable el CG queda en 96,8~in con 1209,8~lb, y al despegue en 98,0~in con 1367,6~lb. Ambos puntos deben caer dentro de la envolvente correspondiente (figura~\ref{fig:cg-beta} para un Beta II). Observe cómo, al consumirse el combustible (brazos de 108,6 y 103,8~in, detrás del CG), el CG avanza de 98,0 a 96,8~in: si el punto sin combustible queda por delante del límite delantero, la carga paga debe reducirse aunque el despegue parezca correcto.
+\end{insightbox}

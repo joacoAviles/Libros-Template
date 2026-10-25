@@ -1,0 +1,762 @@
+\chapter{Guía detallada de la inspección prevuelo}
+\label{cap:prevuelo-guia}
+
+\chapterquote{Un vuelo seguro comienza con un prevuelo bien hecho.}{HeliPreflight}
+
+\opening{Cada ítem de la lista existe porque alguien, alguna vez, lo pasó por alto.}
+
+\section{Propósito y fuentes}
+
+Este capítulo desarrolla, ítem por ítem, la lista de chequeos diarios o de prevuelo del R22 (\emph{Model R22 Daily or Preflight Checks}, rev. 17 NOV 2021, idéntica a la sección~4 del POH). Para cada ítem se indica la condición exigida por el fabricante, cómo revisarlo en la práctica y, cuando corresponde, notas técnicas y un caso de investigación real que muestra lo que puede ocurrir si se omite.\fuente{\emph{Ultimate Preflight Guide} V2.1, HeliPreflight (Clay Webster, instructor CFII Gold Seal), basada en la lista de Robinson, el POH, el Manual de Mantenimiento y los informes de la NTSB y la ATSB}
+
+La guía no reemplaza la instrucción aeronáutica formal: es una herramienta para que los alumnos aprendan a hacer un prevuelo correcto y para que los pilotos habilitados la usen como repaso o material de enseñanza. Los helicópteros con equipo opcional pueden tener ítems modificados o adicionales (vea el suplemento del POH que corresponda). Verifique siempre en \texttt{www.robinsonheli.com} que la lista esté vigente.
+
+\begin{insightbox}[Marcas de torque]
+Muchos ítems piden verificar que ``las marcas de torque estén en una línea continua y no rotas''. La marca de torque (\emph{torque stripe}) es una línea de laca que el mecánico pinta sobre la tuerca, el perno y la pieza después de apretar al torque especificado. Si la línea está desalineada o cortada, el sujetador se movió: no vuele hasta que mantenimiento lo revise.
+\end{insightbox}
+
+\section{Procedimientos generales}
+
+\begin{itemize}
+\item Retire las ruedas de maniobra en tierra y todas las fundas y amarras.
+\item Retire incluso pequeñas acumulaciones de escarcha, hielo o nieve, especialmente de las palas.
+\item Revise los registros de mantenimiento para verificar que la aeronave esté aeronavegable.
+\item Revise el estado general y verifique que no haya daños visibles, pérdidas de fluidos ni desgaste anormal.
+\item Verifique que no haya \emph{fretting} en remaches y uniones: en el aluminio produce un polvo negro fino; en el acero, un residuo café rojizo o negro.
+\item Verifique que los Telatemps no muestren aumentos de temperatura no atribuibles a un cambio en las condiciones de operación (los mecánicos trazan una línea de referencia a la derecha del cuadro más alto oscurecido en operación).
+\item Verifique que las marcas de torque de los sujetadores críticos no estén rotas ni falten.
+\end{itemize}
+
+\begin{caso}[Mejora de Seguridad H-SE 28 (USHST)]
+El Equipo de Seguridad de Helicópteros de EE.\,UU. (USHST) creó la mejora de seguridad 28, ``Inspección de recorrido y seguridad de la carga externa'', tras revisar varios accidentes fatales en que los pilotos no hicieron un prevuelo y un recorrido adecuados para asegurar la carga. En uno de ellos, objetos que los pasajeros dejaron fuera de la aeronave golpearon el rotor de cola al despegar; el helicóptero se estrelló y murieron los tres ocupantes.
+\end{caso}
+
+\section{Recorrido: orden de inspección}
+
+La inspección se hace en trece zonas, comenzando por la puerta del capó derecho, avanzando por el lado derecho hacia la cola, volviendo por el lado izquierdo hasta la nariz y cerrando el recorrido por el lado derecho, para terminar en la cabina:
+
+\begin{multicols}{2}
+\begin{enumerate}\small
+\item Puertas del capó
+\item Lado derecho del motor
+\item Parte trasera del motor
+\item Empenaje
+\item Rotor de cola
+\item Cono de cola
+\item Lado izquierdo del motor
+\item Tanque principal de combustible
+\item Rotor principal
+\item Lado izquierdo del fuselaje
+\item Sección de la nariz
+\item Lado derecho del fuselaje
+\item Interior de la cabina
+\end{enumerate}
+\end{multicols}
+
+% ------------------------------------------------------------------
+\section{Zona 1: puertas del capó}
+
+\pv{1-1}{Interruptor de batería}{ON}
+Suba el interruptor maestro de batería a la posición encendida. Observe que la luz de monóxido de carbono destelle dos veces: después de los dos destellos debe apagarse, lo que indica que el sistema detector de CO funciona. Un destello continuo cada cuatro segundos indica una falla del sensor.
+
+\pv{1-2}{Luces de presión de aceite y alternador}{Encendidas}
+Con el motor detenido y la batería conectada, la luz de advertencia de presión de aceite (\textsf{OIL}) y la de precaución del alternador (\textsf{ALT}) deben estar encendidas. La luz \textsf{GOV OFF} solo se enciende con el interruptor del gobernador en OFF: desconecte momentáneamente el gobernador y verifique que las tres luces estén encendidas. Luego vuelva a poner el gobernador en ON.
+
+\begin{caso}
+El 19 de septiembre de 2013, un Eurocopter AS350B2 configurado para servicio médico (N810LE) aterrizó duro en un campo tras perder totalmente la potencia del motor cerca de Canton, Mississippi. Unos 10 minutos después del despegue se encendió la luz de baja presión de aceite y el indicador marcaba entre 0 y 2~psi. Unos 25 minutos después del despegue la temperatura del motor empezó a subir; el piloto bajó el colectivo, vio que la temperatura subía cada vez más rápido y buscó un campo para aterrizar. El motor perdió toda la potencia antes de llegar.
+\end{caso}
+
+\pv{1-3}{Interruptores de prueba de luces}{Presionar para probar}
+Abra la puerta del capó derecho. Presione uno a uno los botones de prueba y verifique que se encienda la luz correspondiente en el panel. Mantenga presionado el botón de bajo combustible: tarda unos 2 segundos en encenderse. Suba brevemente el colectivo para probar la bocina y la luz de baja RPM (la bocina sale por un parlante en el costado de la consola en los helicópteros anteriores, o por el sistema de audio en los posteriores).
+
+\begin{nota}
+Es buen momento para probar las luces anticolisión, de posición y de aterrizaje. Con la batería conectada y el embrague acoplado (necesario para que funcione la luz de aterrizaje), encienda las luces de posición (\textsf{NAV LTS}), la de aterrizaje y la anticolisión (\textsf{STROBE}). Rodee la aeronave y verifique que funcionen. Después, asegúrese de que el embrague quede desacoplado y las luces de aterrizaje y posición apagadas. Una práctica segura es dejar siempre la anticolisión encendida, para avisar a otros que puede haber un arranque pronto o simplemente como recordatorio de que la batería está conectada.
+\end{nota}
+
+\pv{1-4}{EMU (si está instalada)}{Revisar estado}
+Ubique la luz de estado de la EMU, si está instalada (es equipo estándar en los R22 y R44 nuevos comprados después del 15 de enero de 2020; se reconoce por la luz de estado, ámbar, en la pared trasera del compartimiento bajo el asiento del piloto). Con la batería conectada, revise el estado: luz fija, operación normal; destello rápido (4 por segundo), se registró una excedencia; destello lento (cada 2 segundos), falla de la EMU o de un sensor. Con la batería desconectada la EMU no tiene alimentación y no da indicación.
+
+\pv{1-5}{Cantidad de combustible}{Revisar indicadores}
+Con la batería aún conectada, lea el nivel en el indicador de combustible y determine cuánto debe agregar para tener el combustible planificado para el vuelo.
+
+\begin{caso}
+Gary Powers, el piloto estadounidense conocido por el incidente del U-2 derribado sobre la Unión Soviética en 1960, murió el 1 de agosto de 1977 en un accidente de helicóptero mientras trabajaba como reportero de tránsito para una televisora de Los Ángeles, a los mandos de un Bell 206 JetRanger. El helicóptero se quedó sin combustible al regresar de cubrir incendios forestales en Santa Bárbara.
+\end{caso}
+
+\pv{1-6}{Interruptor de batería}{OFF}
+Baje el interruptor maestro a la posición apagada.
+
+\begin{nota}
+El interruptor de batería controla el relé que desconecta la batería del sistema eléctrico. Dejarlo encendido mucho tiempo con el motor detenido puede descargar la batería y dificultar el arranque.
+\end{nota}
+
+\pv{1-7}{Cantidad del tanque auxiliar}{Revisar}
+Confirme la lectura del indicador ``midiendo'' el tanque con la varilla de combustible (normalmente guardada bajo el asiento izquierdo):
+\begin{itemize}
+\item Retire la tapa y póngala en el bolsillo trasero o sobre el asiento del piloto (ayuda a no olvidar reponerla).
+\item Verifique que la varilla esté limpia.
+\item Sujetándola firmemente (para no dejarla caer al tanque), introdúzcala hasta que la marca predeterminada quede a la altura del borde superior del tanque.
+\item Retírela y lea la indicación; debe coincidir con la cantidad que mostró el indicador.
+\item Devuelva la varilla bajo el asiento izquierdo.
+\end{itemize}
+
+\pv{1-8}{Tapa de llenado}{Apretada}
+Instale la tapa del tanque auxiliar y verifique que esté firme, con la franja de alineación de la tapa alineada con la marca pintada en el tanque.
+
+\begin{caso}
+El 9 de marzo de 2011, un instructor cargó combustible a un Robinson R22 (N112HE) mientras el alumno hacía el prevuelo. Despegaron y practicaban autorrotaciones cuando el helicóptero guiñó a izquierda y derecha. El instructor inició una autorrotación hacia un huerto; el helicóptero golpeó el suelo y los árboles y quedó sobre su costado izquierdo. En los restos faltaba la tapa del tanque izquierdo. En la trayectoria de vuelo se encontraron un trozo de pala del rotor de cola y la tapa, partida en dos; las marcas de impacto eran consistentes con que la tapa golpeó la pala.
+\end{caso}
+
+\pv{1-9}{Tanque auxiliar (si está instalado)}{Sin fugas}
+Inspeccione debajo del tanque auxiliar y verifique que no haya fugas.
+
+\begin{nota}
+El tanque auxiliar está interconectado con el principal y ubicado algo más alto, de modo que se vacía primero mientras aún queda combustible en el principal.
+\end{nota}
+
+\pv{1-10}{Líneas de combustible}{Sin fugas}
+Inspeccione las líneas visibles desde la puerta del capó derecho: conexiones apretadas y firmes, marcas de torque continuas y sin fugas.
+
+\begin{caso}
+El 1 de enero de 2014, un Eurocopter EC130 B4 (N133GC) hacía un vuelo de comprobación posterior al mantenimiento. En la aproximación final se encendió la luz de presión de combustible y el motor se apagó. El piloto bajó el colectivo para autorrotar, pero por la poca altura y velocidad el helicóptero aterrizó duro y volcó. En los restos, una tuerca abocinada (\emph{B-nut}) de una línea principal de combustible estaba sin alambre de frenado y suelta al girarla a mano.
+\end{caso}
+
+\pv{1-11}{Drenajes de los sumideros}{Tomar muestra}
+Ubique los drenajes de los tanques (los R22 con tanques principales dobles tienen dos; los de tanque principal único, uno).
+\begin{itemize}
+\item Introduzca el extremo del tubo en el frasco de prueba (normalmente bajo el asiento izquierdo o en un soporte dedicado).
+\item Suelte la abrazadera blanca del tubo.
+\item Drene una pequeña cantidad presionando con los dedos el extremo superior del tubo de drenaje.
+\item Busque contaminación (agua, suciedad, partículas).
+\item Verifique el color y tipo aprobado: el 100LL debe tener tinte azul.
+\item Devuelva el combustible al tanque y el frasco a su lugar.
+\item Verifique que el tubo no gotee y vuelva a poner la abrazadera.
+\end{itemize}
+
+\pv{1-12}{Aceite de la caja principal}{Lleno, sin fugas}
+Observe el visor de la caja del rotor principal. Si con el helicóptero nivelado no se ve aceite, debe agregarse. El aceite debe verse azulado o ámbar semitransparente; si está oscuro o turbio, debe reemplazarse. Verifique que no haya fugas.
+
+\begin{caso}
+El 12 de marzo de 2009, un Sikorsky S-92A (C-GZCH) llevaba trabajadores a una plataforma a unas 120~MN de la costa cuando sufrió una pérdida rápida y total del aceite de la caja de transmisión principal, a unas 47~MN de tierra. La tripulación declaró emergencia e intentó regresar. Unos 11 minutos después de la pérdida de presión, durante un intento de amaraje, el helicóptero golpeó el agua con una alta razón de descenso. La Junta de Seguridad del Transporte de Canadá señaló entre los hallazgos principales la falla de dos de los tres espárragos de montaje del filtro de aceite de la caja principal, lo que causó la pérdida de aceite, el sobrecalentamiento y la falla del piñón que impulsa la transmisión del rotor de cola.
+\end{caso}
+
+\pv{1-13}{Freno rotor}{Accionamiento normal}
+Ubique la manilla del freno rotor en la parte superior interior de la cabina. Si el freno está aplicado (la cadena plateada está extendida), tire suavemente la manilla hacia abajo y lateralmente hacia el frente hasta que se suelte del soporte y déjela retraerse. Tire del freno hasta sentir resistencia y déjelo retraerse. Ubique el conjunto del brazo del freno detrás de la caja principal: verifique que el cable no esté deshilachado ni dañado; levante el brazo con la mano y escuche el ``clic'' del sensor del freno; verifique que el cableado del sensor esté firme y sin daños; y que todos los sujetadores estén firmes con las marcas de torque continuas.
+
+\pv{1-14}{Acoplamiento flexible}{Sin grietas, tuercas firmes}
+Ubique el acoplamiento flexible delantero detrás de la caja principal. Todo el conjunto es el acoplamiento; la placa delgada del medio es la placa flexible; la horquilla (\emph{yoke}) está entre el eje y la placa, y sus dos piezas gruesas que se unen a la placa son las bridas de la horquilla. Verifique que la placa flexible no tenga grietas ni daños y que los sujetadores estén firmes con las marcas de torque continuas.
+
+\begin{caso}
+El 17 de enero de 2010, el piloto de un Eurocopter AS350 B3 de servicio médico (N904CF) llevó el helicóptero a un estacionario a 25~ft y, al iniciar la transición a vuelo de avance, oyó un fuerte estampido. Hubo una pérdida de potencia; el piloto bajó levemente el colectivo y aterrizó duro en la plataforma. Faltaban las tuercas que unen el acoplamiento flexible motor--caja principal: las tuercas y sus arandelas estaban sueltas y amontonadas dentro de la carcasa de entrada de la transmisión.
+\end{caso}
+
+\pv{1-15}{Bridas de la horquilla}{Sin grietas}
+Ubique las bridas de las horquillas detrás de la caja principal (las dos piezas gruesas que se unen a la placa flexible a cada lado) y verifique que no tengan grietas ni daños. En la cara trasera de la brida de la horquilla delantera, mirando hacia la caja principal, hay dos imanes emisores de RPM del rotor: verifique que estén firmes.
+
+\begin{caso}
+El 13 de marzo de 2013, un Robinson R44 (N392GP) sufrió un fuerte estampido seguido de inmediato por la bocina de baja RPM, una luz de advertencia y una rápida caída de la indicación de RPM del rotor. El instructor inició una autorrotación bajando el colectivo y el motor perdió potencia de inmediato. Después el motor funcionó normalmente en pruebas, pero faltaba uno de los imanes que dan la indicación de RPM del rotor en la horquilla giratoria de la transmisión; se encontró adherido a un perno justo detrás de la horquilla. La separación del imán hizo caer la indicación de RPM y activó la bocina y la luz de baja RPM, lo que llevó a la emisión de los boletines de servicio SB-86 y SB-108.
+\end{caso}
+
+\pv{1-16}{Telatemp de la caja}{Normal}
+Observe el Telatemp de la caja principal. Mantenimiento traza una línea a la derecha de la última temperatura conocida: verifique que no haya cuadros nuevos ennegrecidos. Si un aumento de temperatura no puede explicarse por un cambio en las condiciones de operación, el componente debe examinarse cuidadosamente antes del siguiente vuelo.
+
+\begin{nota}
+Es buen momento para revisar el cableado del detector de virutas de la caja principal, en su parte inferior: tuerca y conexiones firmes, sin cables sueltos.
+\end{nota}
+
+\pv{1-17}{Embrague sprag}{Sin fugas}
+Ubique el lado derecho del cubo de la polea superior. Inspeccione el embrague sprag incorporado en el cubo buscando fugas de fluido rojo. Pruébelo tomando firmemente con la mano la parte superior de la polea y las correas y girándolas hacia usted: la polea y las correas deben girar libremente mientras el rotor principal permanece quieto.
+
+\begin{nota}
+Muchos helicópteros usan un embrague sprag como unidad de rueda libre: desacopla automáticamente el sistema rotor del motor cuando la RPM del motor es menor que la del rotor. Esto permite autorrotar, porque las palas pueden girar libremente si falla el motor.
+\end{nota}
+
+\pv{1-18}{Toma estática}{Despejada}
+Ubique el tubo de la toma estática dentro del capó derecho. Verifique que esté libre de obstrucciones (insectos o suciedad), firme y sin daños.
+
+\begin{nota}
+El personal de mantenimiento puede drenar el agua de las líneas pitot--estáticas retirando los tapones plásticos accesibles por el panel de inspección bajo la cabina. Solo debería ser necesario si el anemómetro o el altímetro funcionan erráticamente.
+\end{nota}
+
+\pv{1-19}{Terminales de varillas de control}{Libres, sin juego}
+Ubique los extremos de todas las varillas de control y tubos de empuje--tracción. Verifique que giren libremente pero sin holgura (hay un movimiento admisible de los terminales, vertical y lateral; consulte los límites con mantenimiento), que la arandela de seguridad esté por fuera de cada terminal y que todos los sujetadores estén firmes con las marcas de torque continuas.
+
+\begin{caso}
+El 27 de marzo de 2007, un Robinson R44 (N744SH) hacía un vuelo de instrucción por la costa de Florida. Un testigo, ex piloto y mecánico, lo vio en vuelo recto y nivelado y luego oyó un cambio en el ruido del rotor seguido de un ``bang/pop/twang''. El helicóptero hizo un alabeo brusco a la izquierda y descendió con la nariz baja hasta el terreno. El examen de los controles reveló que la unión del tubo de empuje--tracción entre el servo delantero derecho y el plato oscilante estaba desconectada: faltaba toda la ferretería de unión (perno, contratuerca, dos arandelas y tuerca \emph{pal}).
+\end{caso}
+
+\pv{1-20}{Bastidor de tubos de acero}{Sin grietas}
+Inspeccione el bastidor de tubos de acero: sin grietas ni daños en los tubos ni en las soldaduras que los unen.
+
+\begin{nota}
+Todas las estructuras de tubos de acero soldados del helicóptero tienen alivio de tensiones. No se permiten reparaciones por soldadura fuera de Robinson Helicopter Co.
+\end{nota}
+
+\pv{1-21}{Todos los sujetadores}{Firmes}
+Hay numerosas amarras plásticas (\emph{zip ties}) y otros sujetadores (tuercas, pernos, tornillos) que sostienen cables y componentes: verifique que todos estén firmes.
+
+\begin{caso}
+El 24 de septiembre de 2022, un Agusta AW139 (N811TA) en crucero comenzó a oler a ``plástico quemado''. Minutos después hubo un ``whoof'' y salió humo de la parte trasera del panel de disyuntores del techo; en segundos la cabina se llenó de un ``humo espeso naranja/café'' con ``visibilidad cero''. La tripulación logró despejar el humo, pero el cíclico y el colectivo requerían mucha fuerza para mantenerlos en posición. El helicóptero llegó a destino, aterrizó en la pista con velocidad, se salió por la derecha y se detuvo en el pasto. Se encontró cableado mal ruteado que rozaba un tubo de torsión del colectivo (C3); el roce provocó un cortocircuito y un fuego localizado que dañó térmicamente el tubo y terminó en la pérdida de continuidad del control colectivo.
+\end{caso}
+
+\pv{1-22}{Control del rotor de cola}{Sin interferencia}
+Ubique el tubo de empuje--tracción y el balancín del rotor de cola (la pieza metálica vertical, con pivote inferior, que une los tubos al frente del compartimiento del motor). Empuje y tire el tubo verificando que se mueva suavemente y sin interferencias; que no tenga grietas, abolladuras ni daños; y que los sujetadores estén firmes con las marcas de torque continuas.
+
+\begin{caso}
+El 15 de julio de 2019, un Robinson R44 (N144TG) inició un viraje a la izquierda durante maniobras de instrucción en estacionario y giró ``muy rápidamente''. Según un video de vigilancia, alabeó unos 70° a la izquierda al acercarse a un cerco, y las palas tocaron el suelo. Se encontró un punzón en el mamparo trasero de la cabina, apoyado contra el balancín de control del rotor de cola, que limitaba parte de la autoridad del rotor de cola.
+\end{caso}
+
+\pv{1-23}{Puertas del capó}{Trabadas}
+Cierre las puertas del capó y verifique que queden bien trabadas. Los R22 con un solo tanque principal tienen una sola puerta de capó; los que tienen tanque auxiliar tienen puertas adicionales.
+
+\begin{caso}
+El 17 de agosto de 2017, un Airbus EC-120B (G-SWNG) sufrió daños cuando el capó derecho del motor se abrió y golpeó las palas del rotor principal durante la recogida para aterrizar. Los tres pestillos del capó habían quedado sin trabar después de un mantenimiento. El piloto no hizo un recorrido de inspección antes del vuelo, que habría detectado los pestillos abiertos.
+\end{caso}
+
+% ------------------------------------------------------------------
+\section{Zona 2: lado derecho del motor}
+
+\pv{2-1}{Ductos de aire del carburador}{Firmes}
+Ubique los ductos: el ducto naranja largo, unido a la abertura redonda con malla, es la toma de aire; el naranja corto es el de calefacción del carburador; el naranja horizontal es el de calefacción de cabina (revíselo también). Verifique que la toma esté libre de obstrucciones, que todos los ductos estén unidos a sus bocas con abrazaderas apretadas, que no tengan roturas ni cortes y que conserven su forma cilíndrica (que no se hayan aplastado por un alambre interno roto).
+
+\pv{2-2}{Toma de aire caliente}{Firme}
+La toma de calefacción del carburador es el canal metálico que envuelve el tubo de escape y se conecta al ducto naranja que va a la caja de aire. Verifique que la toma y sus dos abrazaderas interiores estén firmes y que su montaje no haya causado roce en el tubo de escape.
+
+\begin{nota}
+Ante un filtro de aire obstruido, una compuerta de derivación con resorte montada bajo la tapa de la caja de aire deja pasar el aire. Empuje hacia arriba la pequeña compuerta para verificar que abra libremente, y verifique que los tornillos bajo la caja de aire estén firmes.
+\end{nota}
+
+\pv{2-3}{Chapa del motor}{Sin grietas}
+Inspeccione la chapa que cubre el motor en el lado derecho y el frente derecho: sin grietas ni daños visibles. Inspeccione el retén del panel que va bajo los cilindros (incluye un resorte y sujeta la chapa) y verifique que no toque ni roce la línea de aceite que pasa sobre él. Todos los sujetadores deben estar firmes.
+
+\begin{nota}
+La chapa reduce la acumulación de calor guiando el aire frío alrededor del motor. Las grietas pueden hacer que se desprendan trozos, un peligro potencial para el rotor de cola.
+\end{nota}
+
+\pv{2-4}{Terminales eléctricos}{Apretados}
+Revise todos los terminales eléctricos: conexiones apretadas, sin roces ni cables dañados. Revise la unidad de control del alternador en la parte trasera del cortafuego, el magneto y los cables de bujías hacia los cilindros, y el cable blanco hacia el motor de arranque.
+
+\begin{caso}
+El 5 de agosto de 2000, el piloto de un Rotorway 152 (N11662) en crucero oyó un fuerte golpe detrás de la cabina, sintió una guiñada y creyó que el rotor de cola se había desprendido. Tras entrar en autorrotación notó que aún tenía control del rotor de cola; el motor funcionaba suavemente en ralentí y continuó la autorrotación así. Aterrizó en un campo, pero al final del recorrido los patines se enredaron en una plantación de soya y el helicóptero volcó. El piloto informó que, tras una inspección reciente, había dejado un cable de bujía sin asegurar, y estaba seguro de que eso causó la interrupción de potencia y la guiñada.
+\end{caso}
+
+\pv{2-5}{Línea de combustible}{Sin fugas}
+Revise la línea naranja de combustible hacia el carburador: sin fugas, conexiones firmes y marcas de torque continuas.
+
+\begin{caso}
+El 27 de marzo de 2019, un Eurocopter AS350B3 (N818MC) perdió potencia durante operaciones de quema controlada. El piloto autorrotó; el helicóptero golpeó árboles y luego el terreno, y quedó de costado. Una línea de combustible entre el cortafuego y la unidad hidromecánica (HMU) estaba suelta y sin el alambre de frenado requerido.
+\end{caso}
+
+\pv{2-6}{Compuerta del enfriador de aceite}{Revisar}
+Ubique la compuerta del enfriador de aceite, empújela para abrirla e inspeccione el interior: retire hojas u otros residuos que puedan restringir el flujo de aire al enfriador.
+
+\begin{caso}
+El 25 de septiembre de 2017, tras unos 45 minutos de vuelo, el piloto de un Mosquito XE 28 (N926KB) inició un descenso lento y notó una pérdida importante de RPM de motor y rotor. Intentó aumentar la potencia sin respuesta, entró en autorrotación y buscó dónde aterrizar, pero no alcanzó el área abierta y golpeó el techo de una casa. Los datos del monitor electrónico del motor mostraron un sobrecalentamiento, confirmado luego: la línea de retorno del refrigerante, que sacaba el calor de los cilindros y estaba clasificada para un máximo de 200~°F, se había derretido y soltado de su conector de bronce.
+\end{caso}
+
+\pv{2-7}{Líneas de aceite}{Sin fugas ni roces}
+Inspeccione las líneas de aceite que vienen del enfriador y de los cilindros buscando fugas y verificando la firmeza de los acoples, con marcas de torque continuas. Revise también las marcas de torque de los pernos de la parte inferior del enfriador.
+
+\begin{nota}
+Es buen momento para revisar el estado del motor de arranque, incluidos los dientes del piñón \emph{bendix}, y que esté firmemente montado.
+\end{nota}
+
+\pv{2-8}{Sistema de escape}{Sin grietas}
+Inspeccione el escape buscando grietas y verifique que todos los tubos y sujetadores estén firmes. Cuidado: no tome el escape a mano desnuda si el motor funcionó recientemente.
+
+\begin{caso}
+El 29 de enero de 1997, un Enstrom F-28C (N51774) ``empezó a perder potencia'' mientras instructor y alumno practicaban despegues y aterrizajes. El instructor volvió hacia el aeropuerto descendiendo con pérdida de potencia; antes de llegar al suelo el motor perdió toda la potencia. Tras posarse en una calle de rodaje vio llamas en el compartimiento del motor y, después de detenerlo, intentó sin éxito apagarlas con un extintor de mano. Había un agujero fundido sobre la lumbrera de escape del cilindro N.º 2; la fuga de gases cortó la línea de aceite del cilindro N.º 4 e inició el fuego.
+\end{caso}
+
+\pv{2-9}{Estado general del motor}{Revisar}
+Revise el estado general del motor y busque cualquier cosa fuera de lugar o que se haya pasado por alto en los chequeos anteriores.
+
+\begin{caso}
+El 17 de julio de 1997, un Bell 206L-1 (N3892R) despegaba por un claro entre árboles en Amelia, Luisiana. A unos 60~ft AGL y 40~nudos hubo un fuerte estampido; el helicóptero guiñó a la izquierda y la RPM del rotor empezó a caer. El piloto autorrotó con un viraje cerrado a la derecha hacia la única área disponible, aterrizó duro sobre el patín derecho y volcó. El motor, probado después, superó las especificaciones de un motor nuevo; al desarmarlo se encontraron restos de sangre y tejido en el impulsor y los tubos de descarga del compresor, consistentes con otros motores que habían ingerido ranas arbóreas verdes.
+\end{caso}
+
+\pv{2-10}{Estado de las correas en V}{Revisar}
+Inspeccione las correas buscando desgaste excesivo o daños: grietas, cortes, deshilachado, descascarado, exceso de polvo de correa o patrones de desgaste anormales. Gire las correas sobre la polea para revisarlas completas.
+
+\begin{caso}
+El 9 de mayo de 2011, un Robinson R22 (VH-DSD) hacía arreo de ganado muy cerca del suelo cuando se perdió la transmisión al rotor, con una alta razón de descenso al impacto. La ATSB determinó que habían fallado las dos correas en V que transmiten el torque del motor al rotor. El daño de la correa delantera indicaba que se había salido parcialmente de la polea; en algún momento se fragmentó, comprometiendo la redundancia del sistema. Cuando falló la correa trasera, se perdió toda la transmisión a los rotores.
+\end{caso}
+
+\pv{2-11}{Holgura de las correas en V}{1,5 in (4 cm) máximo}
+Empuje con el dedo cada correa, una por vez, para revisar la holgura: no más de 1,5~in de desviación. Si se desvían más, haga ajustar el actuador de tensión antes de volar (SN-33).
+
+\begin{caso}
+El 24 de marzo de 2005, un Robinson R22 (N225G) en tramo base a la pista 21R guiñó súbitamente a la izquierda y luego a la derecha; al mismo tiempo el helicóptero se sacudió y se encendió la luz del embrague. El instructor tomó los controles y autorrotó; a unos 20~ft inició la recogida, pero el terreno era arena blanda y el helicóptero volcó al tocar. Las correas estaban destrozadas. Unas 4,3 horas antes, en una inspección de 100 horas, un mecánico había aflojado la contratuerca de la carcasa del actuador de las correas y girado hacia arriba el tornillo de tope inferior hasta el fondo; olvidó reposicionarlo y apretar la tuerca. Las correas quedaron excesivamente sueltas, se salieron de la polea inferior y se cortaron.
+\end{caso}
+
+\pv{2-12}{Embrague sprag}{Sin fugas}
+Igual que el ítem 1-17, ahora desde el lado izquierdo del cubo de la polea superior: busque fugas de fluido rojo y pruebe la rueda libre girando la polea y las correas hacia usted con el rotor quieto.
+
+\pv{2-13}{Rodamiento superior}{Sin fugas}
+Ubique el rodamiento superior detrás de la polea superior: sin grietas ni daños; sin fugas ni exceso de grasa a ambos lados; sujetadores firmes con marcas de torque continuas.
+
+\begin{nota}
+La falla de este rodamiento en vuelo podría causar la pérdida de potencia al rotor. Justo antes de fallar un rodamiento del actuador, la luz del embrague puede parpadear constantemente (encenderse y apagarse en menos de un segundo) o encenderse por más tiempo que lo normal. No lo confunda con el retensado normal en vuelo (luz encendida hasta 10 segundos y luego apagada). No reanude el vuelo hasta determinar la causa de una indicación anormal.
+\end{nota}
+
+\pv{2-14}{Telatemp del rodamiento superior}{Normal}
+Observe el Telatemp del rodamiento superior: no debe haber cuadros nuevos ennegrecidos a la derecha de la línea de referencia.
+
+\begin{nota}
+Es buen momento para inspeccionar el actuador del embrague, bajo el rodamiento superior: sin grietas ni daños, sujetadores firmes y marcas de torque continuas. El actuador tendrá algo de movimiento, porque con el embrague desacoplado no está tensado, pero no debe tener holgura excesiva.
+\end{nota}
+
+\pv{2-15}{Estado de la polea superior}{Revisar}
+Inspeccione visualmente toda la polea superior en busca de grietas o daños. Recorra con los dedos los flancos de cada ranura: deben ser lisos y uniformes, sin estrías filosas.
+
+\begin{caso}
+El 15 de julio de 2010, un Robinson R22 (N74603) volaba a 80--100~ft cuando se encendió brevemente la luz del embrague y se apagó. Se encendió de nuevo y el piloto sintió vibración; al bajar el colectivo para descender oyó un fuerte ``pop'' y un ruido de rechinar atrás. Autorrotó e impactó con la nariz baja. Las ranuras de la polea superior estaban desgastadas más allá de los límites de servicio. La bitácora mostraba que las correas se habían reemplazado 22,9 horas antes del accidente.
+\end{caso}
+
+\pv{2-16}{Desgaste de las ranuras de la polea inferior}{Liso y uniforme}
+Recorra con los dedos los flancos de cada ranura de la polea inferior: lisos y uniformes, sin estrías filosas ni daños.
+
+\begin{nota}
+Demorar el acoplamiento del embrague en el arranque, o el corte de la mezcla en la detención, puede hacer que las correas sueltas desgasten la polea y creen estrías capaces de cortarlas.
+\end{nota}
+
+\pv{2-17}{Acoplamiento flexible}{Sin grietas, tuercas firmes}
+Ubique el acoplamiento flexible intermedio en el eje, detrás del rodamiento superior (placa flexible al centro, horquillas y sus bridas a cada lado). Placa sin grietas ni daños; sujetadores firmes con marcas de torque continuas.
+
+\begin{caso}
+El 10 de septiembre de 2022, un Bell 206L-1 (N242BH) regresaba a su base tras una misión de combate de incendios. En la aproximación comenzó una rotación a la derecha imposible de detener aun con todo el pedal izquierdo. El piloto intentó aterrizar en el patio de una casa, pero aterrizó duro y volcó sobre el costado izquierdo. El eje de transmisión del rotor de cola se había separado en un acoplamiento flexible y faltaban componentes críticos del conjunto.
+\end{caso}
+
+\pv{2-18}{Bridas de la horquilla}{Sin grietas}
+Ubique las bridas de las horquillas intermedias, detrás del rodamiento superior, y verifique que no tengan grietas ni daños.
+
+\begin{caso}
+El 26 de mayo de 2022, segundos después de elevarse a estacionario, un Robinson R44 (N132TC) empezó a ``sacudirse violentamente''; se oyeron golpes fuertes y rápidos y la nariz guiñó a la izquierda. El instructor cerró el acelerador y autorrotó desde el estacionario; el helicóptero quedó sobre sus patines pero con daños sustanciales en la célula. Tras detener el motor, el instructor notó que el rotor principal seguía girando mientras el de cola estaba detenido: la horquilla del eje del embrague se había fracturado en una de sus dos orejas de unión a la placa flexible.
+\end{caso}
+
+\pv{2-19}{Bastidor de tubos de acero}{Sin grietas}
+Como en 1-20: sin grietas ni daños en tubos y soldaduras; sujetadores firmes con marcas de torque continuas.
+
+\pv{2-20}{Control del rotor de cola}{Sin interferencia}
+Ubique el tubo de empuje--tracción y el balancín del rotor de cola (aquí, la pieza metálica plana con pivote central que une los tubos al frente del cono de cola). Muévalo verificando funcionamiento suave y sin interferencias; sin grietas, abolladuras ni daños en el balancín o el tubo; sujetadores firmes con marcas de torque continuas.
+
+\begin{caso}
+El 18 de agosto de 2024, un Robinson R44 (N740RH) sufrió daños sustanciales antes de despegar. La piloto arrancó y acopló el embrague antes de embarcar a los pasajeros; mientras el rotor se acoplaba, vio que el pedal izquierdo se iba solo completamente adelante. Detuvo de inmediato el motor y los rotores y salió a revisar: el tubo de empuje--tracción del rotor de cola estaba doblado y cortado detrás de la caja de cola, cerca del conjunto del balancín.
+\end{caso}
+
+% ------------------------------------------------------------------
+\section{Zona 3: parte trasera del motor}
+
+\pv{3-1}{Tuerca del ventilador de enfriamiento}{Pasador alineado con las marcas}
+Verifique que el pasador de la tuerca del ventilador esté alineado con las marcas o la franja de torque del ventilador, y que los demás sujetadores estén firmes con sus marcas de torque continuas.
+
+\begin{nota}
+La desalineación del pasador y la marca puede indicar que hubo una sobrevelocidad del motor.
+\end{nota}
+
+\pv{3-2}{Ventilador de enfriamiento}{Sin grietas}
+Inspeccione todo el ventilador, dentro de su carcasa: sin grietas ni daños y sin residuos aspirados.
+
+\begin{caso}
+El 18 de octubre de 2020, un Robinson R22 (N566BC) viraba a la izquierda hacia el tramo de viento cruzado en un vuelo de instrucción cuando el piloto oyó un ruido de ``metal contra metal'' y el helicóptero dio un tirón. Mientras buscaba un claro, dio otro tirón y el piloto creyó que perdía potencia; no alcanzó un área despejada y el helicóptero bajó ``derecho'' entre los árboles. Faltaban casi todas las correas. Los pernos de sujeción del ventilador estaban flojos y podían girarse fácilmente con una llave, lo que indicaba que lo estaban desde hacía tiempo; probablemente el ventilador transmitió cargas vibratorias que hicieron que el actuador de las correas se extendiera de más poco a poco, hasta la falla de las correas y la pérdida de potencia al rotor.
+\end{caso}
+
+\pv{3-3}{Carcasa del ventilador}{Sin grietas}
+Inspeccione la carcasa (\emph{scroll}) de fibra de vidrio alrededor del ventilador: sin grietas ni daños y con todos los sujetadores firmes.
+
+\begin{nota}
+La vibración excesiva puede iniciar y agrandar grietas. Informe cualquier anomalía a mantenimiento para evitar daños mayores.
+\end{nota}
+
+\pv{3-4}{Telatemps del rodamiento inferior}{Normal}
+Observe el Telatemp del rodamiento inferior: sin cuadros nuevos ennegrecidos.
+
+\begin{nota}
+Los Telatemps pueden decolorarse por la intemperie; en ese caso deben reemplazarse.
+\end{nota}
+
+\pv{3-5}{Rodamiento inferior}{Sin fugas}
+Ubique el rodamiento inferior detrás de la polea inferior: sin grietas ni daños, sin fugas ni exceso de grasa a ambos lados, sujetadores firmes con marcas de torque continuas. (Vea la nota del ítem 2-13 sobre la luz del embrague y la falla de rodamientos del actuador.)
+
+% ------------------------------------------------------------------
+\section{Zona 4: empenaje}
+
+\pv{4-1}{Superficies de cola}{Sin grietas}
+Inspeccione los estabilizadores vertical y horizontal, el patín de cola y el protector del rotor de cola: sin grietas, abolladuras ni otros daños. Si hay abolladuras, verifique que mantenimiento ya las haya revisado y registrado, confirmando que no afectan la seguridad. Verifique que no haya raspaduras bajo el patín de cola, que indicarían un golpe de cola.
+
+\begin{nota}
+A comienzos de 2024 Robinson obtuvo la aprobación de la FAA para su nuevo empenaje del R22, con estabilizador horizontal simétrico y nuevo cono de cola, que hoy es estándar en todos los Robinson de nueva fabricación.
+\end{nota}
+
+\pv{4-2}{Sujetadores}{Firmes}
+Verifique que toda la ferretería de montaje esté firme y con marcas de torque continuas, y que las amarras que sujetan los cables en la caja de cola estén firmes.
+
+\begin{nota}
+Es buen momento para inspeccionar los pernos de unión del cono de cola del lado derecho: firmes y con marcas de torque continuas.
+\end{nota}
+
+\pv{4-3}{Luz de posición}{Revisar}
+Verifique que la luz de posición trasera esté firmemente montada, sin grietas ni daños, sin humedad atrapada ni LED quemados.
+
+\begin{nota}
+En los R22 sin tanque auxiliar, el bloque metálico bajo la luz de posición es un contrapeso para el peso y balance; no existe en los que tienen tanque auxiliar.
+\end{nota}
+
+% ------------------------------------------------------------------
+\section{Zona 5: rotor de cola}
+
+\pv{5-1}{Telatemp de la caja}{Normal}
+Observe el Telatemp de la caja de cola: sin cuadros nuevos ennegrecidos.
+
+\begin{nota}
+Es buen momento para revisar el cableado del detector de virutas y el alambre de frenado de la caja de cola, en su parte inferior: tuerca y conexiones firmes, sin cables sueltos, y todo el alambre de frenado presente y firme.
+\end{nota}
+
+\pv{5-2}{Caja de cola}{Aceite visible, sin fugas}
+Observe el visor de la caja de cola. Si con el helicóptero nivelado no se ve aceite, debe agregarse. Debe verse azulado o ámbar semitransparente (oscuro o turbio: reemplazar). Sin fugas.
+
+\begin{caso}
+El 25 de agosto de 2021, un Enstrom 280FX (G-OJBB) perdió el empuje del rotor de cola en estacionario cerca del suelo, junto a la cima de un cerro, con pérdida de control y aterrizaje duro. La caja de cola tenía daños en los engranajes cónicos y un rodamiento fallado, consistentes con falta de lubricación. El mantenimiento de la caja no se había hecho según las instrucciones del fabricante; probablemente se agregó aceite insuficiente en un servicio hecho 25 horas de vuelo antes del accidente.
+\end{caso}
+
+\pv{5-3}{Palas}{Limpias, sin daños ni grietas}
+Inspeccione ambas palas del rotor de cola: sin picaduras, grietas ni otros daños; sujetadores firmes con marcas de torque continuas; la línea de unión entre el revestimiento y el larguero no debe ser visible. Revise visualmente las tapas de punta buscando una línea de unión expuesta o pintura ampollada: la pintura ampollada puede indicar corrosión subyacente. Si hay pintura ampollada en la línea de unión de la tapa de punta o junto a ella, o si la línea está expuesta, haga el mantenimiento antes de volar.
+
+\pv{5-4}{Varillas de paso}{Sin juego}
+Ubique las varillas de paso del rotor de cola: sin grietas, corrosión ni otros daños; libres para girar pero sin holgura (consulte con mantenimiento los límites admisibles); arandela de seguridad por fuera del terminal; sujetadores firmes con marcas de torque continuas.
+
+\begin{caso}
+El 22 de mayo de 2012, un Eurocopter AS350 B2 (N105TV) acababa de iniciar una órbita lenta cuando sufrió una vibración severa, continua y tan intensa que el piloto desvió a un aeropuerto cercano y aterrizó. Faltaba uno de los pernos de las varillas de cambio de paso del rotor de cola (unión al brazo de paso). El vuelo seguía a una inspección de 100 horas terminada ese mismo día; el perno no había quedado correctamente apretado y asegurado, y se soltó en vuelo.
+\end{caso}
+
+\pv{5-5}{Rodamientos de balanceo}{Revisar estado}
+Ubique los dos rodamientos de balanceo, reconocibles por el material elastomérico negro del cubo alrededor del perno de balanceo. Inspecciónelos por daños o desgaste excesivo y verifique su estado balanceando suavemente las palas: el movimiento debe ser firme pero suave.
+
+\begin{nota}
+La fatiga, la contaminación con aceite o la sobrecarga pueden degradar el elastómero. Las pequeñas grietas superficiales (por fatiga) son normales y no exigen reemplazo. Al crecer, se pierde suficiente elastómero para reducir la rigidez y aumentar la vibración. Si hay grietas profundas (más de 0,10~in) en más del 25\,\% de la cara del elastómero, reemplace el rodamiento.
+\end{nota}
+
+\pv{5-6}{Perno de balanceo}{No gira}
+Ubique el perno de balanceo, que atraviesa el centro de los rodamientos elastoméricos. Verifique que no gire, que la tuerca esté firme y que las marcas de torque estén continuas.
+
+\begin{caso}
+El 29 de mayo de 2011, el piloto de un Robinson R22 (N8313E) sintió una vibración anormal en crucero e hizo un aterrizaje precautorio en la entrada de una casa. El perno de la bisagra de balanceo del rotor de cola se había fracturado por fatiga y podía girarse a mano; no tenía marca de torque que ayudara a detectar el movimiento. La lista de prevuelo del fabricante exigía verificar que el perno no girara; el piloto declaró que no siempre usaba esa lista. La última inspección anual se había hecho unas 4 semanas antes.
+\end{caso}
+
+\pv{5-7}{Balancín de control}{Libre, sin juego}
+Ubique el balancín de control de paso del rotor de cola (la pieza en L con pivote central que une el tubo de empuje--tracción con el plato oscilante del rotor de cola). Muévalo y verifique funcionamiento suave y sin interferencias; sin grietas ni daños; terminal con el movimiento admisible y arandela de seguridad por fuera (por debajo); y todos los sujetadores ---incluidas la contratuerca interior y la tuerca \emph{pal} del tubo--- firmes con marcas de torque continuas.
+
+\begin{nota}
+Es buen momento para revisar el plato oscilante del rotor de cola: debe deslizarse suavemente adelante y atrás, sin grietas, daños ni exceso de grasa, y estar firme y sin holgura.
+\end{nota}
+
+% ------------------------------------------------------------------
+\section{Zona 6: cono de cola}
+
+\pv{6-1}{Revestimientos}{Sin grietas ni abolladuras}
+Inspeccione todo el revestimiento de aluminio del cono de cola: sin grietas ni abolladuras. Verifique que estén todos los remaches del cono y del empenaje, sin grietas, holgura ni residuos de \emph{fretting}, y que los paneles de inspección estén firmes.
+
+\begin{nota}
+El cono de cola es monocasco: sus revestimientos de aluminio soportan las cargas primarias. Los daños suelen producirse al mover la aeronave dentro o fuera del hangar.
+\end{nota}
+
+\pv{6-2}{Estado de la luz estroboscópica}{Revisar}
+Verifique que la luz anticolisión esté firmemente montada, sin grietas ni daños, sin humedad atrapada ni LED quemados.
+
+\begin{nota}
+Encienda la luz estroboscópica antes de arrancar y déjela encendida hasta que los rotores se detengan: advierte al personal de tierra.
+\end{nota}
+
+\pv{6-3}{Antena}{Revisar}
+Inspeccione las antenas sobre el cono de cola: firmemente montadas, sin grietas ni daños.
+
+\begin{nota}
+Es buen momento para inspeccionar los pernos de unión del cono de cola del lado izquierdo: firmes y con marcas de torque continuas.
+\end{nota}
+
+% ------------------------------------------------------------------
+\section{Zona 7: lado izquierdo del motor}
+
+\pv{7-1}{Aceite del motor}{4 a 6 qt}
+Ubique y retire el tubo y la varilla de aceite. Limpie la varilla con un paño limpio, insértela hasta asentarla, retírela y lea el nivel: debe estar entre 4 y 6 cuartos. Reinstale la varilla y gírela hasta apretarla con los dedos.
+
+\begin{nota}
+El calor del motor dilata levemente la varilla. Apretarla solo con los dedos evita que quede demasiado apretada y sea difícil de sacar.
+\end{nota}
+
+\pv{7-2}{Filtro de aceite (si está instalado)}{Firme, sin fugas}
+Ubique el filtro de aceite y verifique que esté firme y sin fugas visibles.
+
+\begin{caso}
+El 18 de septiembre de 2018, en crucero, se encendió la luz de aceite de un Robinson R44 (N632NV). El piloto inició un descenso inmediato y confirmó que el motor seguía dando potencia; cerca del suelo manejó levemente el colectivo para mantener la RPM. El helicóptero tocó con algo de velocidad y se deslizó unos 40~ft. Había aceite por fuera de ambos paneles inferiores del motor y por dentro del panel del lado del piloto; la varilla marcaba aceite a unos 1/8 de pulgada. El torque necesario para girar el filtro era muy inferior al normal, el acople roscado del adaptador del filtro estaba enroscado solo unos 2 hilos y la cavidad del filtro estaba vacía. La pérdida de aceite se debió probablemente al adaptador del filtro suelto.
+\end{caso}
+
+\pv{7-3}{Líneas de combustible}{Sin fugas}
+Ubique la línea rígida de combustible donde sale bajo el tanque principal e inspecciónela hasta el gascolator; inspeccione la línea flexible del gascolator al carburador. Sin fugas y con marcas de torque continuas.
+
+\begin{caso}
+El 19 de enero de 2004, un Robinson R22 (N224LC) perdió potencia en el despegue a unos 150~ft. El piloto hizo un aterrizaje de emergencia en un campo abierto y hubo un incendio posterior. La línea principal de combustible al carburador estaba separada, justo bajo su codo de 90°; la tuerca abocinada que la fija al codo estaba suelta y había marcas de herramienta en el acople. La última inspección de 100 horas se había hecho unas 7 horas antes del accidente.
+\end{caso}
+
+\pv{7-4}{Drenaje del gascolator}{Tomar muestra}
+Ubique el drenaje del gascolator, introduzca el tubo en el frasco de prueba, drene una pequeña cantidad presionando el extremo superior del tubo con el borde del frasco o con los dedos, busque contaminación (agua, suciedad, partículas) y verifique el color (100LL: tinte azul). Devuelva el combustible al tanque y el frasco a su lugar, y verifique que el tubo no gotee.
+
+\pv{7-5}{Articulación del acelerador}{Operable}
+Ubique la articulación del acelerador en el lado izquierdo del carburador. Abra la puerta de la cabina y suba el colectivo observando la articulación: debe moverse suavemente al subir y bajar el colectivo. Gire el acelerador hasta el retén (contra el resorte de sobrerrecorrido) y suba el colectivo: la articulación no debe moverse. Sujetadores firmes con marcas de torque continuas.
+
+\begin{nota}
+Es buen momento para revisar la articulación de la mezcla al frente del carburador: sin deshilachados ni daños visibles; sujetadores firmes y marcas de torque continuas.
+\end{nota}
+
+\pv{7-6}{Batería y relé (si están aquí)}{Firmes}
+Verifique que la batería esté firmemente montada y que sus dos anillos de chaveta circulares estén presentes y bien instalados. Verifique que el relé de batería esté firmemente montado y que los cables estén apretados y sin daños. Revise también el magneto y los cables de bujías.
+
+\begin{nota}
+El interruptor de batería controla el relé, que desconecta la batería de 12~V del sistema eléctrico.
+\end{nota}
+
+\pv{7-7}{Tensión de la correa del alternador}{Revisar}
+Ubique el alternador y su correa. Presione la correa y verifique que tenga la tensión correcta; que no esté agrietada, deshilachada ni degradada; que el alternador esté firmemente montado, y que los sujetadores estén firmes con marcas de torque continuas.
+
+\begin{caso}
+El 14 de septiembre de 2007, el piloto de un Robinson R22 (N877HF) oyó un fuerte golpe en la parte trasera. Se encendió la luz del alternador y aplicó el procedimiento de emergencia; notó que la RPM fluctuaba, con la del rotor alta y la del motor baja. Autorrotó y aterrizó en terreno irregular. La NTSB determinó como causa probable la falla de las correas en V de la transmisión principal por los daños sufridos cuando falló la correa del alternador y sus restos se metieron entre las correas principales y sus poleas.
+\end{caso}
+
+\pv{7-8}{Bastidor de tubos de acero}{Sin grietas}
+Sin grietas ni daños en tubos y soldaduras; sujetadores firmes con marcas de torque continuas. (No se permiten reparaciones por soldadura fuera de Robinson.)
+
+\pv{7-9}{Chapa del motor}{Sin grietas}
+Como en 2-3, ahora en el lado izquierdo y el frente izquierdo: sin grietas, retén del panel sin rozar la línea de aceite, sujetadores firmes.
+
+\pv{7-10}{Sistema de escape}{Sin grietas}
+Inspeccione el escape del lado izquierdo buscando grietas; tubos y sujetadores firmes. Cuidado con el calor.
+
+\begin{caso}
+El 15 de mayo de 2019, el piloto de un Sikorsky S-76 (N761AF) notó vapores en la cabina en ruta y luego recibió avisos visuales y sonoros de humo en el compartimiento de equipaje trasero. Inició un descenso de emergencia y aterrizó sin novedad en un aeropuerto alternativo. El ducto de escape del motor N.º 2 estaba desconectado y fuera de su asiento: los gases entraron al compartimiento del eje de transmisión del rotor de cola y causaron daños térmicos sustanciales al eje y su entorno. Los pernos de unión del ducto no tenían el torque especificado.
+\end{caso}
+
+\pv{7-11}{Estado general del motor}{Revisar}
+Revise el estado general del motor del lado izquierdo y cualquier cosa fuera de lugar.
+
+\begin{caso}
+El 25 de diciembre de 2009, el piloto de un Bell 407 (N600CE) subió a 50--60~ft AGL cuando sonaron dos bocinas de aviso y el helicóptero guiñó 90° a la izquierda. Bajó el colectivo para preservar la RPM y volvió sobre el helipuerto; a 5--8~ft subió el colectivo, pero el descenso continuó rápido hasta un aterrizaje duro. Los videos del hospital mostraron que el helicóptero estuvo unas 5 horas estacionado afuera con nieve soplando, sin tapones ni fundas en las tomas del motor ni en el escape, y que nadie revisó el escape, la toma derecha ni abrió paneles antes de operar. Los datos de la unidad de control del motor mostraron un apagado momentáneo, probablemente por ingestión de nieve o hielo.
+\end{caso}
+
+% ------------------------------------------------------------------
+\section{Zona 8: tanque principal de combustible}
+
+\pv{8-1}{Cantidad}{Revisar}
+Confirme la lectura del indicador midiendo el tanque principal con la varilla, igual que en el ítem 1-7 (tapa en el bolsillo o sobre el asiento, varilla limpia y bien sujeta, lectura coincidente con el indicador, varilla de vuelta bajo el asiento izquierdo).
+
+\pv{8-2}{Tapa de llenado}{Apretada}
+Instale la tapa y verifique que esté firme, con la franja de alineación coincidente con la marca pintada en el tanque.
+
+\begin{caso}
+El 13 de abril de 2006, el piloto de un Robinson R22 (N887BC) chocó con árboles y terreno durante un aterrizaje forzoso. Los testigos dijeron que el helicóptero pareció perder potencia, como si se hubiera quedado sin combustible, y bajó rápido hacia un camino. No había anomalías mecánicas previas al impacto. El análisis mostró agua en el combustible del carburador, pero no en los tanques. El estanque de combustible del piloto en su casa, bajo un edificio sin canaletas, tenía una capa de agua y sedimento; la contaminación del carburador era consistente con escurrimiento del techo. Con combustible limpio el motor funcionó bien. Un mecánico relató que unas dos semanas antes el piloto había perdido una de las tapas de combustible y había conseguido un reemplazo.
+\end{caso}
+
+\pv{8-3}{Fugas}{Ninguna}
+Inspeccione el puerto de drenaje en la parte inferior izquierda de la aeronave: sin fugas ni manchas azules (indicio de fuga).
+
+\begin{nota}
+Las vejigas de los tanques se deterioran con el tiempo y pueden rezumar combustible. Para prolongar su vida, mantenga los tanques llenos al guardar el helicóptero, drene el agua de los sumideros y use hangar cuando sea posible (vea el capítulo~\ref{cap:manejo}).
+\end{nota}
+
+% ------------------------------------------------------------------
+\section{Zona 9: rotor principal}
+
+\begin{precaucion}
+No tire de las palas hacia abajo para balancear el rotor. Para bajar una pala, empuje hacia arriba la opuesta.
+\end{precaucion}
+
+\pv{9-1}{Palas}{Limpias, sin daños ni grietas}
+Usando el escalón del travesaño del bastidor de tubos de acero, suba y empuje hacia arriba una de las palas, lo que bajará la opuesta. Baje y camine hasta el extremo de la pala baja. Inspeccione la pala y sus tapas de punta: limpias, firmes, sin picaduras, grietas ni otros daños, y sin que se vea la línea de unión revestimiento--larguero. Repita con la otra pala subiendo de nuevo al escalón. Al terminar, deje las palas aproximadamente niveladas para evitar un posible golpe al cono de cola.
+
+\begin{precaucion}
+Verifique que la erosión de la cara inferior de las palas no haya dejado expuesta la línea de unión revestimiento--larguero (vea ``Sistemas rotores'' en el capítulo~\ref{cap:sistemas}).
+\end{precaucion}
+
+\pv{9-2}{Fundas de cambio de paso}{Sin fugas}
+Inspeccione las fundas de goma de cambio de paso de ambas palas: firmes, sin roturas, cortes ni daños, sin fugas de aceite y con marcas de torque continuas.
+
+\begin{nota}
+Los rodamientos de cambio de paso de cada pala están en una carcasa en la raíz, llena de aceite rojo (ATF) y sellada con la funda elastomérica.
+\end{nota}
+
+\pv{9-3}{Pernos de las bisagras principales}{Chavetas instaladas}
+Inspeccione la bisagra de balanceo superior y las dos bisagras de conicidad inferiores: sin corrosión, tuercas y pernos firmes, pasadores de chaveta instalados y marcas de torque continuas.
+
+\begin{nota}
+Mientras algunos fabricantes exigen lubricar el rotor principal con grasa, las bisagras de conicidad y balanceo de Robinson usan rodamientos autolubricados.
+\end{nota}
+
+\pv{9-4}{Todos los terminales de varilla}{Libres, sin juego}
+Ubique todos los terminales de las varillas de paso, de las tijeras y de los tubos de empuje--tracción unidos al plato oscilante: libres para girar pero sin holgura (con el movimiento admisible según mantenimiento), arandela de seguridad por fuera de cada terminal y sujetadores firmes con marcas de torque continuas.
+
+\begin{caso}
+El 22 de noviembre de 2022, el piloto de un Robinson R44 (N7094J) perdió el control y entró en un descenso pronunciado hasta impactar un área de pasto junto a una carretera; antes del impacto llamó por radio diciendo que ``caía''. El terminal delantero izquierdo, que debía estar conectado al plato oscilante estacionario del rotor principal, estaba desconectado y faltaba la ferretería de unión.
+\end{caso}
+
+\pv{9-5}{Todos los sujetadores}{Firmes}
+Verifique que todos los demás sujetadores estén firmes con marcas de torque continuas, y que las dos amarras plásticas que sujetan la funda del plato oscilante estén firmes.
+
+\begin{nota}
+El frío puede volver quebradizas las amarras plásticas y romperlas, dejando la funda del plato oscilante suelta.
+\end{nota}
+
+\pv{9-6}{Tijeras del plato oscilante}{Sin holgura excesiva}
+Ubique el plato oscilante y sus tijeras: sin grietas ni daños visibles, sin holgura excesiva y con sujetadores firmes y marcas de torque continuas.
+
+\begin{caso}
+El 11 de marzo de 1998, instructor y alumno practicaban aterrizajes en un Bell 47D1 (N13012). Cuando el alumno bajó el colectivo para iniciar una aproximación empinada, apareció una vibración vertical severa y, 2 o 3 segundos después, una lateral severa. El instructor tomó los controles y continuó el descenso; a unos 10~ft intentó reducir velocidad y descenso con cíclico atrás y colectivo arriba, sin mucho efecto, y el impacto fue duro; el helicóptero volcó a la izquierda. Faltaba el perno de la bisagra que une la tijera con el plato oscilante.
+\end{caso}
+
+% ------------------------------------------------------------------
+\section{Zona 10: lado izquierdo del fuselaje}
+
+\pv{10-1}{Compartimiento de equipaje}{Revisar}
+Levante el cojín del asiento izquierdo y retire los objetos innecesarios del compartimiento. Al volar solo, llene primero el compartimiento izquierdo a su capacidad antes de usar el derecho. Evite poner objetos que puedan lesionar al ocupante si el asiento colapsa en un aterrizaje duro.
+
+\begin{nota}
+Capacidad máxima del compartimiento: 50~lb; asiento más compartimiento: 240~lb combinados.
+\end{nota}
+
+\pv{10-2}{Controles removibles}{Firmes si están instalados}
+En los helicópteros con controles removibles, retire los controles del asiento izquierdo si quien lo ocupa no es piloto de helicóptero habilitado. Si están instalados, verifique que estén bien instalados y firmes. En los helicópteros posteriores, el cíclico tiene un anillo moleteado junto al pasador de liberación rápida: apriételo a mano para eliminar el juego.
+
+\begin{caso}
+El 7 de junio de 2019, el instructor de un Cabri G2 (F-HOLA) volaba desde el asiento izquierdo hacia la zona de despegue para un vuelo de introducción. Al reducir velocidad para el estacionario, el colectivo se separó súbitamente de su base; el helicóptero guiñó a la izquierda y subió. Con control solo parcial mediante el cíclico y los pedales, el instructor intentó contrarrestar la rotación; la RPM cayó, el helicóptero descendió, el cono de cola y luego los patines golpearon el suelo, y quedó en el pasto junto a la pista. En el vuelo anterior, un alumno había retirado los dobles comandos del lado izquierdo para un vuelo solo supervisado y los volvió a montar al terminar; su instructor revisó visualmente el montaje pero no detectó la anomalía.
+\end{caso}
+
+\pv{10-3}{Colectivo}{Despejado}
+Si los controles izquierdos están instalados, verifique que no haya objetos sobre, bajo o cerca del colectivo. Súbalo completamente verificando el recorrido completo sin obstrucciones.
+
+\begin{caso}
+El 16 de abril de 2000, el piloto de un Rotorway Exec 162 (N162GG) completó un circuito y, en el tramo final de la aproximación, encontró el colectivo difícil de bajar y con el movimiento restringido. Lo forzó a la posición completamente abajo; el helicóptero tocó el suelo y volcó. Se encontró un disco de pesas metálico de 25 libras en el piso del lado del copiloto: por consejo de la fábrica del kit, el piloto lo había agregado para lograr un ascenso a estacionario más nivelado. La NTSB determinó como causa probable el uso de un lastre sin asegurar en la cabina, que se desplazó en vuelo y bloqueó el colectivo.
+\end{caso}
+
+\pv{10-4}{Cinturón de seguridad}{Revisar estado y abrochar}
+Inspeccione el cinturón izquierdo: sin deshilachados, roturas ni cortes. Verifique que esté abrochado (limitación del POH: el cinturón izquierdo debe estar abrochado).
+
+\begin{nota}
+Ningún piloto puede despegar sin que el piloto al mando se asegure de que cada persona a bordo haya sido instruida en cómo abrochar y desabrochar su cinturón y, si lo hay, su arnés de hombro (14 CFR 91.107).
+\end{nota}
+
+\pv{10-5}{Puerta}{Destrabada y cerrada con pestillo}
+Verifique que la puerta izquierda esté cerrada con el pestillo, pero sin llave.
+
+\begin{caso}
+El 23 de julio de 2011, el piloto de un Robinson R44 (N915BW) perdió el control al intentar asegurar la puerta derecha, que se abrió durante el despegue. El helicóptero golpeó la plataforma, los patines se separaron y el cortafuego y el rotor de cola sufrieron daños sustanciales. No hubo fallas mecánicas; antes de salir, el piloto había comprobado la puerta presionándola con el codo y supuso que el pasador de seguridad no había entrado por completo.
+\end{caso}
+
+\pv{10-6}{Pasadores de seguridad de las bisagras}{Instalados}
+Verifique que los dos pasadores de seguridad de las bisagras de la puerta estén correctamente instalados: las patas de la chaveta hacia atrás de la aeronave y una pata (la un poco más larga) doblada a 45° hacia abajo.
+
+\begin{nota}
+Ambas puertas pueden ser retiradas e instaladas por el personal de mantenimiento o los pilotos (retirando las chavetas de los pasadores de bisagra superior e inferior). Ajuste el peso y balance según corresponda.
+\end{nota}
+
+\pv{10-7}{Tren de aterrizaje}{Revisar}
+Revise el tubo del patín, los montantes y los tubos transversales buscando grietas. Revise el espesor de las zapatas: deben reemplazarse con menos de 0,050~in (el espesor de la hoja de la lista de prevuelo). Sujetadores firmes con marcas de torque continuas.
+
+\begin{nota}
+La mayoría de los aterrizajes duros se absorben elásticamente; en uno extremadamente duro, los montantes se abren hacia arriba y afuera al ceder el tubo transversal. Una leve deformación es aceptable. Reemplace el tubo transversal delantero si toca la cubierta que está debajo. Una deformación que deje el patín de cola a menos de 34~in del suelo (24~in en el Standard o HP; 37~in en el Mariner), con el helicóptero vacío sobre superficie dura y nivelada, exige reemplazar el o los tubos transversales.
+\end{nota}
+
+\pv{10-8}{Luz de posición}{Revisar}
+Verifique que la luz de posición esté firmemente montada y sea del color correcto (roja en el lado izquierdo); sin grietas, daños, humedad atrapada ni LED quemados.
+
+\begin{nota}
+Es buen momento para buscar tornillos de paneles sueltos en todo el exterior de la aeronave.
+\end{nota}
+
+% ------------------------------------------------------------------
+\section{Zona 11: sección de la nariz}
+
+\pv{11-1}{Tubo pitot}{Despejado}
+Ubique el tubo pitot en el frente del carenado del mástil: firme, sin moverse y libre de obstrucciones (insectos o suciedad).
+
+\pv{11-2}{Estado y limpieza del parabrisas}{Revisar}
+Revise el parabrisas buscando grietas u otros daños y verifique que esté limpio. Si hay que limpiarlo, use un paño suave con jabón suave y agua tibia, o un limpiador de plásticos de aviación (como el limpiador de parabrisas en aerosol Prist).
+
+\begin{nota}
+Limpie el parabrisas con movimientos verticales (de arriba abajo). Si por descuido quedan estrías o rayas verticales, no se confundirán en vuelo con tendidos eléctricos o cables, como sí podría ocurrir con rayas horizontales.
+\end{nota}
+
+\pv{11-3}{Luces de aterrizaje}{Revisar}
+Verifique que las luces de aterrizaje estén firmemente montadas, con lentes sin grietas ni daños, sin humedad atrapada ni LED quemados.
+
+\begin{nota}
+Es buen momento para inspeccionar la toma de aire fresco al frente, sobre la luz de aterrizaje: libre de insectos y residuos.
+\end{nota}
+
+\pv{11-4}{Hilo de guiñada}{Revisar}
+Ubique el hilo de guiñada (\emph{yaw string}) en el centro del parabrisas: firme pero libre para moverse, y con los extremos sin deshilacharse.
+
+\begin{nota}
+El hilo de guiñada indica el derrape (resbale o derrape) en vuelo: mide el ángulo de derrape y da al piloto una referencia visual para corregir la guiñada, de modo que el helicóptero vuele hacia adelante con la menor resistencia.
+\end{nota}
+
+% ------------------------------------------------------------------
+\section{Zona 12: lado derecho del fuselaje}
+
+\pv{12-1}{Tren de aterrizaje}{Revisar}
+Igual que el ítem 10-7 en el lado derecho: tubos sin grietas, zapatas de más de 0,050~in, sujetadores firmes, y altura del patín de cola dentro de los límites.
+
+\pv{12-2}{Luz de posición}{Revisar}
+Verifique que la luz esté firmemente montada y sea del color correcto (verde en el lado derecho); sin grietas, daños, humedad ni LED quemados. Busque tornillos de paneles sueltos.
+
+\pv{12-3}{Pasadores de seguridad de las bisagras}{Instalados}
+Igual que el ítem 10-6 en la puerta derecha: chavetas con las patas hacia atrás y la pata más larga doblada a 45° hacia abajo.
+
+\pv{12-4}{Compartimiento de equipaje}{Revisar}
+Levante el cojín del asiento derecho y retire los objetos innecesarios. Al volar solo, llene primero el compartimiento izquierdo. Evite objetos que puedan lesionar al ocupante si el asiento colapsa. Máximo 50~lb por compartimiento y 240~lb asiento más compartimiento.
+
+% ------------------------------------------------------------------
+\section{Zona 13: interior de la cabina}
+
+\pv{13-1}{Objetos sueltos}{Retirados o guardados}
+Revise la cabina buscando objetos sueltos o sin asegurar y retírelos, asegúrelos o guárdelos.
+
+\begin{caso}
+El 18 de octubre de 2018, un MD 500D (ZK-HOJ) que había despegado del aeródromo de Wānaka empezó a desintegrarse en vuelo; giró mientras descendía casi verticalmente y se incendió al golpear el suelo. La Comisión de Investigación de Accidentes de Transporte de Nueva Zelanda concluyó que muy probablemente la puerta trasera izquierda se abrió inesperadamente en vuelo y un overol sin asegurar salió de la cabina trasera y fue golpeado por el rotor de cola.
+\end{caso}
+
+\pv{13-2}{Cinturón de seguridad}{Revisar estado}
+Inspeccione el cinturón derecho: sin deshilachados, roturas ni cortes, y abrochado (14 CFR 91.107: instruya a cada persona a bordo sobre cómo abrochar y desabrochar su cinturón).
+
+\pv{13-3}{Instrumentos, interruptores y controles}{Revisar estado}
+Revise todos los instrumentos e interruptores de la cabina: ninguno roto, suelto ni faltante, y todos en la posición correcta. Verifique el estado y el funcionamiento correcto de los controles: cíclico, colectivo, acelerador y pedales.
+
+\begin{caso}
+El 3 de julio de 2015, un Airbus AS350 B3e (N390LG) despegó del helipuerto del Summit Medical Center en Frisco, Colorado, y se estrelló en un estacionamiento a 360~ft del helipuerto. Los procedimientos exigían un chequeo hidráulico prevuelo para comprobar el compensador de carga de guiñada. La NTSB determinó que el piloto muy probablemente no devolvió a ON el interruptor hidráulico del servo de guiñada antes de despegar: no hubo presión hidráulica en el servo del rotor de cola ni en el acumulador del compensador, los pedales quedaron sin asistencia y las cargas en ellos aumentaron notablemente.
+\end{caso}
+
+\pv{13-4}{Reloj}{Funcionando}
+Verifique que el reloj esté encendido, en modo ET (tiempo transcurrido) y puesto en cero.
+
+\begin{nota}
+Un cable protegido por fusible cerca de la batería puentea el relé de batería para que ambos tacómetros y el reloj sigan alimentados con el interruptor de batería apagado.
+\end{nota}
+
+\section{Precauciones finales}
+
+\begin{precaucion}
+En los helicópteros con controles removibles, retire los controles del asiento izquierdo si quien lo ocupa no es piloto de helicóptero habilitado.
+\end{precaucion}
+
+\begin{precaucion}
+Asegúrese de que las palas del rotor queden aproximadamente niveladas para evitar un posible golpe al cono de cola.
+\end{precaucion}
+
+\begin{precaucion}
+Al volar solo, llene primero el compartimiento de equipaje izquierdo a su capacidad antes de usar el derecho. Evite poner en los compartimientos objetos que puedan lesionar al ocupante si el asiento colapsa en un aterrizaje duro.
+\end{precaucion}
+
+\begin{precaucion}
+Los pilotos de menor estatura pueden necesitar un cojín para lograr el recorrido completo de todos los controles. Verifique que el recorrido del cíclico hacia atrás no esté restringido.
+\end{precaucion}
+
+\begin{nota}
+Las aeronaves con equipo opcional pueden tener ítems modificados o adicionales. Consulte el suplemento del POH que corresponda.
+\end{nota}

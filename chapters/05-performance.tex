@@ -1,0 +1,81 @@
+\chapter{Performance}
+\label{cap:performance}
+
+\opening{Los gráficos se obtuvieron en condiciones ideales; el día real casi nunca lo es.}
+
+\section{Generalidades}
+\fuente{POH, sección 5 (aprobada por la FAA), revisión del 22 FEB 2024}
+
+La controlabilidad en vuelo estacionario con efecto suelo (IGE) se ha comprobado con viento de 17~nudos desde cualquier dirección hasta 9800~ft (2990~m) de altitud de densidad. Consulte los gráficos de performance en estacionario para conocer el peso bruto permitido.
+
+\begin{precaucion}
+Los datos de performance de esta sección se obtuvieron en condiciones ideales. La performance en otras condiciones puede ser sustancialmente menor.
+\end{precaucion}
+
+\begin{nota}
+Los datos de vuelo estacionario se dan con la calefacción del carburador apagada. La calefacción total reduce los techos de estacionario hasta en 2000~ft (610~m).
+\end{nota}
+
+La velocidad indicada (KIAS) de los gráficos supone error de instrumento cero.
+
+\section{Temperatura de operación demostrada}
+
+Se ha demostrado un enfriamiento satisfactorio del motor con una temperatura exterior de 38~°C (100~°F) al nivel del mar, o de 23~°C (41~°F) sobre la ISA en altura.
+
+\section{Calibración de velocidad}
+
+\widefigure[0.72\linewidth]{assets/poh/calibracion-velocidad.png}{Curva de calibración de velocidad: velocidad calibrada (KCAS) en función de la indicada (KIAS).}
+
+\section{Gráfico de altitud de densidad}
+
+\widefigure[0.72\linewidth]{assets/poh/altitud-densidad.png}{Altitud de densidad en función de la altitud de presión y la temperatura exterior (°C abajo, °F en la escala inferior).}
+
+\section{Techo de vuelo estacionario con efecto suelo (IGE)}
+
+Los gráficos IGE corresponden a 2~ft de separación de los patines, acelerador a fondo y 104\,\% RPM (103--104\,\% en el Beta II), sin viento.
+
+\widefigure[0.70\linewidth]{assets/poh/hover-72.png}{Techo IGE vs. peso bruto --- R22 Standard (O-320-A2B o -A2C).}
+
+\widefigure[0.78\linewidth]{assets/poh/hover-73.png}{Techo IGE vs. peso bruto --- R22 HP, Alpha y Beta (O-320-B2C).}
+
+\widefigure[0.72\linewidth]{assets/poh/hover-74.png}{Techo IGE vs. peso bruto --- R22 Beta II (O-360-J2A). La controlabilidad en estacionario con viento de 17~nudos está comprobada hasta 9800~ft de altitud de densidad.}
+
+\section{Techo de vuelo estacionario fuera del efecto suelo (OGE)}
+
+Los gráficos OGE corresponden a viento cero y 104\,\% RPM. En el Standard, HP y Alpha se limita la presión de admisión hasta la altitud crítica y se usa acelerador a fondo por encima; en el Beta y el Beta II, potencia de despegue o acelerador a fondo.
+
+\widefigure[0.72\linewidth]{assets/poh/hover-75.png}{Techo OGE vs. peso bruto --- R22 Standard (O-320-A2B o -A2C).}
+
+\widefigure[0.78\linewidth]{assets/poh/hover-76.png}{Techo OGE vs. peso bruto --- R22 HP y Alpha (O-320-B2C). Peso bruto máximo: HP 1300~lb; Alpha 1370~lb.}
+
+\widefigure[0.78\linewidth]{assets/poh/hover-77.png}{Techo OGE vs. peso bruto --- R22 Beta (O-320-B2C).}
+
+\widefigure[0.70\linewidth]{assets/poh/hover-78.png}{Techo OGE vs. peso bruto --- R22 Beta II (O-360-J2A).}
+
+\section{Diagrama altura--velocidad}
+
+\widefigure[0.74\linewidth]{assets/poh/altura-velocidad.png}{Diagrama altura--velocidad. Condiciones demostradas: superficie dura y lisa, viento en calma, 103--104\,\% RPM. Evite operar en las zonas sombreadas. Las curvas corresponden a 7000~ft de altitud de densidad con 1300~lb y a nivel del mar con 1370~lb. Se indica el perfil de despegue recomendado.}
+
+\section{Características de ruido}
+
+El siguiente nivel de ruido cumple los requisitos del 14 CFR parte 36, apéndice J, y del Anexo 16 de la OACI, capítulo 11, para las versiones posteriores con el estabilizador horizontal montado bajo el cono de cola, por delante del rotor de cola. Se obtuvo de datos de ensayo aprobados por la FAA.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Datos de certificación de ruido.}
+\begin{tabularx}{\linewidth}{@{}lYY@{}}
+\toprule
+ & R22 & R22 Alpha y Beta \\
+\midrule
+Motor & Lycoming O-320-A2B, O-320-A2C y O-320-B2C & Lycoming O-320-B2C y O-360-J2A \\
+Peso bruto & 1300 lb (590 kg) & 1370 lb (622 kg) \\
+\textsc{v}\textsubscript{H} & \multicolumn{2}{c}{95 KTAS} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+El nivel de exposición sonora en sobrevuelo (SEL) es de 77,4~dB(A), que cumple los requisitos de un helicóptero Etapa~3 según el 14 CFR parte 36.
+
+\begin{nota}
+La FAA no ha determinado si el nivel de ruido de esta aeronave es o debe ser aceptable o inaceptable para operar en un aeropuerto, desde él o hacia él.
+\end{nota}

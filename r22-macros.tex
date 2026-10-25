@@ -1,0 +1,56 @@
+% Macros específicas del Manual R22 (se cargan desde main.tex, después de avia-editorial).
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\sisetup{locale=DE,group-minimum-digits=4,output-decimal-marker={,}}
+\setlist{itemsep=1pt,topsep=3pt,parsep=0pt}
+\setlist[itemize]{leftmargin=1.3em}
+\setlist[enumerate]{leftmargin=1.6em}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Partes con estilo sobrio
+\renewcommand*{\partnamefont}{\sffamily\large\color{AviaBlue}}
+\renewcommand*{\partnumfont}{\sffamily\Huge\color{AviaBlue}}
+\renewcommand*{\parttitlefont}{\rmfamily\Huge\bfseries\color{AviaInk}}
+\setsubsubsecheadstyle{\normalsize\sffamily\bfseries\color{AviaInk}}
+\setsecnumdepth{subsection}
+\settocdepth{section}
+\maxtocdepth{section}
+
+% Avisos con la nomenclatura del fabricante
+\newenvironment{advertencia}{\begin{technicalbox}[ADVERTENCIA]}{\end{technicalbox}}
+\newenvironment{precaucion}{\begin{technicalbox}[PRECAUCIÓN]}{\end{technicalbox}}
+\newenvironment{nota}{\begin{insightbox}[NOTA]}{\end{insightbox}}
+\newenvironment{caso}[1][Caso de investigación]{\begin{insightbox}[#1]\small}{\end{insightbox}}
+
+% Listas de chequeo con puntos guía:  \chk{Ítem}{Acción}
+\newenvironment{checklist}{\begin{list}{}{\setlength{\leftmargin}{0.6em}\setlength{\itemsep}{1pt}\setlength{\parsep}{0pt}\setlength{\topsep}{4pt}}\small}{\end{list}}
+\newcommand{\chk}[2]{\item[]#1\,\dotfill\,\textbf{#2}}
+\newcommand{\chkhead}[1]{\item[]\textsf{\textbf{#1}}}
+
+% Paso de procedimiento numerado de emergencia
+\newenvironment{pasos}{\begin{enumerate}[label=\arabic*.,leftmargin=1.8em]}{\end{enumerate}}
+
+% Referencia a fuente original (aparece como nota)
+\newcommand{\fuente}[1]{\sidenote{Fuente original: #1.}}
+
+% Ítem de la guía de prevuelo:  \pv{1-1}{Interruptor de batería}{Condición esperada}
+\newcommand{\pv}[3]{\subsection*{\textsf{#1}\enspace #2}\noindent\textsf{\small Condición: \textbf{#3}}\par\smallskip}
+
+% Índice: espacio para números de sección de dos dígitos y partes en romanos
+\setlength{\cftsectionnumwidth}{2.9em}
+\setlength{\cftchapternumwidth}{2em}
+\renewcommand{\cftpartpresnum}{\mbox{Parte}\space}
+\renewcommand{\cftpartaftersnum}{\quad}
+\setlength{\cftpartnumwidth}{5.8em}
+\renewcommand{\cftappendixname}{Apéndice\space}
+\setlength{\emergencystretch}{2em}

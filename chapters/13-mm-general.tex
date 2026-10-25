@@ -1,0 +1,130 @@
+\chapter{Generalidades del mantenimiento}
+\label{cap:mm-general}
+
+\opening{Lea siempre las instrucciones completas antes de ejecutar una tarea.}
+
+\begin{nota}
+Esta parte del libro sintetiza el \emph{R22 Maintenance Manual and Instructions for Continued Airworthiness} (RTR 060, vol.~I), con páginas revisadas hasta agosto de 2026. Se transcriben íntegramente los intervalos, límites, valores de torque, holguras y criterios de rechazo; los procedimientos paso a paso de desmontaje y montaje se resumen en sus puntos críticos. Las referencias del tipo ``§~7.230'' remiten a la sección del MM original, que debe consultarse en su revisión vigente antes de ejecutar cualquier trabajo.
+\end{nota}
+
+\section{Instrucciones de aeronavegabilidad continuada}
+\fuente{MM, capítulo 1}
+
+El Manual de Mantenimiento del R22 contiene las instrucciones necesarias para el mantenimiento, el servicio y el manejo correctos de los helicópteros de la serie R22. Las Instrucciones de Aeronavegabilidad Continuada (ICA) del R22 comprenden:
+
+\begin{itemize}
+\item el Manual de Mantenimiento (MM);
+\item el Catálogo Ilustrado de Partes (IPC);
+\item los Boletines de Servicio (SB) y las Cartas de Servicio (SL) del R22;
+\item los manuales del operador de Lycoming para las series O-320 y O-360, y las publicaciones técnicas aplicables de Lycoming;
+\item las publicaciones técnicas aplicables de los fabricantes de componentes.
+\end{itemize}
+
+Robinson (RHC), Lycoming y los fabricantes de componentes emiten boletines de servicio. \textbf{El cumplimiento de los boletines de servicio de RHC es obligatorio}; los demás se cumplen según se indique. Las publicaciones de RHC están en \texttt{www.robinsonheli.com}; las de Lycoming en \texttt{www.lycoming.com} y las de Continental Motors en \texttt{www.continentalmotors.aero}.
+
+Las instrucciones de \emph{kit} se emiten para la instalación en campo de mejoras de equipo opcionales u obligatorias (por un boletín o por obsolescencia de partes), o de sus provisiones. Las instrucciones de kit de RHC implementan datos de diseño tipo aprobados o están aprobadas como tales.
+
+\subsection{Actualización de manuales y catálogos}
+
+El MM y el IPC están disponibles gratuitamente y sin cuenta en \texttt{www.robinsonheli.com}, pestaña \emph{Publications}. Se recomienda consultarlos en línea para asegurar que los datos estén vigentes; si se usan en papel o descargados, debe verificarse su vigencia con el registro de revisiones (\emph{Revision Log}) en línea. Puede suscribirse a notificaciones gratuitas de revisión escribiendo a \texttt{subscriptions@robinsonheli.com} con ``Subscribe email'' en el asunto, indicando nombre, correo, dirección y modelos de interés.
+
+\section{Autorizaciones}
+
+\subsection{Mantenimiento del R22}
+
+Solo los mecánicos debidamente certificados que hayan aprobado un curso de mantenimiento del R22 patrocinado por la fábrica, o que trabajen bajo la supervisión directa de uno de ellos, pueden efectuar mantenimiento, reparaciones o inspecciones en los helicópteros de la serie R22.
+
+Las inspecciones anuales de los helicópteros livianos matriculados en EE.\,UU. deben ser efectuadas por titulares de una autorización de inspección (IA) o por estaciones reparadoras certificadas por la FAA. El prevuelo diario y parte del mantenimiento preventivo pueden ser efectuados por dichos mecánicos o por el piloto/propietario debidamente instruido según el POH y la normativa aplicable.
+
+\subsection{Mantenimiento de componentes}
+
+Solo los mecánicos certificados que hayan aprobado tanto el curso de mantenimiento de fábrica como el curso de mantenimiento de componentes, y que dispongan de los datos técnicos de RHC, están autorizados para el mantenimiento especificado en el Manual de Mantenimiento de Componentes (CMM). Este solo puede hacerse en un Centro de Servicio autorizado por RHC que tenga las herramientas especiales correspondientes (ref. R22 SL-81).
+
+\section{Registros de mantenimiento}
+
+El \emph{Airframe Maintenance Record} (registro de mantenimiento de la célula) está disponible en línea; sus formularios PDF sirven para los R22, R44 y R66. Los \emph{Component Record} sirven para los componentes de vida limitada o con TBO. También se venden en papel (P/N R8478 y P/N R8479, paquete de 20).
+
+Un \emph{Component Record} registra los retiros, instalaciones y mantenimiento de un componente de vida limitada o con TBO. Cuando el componente se instala, la tarjeta se inserta en el registro de la célula; cuando se retira, la tarjeta se retira y acompaña al componente. Los conjuntos mayores pueden contener uno o más componentes de vida limitada o con TBO. RHC recomienda usar estas tarjetas para controlar el tiempo de las partes intercambiables, porque su vida de servicio puede diferir entre modelos. RHC no crea tarjetas para repuestos, pero los operadores pueden hacerlo.
+
+RHC recomienda imprimir los registros con impresora láser a color (tóner) o de inyección con tinta pigmentada, en cartulina blanca \emph{premium} de 65~lb (brillo 96). Existen carpetas (P/N R8656) y separadores (P/N R8650).
+
+\section{Avisos del manual}
+
+\begin{checklist}
+\chk{NOTE (nota)}{Énfasis o explicación complementaria}
+\chk{CAUTION (precaución)}{Puede producirse daño al equipo}
+\chk{WARNING (advertencia)}{Puede producirse lesión personal o la muerte}
+\end{checklist}
+
+Las referencias a secciones y figuras del MM y del IPC pueden reubicarse o renumerarse. RHC procura corregir las referencias obsoletas al revisar sus documentos, pero algunas pueden permanecer; una búsqueda por palabra clave o número de parte en los documentos en línea ayuda a encontrar los datos.
+
+\section{Definiciones}
+
+\begin{description}
+\item[Parte crítica (14 CFR \S\,27.602).] Las palas del rotor principal A016-x y las del rotor de cola A029-x son partes críticas y están sujetas a requisitos especiales de inspección e informe (capítulos 26 y 28 del MM).
+\item[12 años.] Para una inspección o vida límite de 12 años, se cuentan desde la fecha del certificado de aeronavegabilidad emitido por la fábrica, del certificado de liberación autorizada emitido por la fábrica (formulario FAA 8130-3) o de la última inspección de 12 años.
+\item[Anualmente.] Dentro de los 12 meses calendario anteriores.
+\item[Dato de referencia.] Plano vertical imaginario desde el que se miden todas las distancias horizontales para el balance, con la aeronave en actitud de vuelo nivelado (vea el capítulo~\ref{cap:mm-datos-servicio}).
+\item[Peso vacío.] Peso vacío estándar de un helicóptero estándar, incluido el combustible no utilizable, todos los fluidos operativos y el aceite de motor completo. El peso vacío básico es el estándar más el equipo opcional instalado. Vea la hoja de datos del certificado tipo (TCDS) H10WE, la lista de equipos / hoja de peso y balance (RF 134) y el registro de peso y balance del POH.
+\item[Parte de vida limitada.] Toda parte para la cual el diseño tipo, las ICA o el manual de mantenimiento especifican un límite de reemplazo obligatorio (capítulo~\ref{cap:mm-vida-limitada}).
+\item[Tiempo en servicio.] Para los registros de mantenimiento, el tiempo desde que la aeronave deja la superficie de la tierra hasta que la toca en el siguiente punto de aterrizaje.
+\end{description}
+
+Las abreviaturas del MM se incluyen en el apéndice~\ref{ap:abreviaturas}.
+
+\section{Información de servicio}
+
+\textbf{Designación de partes.} Las partes de RHC se designan con un número alfanumérico que comienza con una letra (``A'', ``B'', ``C'', etc.), seguida de tres dígitos y un número de guion. A continuación del número estampado o marcado va una letra (o letras) de revisión, que progresa de A a Z, luego de AA a AZ, de BA a BZ, etc. Salvo indicación contraria, cualquier revisión de un mismo número de parte es intercambiable (por ejemplo, ``A101-1~A'' y ``A101-1~D''). Un cambio en el número de guion indica un cambio de forma, ajuste o función: C339-1 no es intercambiable con C339-10, y F049-6 tampoco con F049-06.
+
+\textbf{Devolución de partes.} Toda parte enviada a RHC debe incluir un formulario firmado de Devolución/Autorización de Componente (CRA), disponible en línea.
+
+\textbf{Pedidos.} Las partes se obtienen de cualquier distribuidor o Centro de Servicio R22, o directamente del representante de servicio al cliente de RHC.
+
+\textbf{Garantía.} Complete el formulario CRA e indique en la sección de reclamo de garantía si el giroavión o el componente está en garantía. Si el reclamo se debe a un boletín de servicio, escriba ``per SB-XX'' junto a la acción solicitada.
+
+\section{Armado de un R22 embalado para exportación}
+
+\begin{nota}
+El armado debe hacerlo un mecánico certificado.
+\end{nota}
+
+\begin{pasos}
+\item Retire todos los componentes del cajón del cono de cola y los accesibles del cajón de la cabina. Arme el tren (\S\S\,5.220 ---solo flotadores--- y 5.320).
+\item Enganche un izaje al cubo del rotor principal (\S\,17-20). Levante el extremo trasero del cajón mientras tensa el izaje. Con el mástil vertical, retire los pernos de los puntos de unión del tren y retire el cajón. Instale el tren (\S\,5.120) y baje el helicóptero al suelo.
+\item Instale el panel de cubierta del tubo transversal delantero. Con tren de flotadores, ajuste la presión según el suplemento Mariner del POH y verifique que se use el estabilizador de flotador en lugar del patín de cola.
+\item Instale el cono de cola (\S\,4.312) y el protector visual del rotor de cola.
+\item Instale el empenaje (\S\,4.322).
+\item Instale el escape (\S\,6.520) y la mitad inferior de la carcasa del ventilador.
+\item Retire los tapones de preservación de los agujeros de bujía superiores; instale las bujías superiores con su torque especial (\S\,23-33) y conecte los cables de encendido.
+\item Llene el aceite del motor hasta la marca de seis cuartos de la varilla.
+\item Instale las palas del rotor principal (\S\,26-10), haciendo coincidir las marcas de color de palas, pernos, cubo y varillas de paso. Una el extremo superior de las varillas a los cuernos de paso.
+\item Instale el rotor de cola (\S\,28-10).
+\item Si es necesario, llene la batería con electrolito y cárguela.
+\item Llene las cajas principal y de cola hasta el centro del visor con el aceite correcto (\S\,22-10 parte C). En los helicópteros enviados ``de costado'' con cajas principales antiguas que tienen el respiradero sobre el tubo del mástil estático, inyecte 6~onzas del aceite correcto por ese respiradero (no se requiere en los posteriores, con el respiradero en la base del tubo).
+\item Cargue combustible y drene una pequeña cantidad por el gascolator.
+\item Si tiene horizonte artificial, giróscopo direccional o brújula de carta vertical, instálelos: retire las luces \textsf{ALT} (ámbar) y \textsf{OIL} (roja) de la consola B050, saque la cara de instrumentos (A777-1, A981-1 o B197-1) y apóyela sobre un acolchado; instale los instrumentos; conecte el conector recto al giróscopo direccional y el acodado al horizonte (con el alivio de tensión hacia abajo), asegurando que traben, y amarre el cable sobrante; reinstale la cara y las luces. Para la brújula de carta vertical, una los dos cables que salen del arco del parabrisas con termorretráctil (la polaridad no importa) y fíjela con dos tornillos.
+\end{pasos}
+
+\begin{precaucion}
+No levante el helicóptero con el cajón unido tomándolo del cubo del rotor principal: podrían dañarse la caja principal y los bastidores. Los tornillos de montaje del giróscopo direccional no deben exceder 1~in de largo, o se dañará la unidad.
+\end{precaucion}
+
+\begin{pasos}
+\setcounter{enumi}{14}
+\item Instale la batería (sistema con negativo a masa).
+\item Efectúe el prevuelo del POH y la inspección según \S\S\,2.205 y 2.210 (con un piloto calificado y un mecánico certificado).
+\item Verifique el balance del rotor de cola (\S\,10.240).
+\item Efectúe los chequeos en estacionario (\S\,2.220.1). \textbf{No} pase todavía a vuelo de avance.
+\item Haga \emph{tracking} y balanceo del rotor principal (\S\,10.230).
+\item Ascendiendo con potencia de despegue según letrero y 50~KIAS: (a) evalúe la aspereza a las RPM máxima y mínima con potencia; (b) a la RPM mínima con potencia, haga una guiñada de 30° a la izquierda para comprobar un control direccional adecuado.
+\item En vuelo nivelado a la altitud típica de crucero, MCP, compensación derecha y gobernador conectados: (a) verifique que las fuerzas longitudinales y laterales del cíclico estén neutralizadas (sin tendencia a desplazarse); (b) que las del colectivo también lo estén; (c) verifique la correlación del acelerador: con 22~inHg de MAP, desconecte el gobernador; sin girar el acelerador, baje el colectivo hasta 12~inHg y súbalo a 22,5~inHg: la RPM debe permanecer en el arco verde.
+\item Evalúe la aspereza a la RPM mínima con potencia, con potencia de despegue según letrero y a la \textsc{v}\textsubscript{NE} según letrero.
+\item Verifique el funcionamiento de todos los instrumentos, indicadores y aviónica.
+\item En autorrotación a 50~KIAS y 90\,\% de RPM del rotor, haga una guiñada de 30° a la derecha para comprobar el control direccional.
+\end{pasos}
+
+\section{Mantenimiento programado}
+
+Los intervalos de mantenimiento e inspección requeridos están en la tabla~\ref{tab:mm-programadas} del capítulo~\ref{cap:mm-inspecciones}. Además deben consultarse, porque algunas aeronaves pueden requerir trabajos adicionales: los registros de mantenimiento de la aeronave, los boletines de servicio de los fabricantes, la reglamentación aeronáutica, las limitaciones de aeronavegabilidad y las directivas de aeronavegabilidad.
+
+Entre inspecciones programadas se requiere mantenimiento preventivo. Las pérdidas de fluidos, decoloraciones, \emph{fretting}, excoriaciones (\emph{galling}), roces, mellas, rayas, abolladuras, grietas y corrosión justifican siempre una investigación adicional. Los elementos no aeronavegables deben reemplazarse o repararse según lo permita RHC.

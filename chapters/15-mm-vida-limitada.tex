@@ -1,0 +1,242 @@
+\chapter{Componentes de vida limitada y mantenimiento por tiempo}
+\label{cap:mm-vida-limitada}
+
+\opening{Un componente cuyo tiempo en servicio no está documentado de forma confiable no puede considerarse aeronavegable.}
+
+\section{Registros de tiempo en servicio}
+\fuente{MM, capítulo 3 y \S\,1.102}
+
+Es responsabilidad del operador llevar el registro del tiempo en servicio de la célula, el motor y los componentes de vida limitada. Los R22 tienen un horómetro activado por la presión de aceite (registra el tiempo de funcionamiento del motor) o uno activado por el colectivo (registra el tiempo de vuelo, con el colectivo arriba). Cualquiera de los dos métodos sirve, pero \textbf{los valores numéricos de las vidas de servicio dependen del método usado}.
+
+El tiempo calendario de la célula y el motor comienza en la fecha del certificado de aeronavegabilidad original de exportación (o estándar) emitido por RHC. Para los repuestos sin límite de almacenamiento especificado (\S\,23-85), comienza en la fecha de la etiqueta de aprobación de aeronavegabilidad (certificado de liberación autorizada) emitida por RHC con la factura.
+
+Si un componente o una inspección tiene intervalos en horas y en tiempo calendario, cumpla el que ocurra primero y luego reinicie el intervalo, salvo indicación contraria. Al instalar una parte de vida limitada o con requisito de overhaul, registre la fecha, el número y nombre de parte, el número de serie, el tiempo total del helicóptero y el tiempo acumulado por la parte desde nueva o desde su último overhaul.
+
+\begin{advertencia}
+Los componentes con tiempos de overhaul obligatorios o límites de vida cuyo tiempo en servicio no esté documentado de forma confiable no pueden considerarse aeronavegables y deben retirarse del servicio.
+\end{advertencia}
+
+Las partes de vida limitada por fatiga deben retirarse del helicóptero a los intervalos especificados y darse de baja permanentemente, de preferencia destruyéndolas o dañándolas para que no puedan volver al servicio por error. La hoja de datos del certificado tipo (TCDS H10WE) está disponible en el sitio de la FAA (\texttt{https://drs.faa.gov}).
+
+\section{Limitaciones de aeronavegabilidad}
+
+La Sección de Limitaciones de Aeronavegabilidad está aprobada por la FAA (10 DIC 2024) y especifica las inspecciones y el mantenimiento requeridos por 14 CFR \S\S\,43.16 y 91.403, salvo que se haya aprobado un programa alternativo. Las páginas 3.3 a 3.5 del MM constituyen esa sección en su totalidad y fijan los tiempos de reemplazo obligatorios de las partes de vida limitada por fatiga.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.4\linewidth}>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedleft\arraybackslash}p{0.2\linewidth}@{}}
+\caption{Partes de vida limitada por fatiga --- tiempo registrado por \textbf{horómetro de presión de aceite} (tiempo de motor).}\label{tab:vida-motor}\\
+\toprule
+Número de parte & Descripción & Vida máxima \\
+\midrule
+\endfirsthead
+\toprule
+Número de parte & Descripción & Vida máxima \\
+\midrule
+\endhead
+A016-2 (retirada por AD 2004-19-09) & Pala del rotor principal & 2200 h o 10 años\textsuperscript{1} \\
+A016-4 (retirada por AD 2014-23-16) & Pala del rotor principal & 2200 h o 12 años\textsuperscript{1} \\
+A016-6 rev.~AW y anteriores & Pala del rotor principal & 2200 h o 12 años\textsuperscript{1} \\
+A016-6 rev.~AX y posteriores & Pala del rotor principal & 2200 h o 15 años\textsuperscript{1} \\
+A029-1 y -2 rev.~U y anteriores & Pala del rotor de cola & 2200 h o 12 años\textsuperscript{1} \\
+A029-2 rev.~V y posteriores & Pala del rotor de cola & 2200 h o 15 años\textsuperscript{1} \\
+A146-1 (motor O-360) & Piñón de la caja principal & 2200 h \\
+A158-3 & Espiga del rotor principal & 2200 h \\
+B545-1 & Juego de engranajes, caja de cola & 2200 h \\
+B545-2 & Piñón, caja de cola & 2200 h \\
+NAS630-80 (o MS21250-10080) & Perno de bisagra de conicidad & 2200 h \\
+NAS1351-4-20 (o A722-1 o -2) & Tornillos del cuerno de paso & 2200 h \\
+NAS6604 (o NAS1304) & Perno de unión pala--cubo del rotor de cola & 2200 h \\
+A158-1 & Espiga del rotor principal & 2415 h\textsuperscript{2} \\
+A020-2 rev.~R y anteriores & Bastidor superior & 4200 h \\
+A020-2 y -90 rev.~S y posteriores & Bastidor superior & 4400 h \\
+A023-1, -20, -22 y -23 & Cono de cola & 4400 h \\
+A047-1 y -6 & Bastidor superior & 4400 h \\
+A154-1 & Cubo del rotor principal & 4400 h \\
+B370-1 & Cubo del rotor principal & 4400 h \\
+A020-84 & Bastidor inferior derecho & 5110 h \\
+A046-2 & Bastidor inferior derecho & 5110 h \\
+A062-2 & Cubo del rotor de cola & 6000 h \\
+A030-1 & Conjunto del cubo del rotor de cola & 6260 h \\
+\bottomrule
+\multicolumn{3}{@{}p{\linewidth}@{}}{\footnotesize \textsuperscript{1} Lo que ocurra primero. El tiempo calendario comienza en la fecha de la aprobación de aeronavegabilidad original emitida por RHC. \textsuperscript{2} Sujeta al cumplimiento de la AD 88-26-01 R2.}
+\end{longtable}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.4\linewidth}>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedleft\arraybackslash}p{0.2\linewidth}@{}}
+\caption{Partes de vida limitada por fatiga --- tiempo registrado por \textbf{horómetro activado por el colectivo} (tiempo de vuelo).}\label{tab:vida-colectivo}\\
+\toprule
+Número de parte & Descripción & Vida máxima \\
+\midrule
+\endfirsthead
+\toprule
+Número de parte & Descripción & Vida máxima \\
+\midrule
+\endhead
+A016-2 (retirada por AD 2004-19-09) & Pala del rotor principal & 1964 h o 10 años\textsuperscript{1} \\
+A016-4 (retirada por AD 2014-23-16) & Pala del rotor principal & 1964 h o 12 años\textsuperscript{1} \\
+NAS630-80 (o MS21250-10080) & Perno de bisagra de conicidad & 1964 h \\
+NAS1351-4-20 (o A722-1 o -2) & Tornillos del cuerno de paso & 1964 h \\
+A158-1 & Espiga del rotor principal & 2156 h\textsuperscript{2} \\
+A016-6 rev.~AW y anteriores & Pala del rotor principal & 2200 h o 12 años\textsuperscript{1} \\
+A016-6 rev.~AX y posteriores & Pala del rotor principal & 2200 h o 15 años\textsuperscript{1} \\
+A029-1 y -2 rev.~U y anteriores & Pala del rotor de cola & 2200 h o 12 años\textsuperscript{1} \\
+A029-2 rev.~V y posteriores & Pala del rotor de cola & 2200 h o 15 años\textsuperscript{1} \\
+A146-1 & Piñón de la caja principal & 2200 h \\
+A158-3 & Espiga del rotor principal & 2200 h \\
+A188-2 & Conjunto del embrague sprag & 2200 h \\
+A647-1 & Rodamiento del eje del rotor principal & 2200 h o 12 años\textsuperscript{1} \\
+A647-6 & Rodamiento del control de paso del rotor de cola & 2200 h o 12 años\textsuperscript{1} \\
+A647-8 & Rodamiento del amortiguador & 2200 h o 12 años\textsuperscript{1} \\
+B545-1 & Juego de engranajes, caja de cola & 2200 h \\
+B545-2 & Piñón, caja de cola & 2200 h \\
+NAS6604 (o NAS1304) & Perno de unión pala--cubo del rotor de cola & 2200 h \\
+A020-2 rev.~R y anteriores & Bastidor superior & 3750 h \\
+A154-1 & Cubo del rotor principal & 3928 h \\
+A020-2 y -90 rev.~S y posteriores & Bastidor superior & 4400 h \\
+A020-84 & Bastidor inferior derecho & 4400 h \\
+A023-1, -20, -22 y -23 & Cono de cola & 4400 h \\
+A046-2 & Bastidor inferior derecho & 4400 h \\
+A047-1 y -6 & Bastidor superior & 4400 h \\
+A062-2 & Cubo del rotor de cola & 4400 h \\
+B370-1 & Cubo del rotor principal & 4400 h \\
+A030-1 & Conjunto del cubo del rotor de cola & 5589 h \\
+\bottomrule
+\multicolumn{3}{@{}p{\linewidth}@{}}{\footnotesize \textsuperscript{1} Lo que ocurra primero. El tiempo calendario comienza en la fecha de la aprobación de aeronavegabilidad original emitida por RHC. \textsuperscript{2} Sujeta al cumplimiento de la AD 88-26-01 R2.}
+\end{longtable}
+
+\section{Mantenimiento adicional de componentes}
+
+\begin{nota}
+Las partes fabricadas por RHC que no figuran en esta sección con mantenimiento adicional, ni en las tablas de vida limitada, son ``según condición'' (\emph{on condition}).
+\end{nota}
+
+\subsection{A los 12 años}
+
+Retire los siguientes componentes cuando acumulen 12 años en servicio y menos de 2200 horas desde nuevos, desde su último overhaul o desde su último mantenimiento de 12 años, y efectúe la acción indicada.
+
+{\footnotesize
+\begin{longtable}{@{}p{2.1cm}p{2.6cm}p{\dimexpr\linewidth-4.7cm-4\tabcolsep}@{}}
+\caption{Mantenimiento de componentes a los 12 años.}\\
+\toprule
+P/N & Descripción & Acción \\
+\midrule
+\endfirsthead
+\toprule
+P/N & Descripción & Acción \\
+\midrule
+\endhead
+A005-4 (A154-1); A005-12 (B370-1) & Cubo y rodamientos del rotor principal & Inspección y reparación según \S\,2.610, devolución a RHC para inspección y reparación, o reemplazo por uno nuevo. \\
+A005-6 (A016-4/A158-1); A005-7 (A016-6/A158-1); A005-14 (A016-6/A158-3) & Pala y espiga del rotor principal & Enviar a un taller de componentes autorizado para el mantenimiento de 12 años, o reemplazar por nuevo o por intercambio con overhaul. Incluye reemplazo de pala (si corresponde), de rodamientos de la espiga (si corresponde), de los tornillos del cuerno de paso, de la funda y anillos O, e inspección. \\
+A006-1 y -6 & Caja del rotor principal & Mantenimiento de 12 años en taller autorizado (reemplazo del sello del piñón, anillos O, rodamientos sellados, soportes de goma y rodamientos adicionales según sea necesario, e inspección), o nueva o intercambio. \\
+A007-3, -5 o -6 & Eje del ventilador & Reemplazar por un A007-6 nuevo. \\
+A008-2 o -4 & Rotor de cola & Desarmar; reemplazar cubo y/o palas según sea necesario; retirar bujes y rodamientos de balanceo; inspeccionar el cubo (sin \emph{fretting} ni corrosión; penetrantes fluorescentes si hay corrosión); reemplazar los rodamientos de balanceo. O reemplazar por un A008-4 nuevo. \\
+A014-8 (instalado en S/N 0002 a 0487) & Tren de aterrizaje & Reemplazar por nuevo. \\
+A017-2 & Plato oscilante & Nuevo o intercambio con overhaul (incluye inspección y reparación). \\
+A018-1 (anodizado) y A018-2 (metalizado) & Embrague & Mantenimiento de 12 años en taller autorizado (sellos, anillos O, rodamientos e inspección), o nuevo o intercambio. \\
+A020-2 S/N 0399 y anteriores (instalado en S/N 0002 a 0311) & Bastidor superior & Reemplazar por nuevo (puede requerir reemplazar la bahía delantera del cono de cola). \\
+A021-1 & Caja del rotor de cola & Nueva o intercambio B021-1. \\
+A031-1 & Control de paso del rotor de cola & Reemplazar por nuevo. \\
+A041-11 o -12 & Rodamiento amortiguador del eje de cola & Nuevo A041-11 o -12, o eje nuevo B224-1 o -3. \\
+A044-1 rev.~M y anteriores (S/N 0002 a 0631) & Estabilizador horizontal & Reemplazar por nuevo. \\
+A051-1 o -3 & Actuador del embrague (el A051-1 incluye el motorreductor) & Nuevo o intercambio con overhaul. \\
+A120-1 & Balancín del rotor de cola & Reemplazar por nuevo. \\
+A169-1, -2 o -4 rev.~J y anteriores (S/N 0002 a 0500) & Silenciador con \emph{risers} & Reemplazar por silenciador rev.~K o posterior. \\
+A169-6 o -35 (O-320); A169-24 o -37 (O-360) & Silenciador con \emph{risers} & Inspeccionar visualmente el interior; sin pérdida evidente de material. \\
+A190-1 o -2 & Juego de correas en V & Reemplazar por un juego A190-2 nuevo. \\
+A193-2 / A193-3 & Placa flexible & Reemplazar por A947-2 / A947-3. \\
+A197-1 a -7 (S/N 0002 a 0747) & Eje de transmisión del rotor de cola & Reemplazar por eje B224-1 y horquilla B223 correspondiente. \\
+A258-1 & Varillas de paso del rotor principal & Reemplazar por A258-1 o A258-5 nuevas. \\
+A258-5 & Varillas de paso del rotor principal & Desarmar; inspeccionar visualmente el cilindro con 10X; sin corrosión. \\
+A343-1; A347-1 (S/N 0002 a 0435); A347-5 & Montantes del eje intermedio (vertical; trasero horizontal; trasero diagonal) & Registrar la longitud y desarmar; inspeccionar interior y exterior; reemplazar si hay corrosión. \\
+A480-1 & Funda del plato oscilante & Reemplazar por nueva. \\
+A493-1 rev.~H y anteriores (anodizada, S/N 0002 a 0294) & Polea inferior & Reemplazar por rev.~I o posterior (rociado de acero). \\
+A649-1, -2 o C649-1 & Enfriador de aceite & Nuevo o intercambio C649-1. \\
+A650-1 o -3 & Herrajes de montaje de la caja principal & Inspección visual exterior e interior; reemplazar si están gastados o corroídos. \\
+A785-1, -2, -6, -7, -26 y -32 & Mangueras de aire (admisión, entrada de aire caliente, enfriamiento del motor y del alternador) & Reemplazar por nuevas. \\
+A792-2, -4 o -5 & Tacómetro doble & Reemplazar por un A792-5 nuevo. \\
+B021-1 & Caja del rotor de cola & Mantenimiento de 12 años según \S\,2.620, o nueva o intercambio. \\
+B173-1 & Correa del alternador & Reemplazar por nueva. \\
+B174-1 & Ventilador & Mantenimiento de 12 años según \S\,2.630, o nuevo o intercambio. \\
+B283-1, -2 y -6 rev.~A a P & Mangueras de combustible & Reemplazar por nuevas. \\
+B286-2; D270-1 & Controlador del gobernador & Nuevo o intercambio con overhaul. \\
+D756-2 (o A011-2) & Balancín del acelerador & Reemplazar por nuevo. \\
+F650-3 & Perno de montaje de la caja principal & Inspección visual exterior e interior; sin corrosión. \\
+\bottomrule
+\end{longtable}}
+
+\subsection{A las 2200 horas}
+
+Retire los siguientes componentes cuando acumulen 2200 horas en servicio desde nuevos o desde su último overhaul, y efectúe la acción indicada.
+
+{\footnotesize
+\begin{longtable}{@{}p{2.1cm}p{2.6cm}p{\dimexpr\linewidth-4.7cm-4\tabcolsep}@{}}
+\caption{Mantenimiento de componentes a las 2200 horas.}\\
+\toprule
+P/N & Descripción & Acción \\
+\midrule
+\endfirsthead
+\toprule
+P/N & Descripción & Acción \\
+\midrule
+\endhead
+A005-4 (A154-1); A005-12 (B370-1) & Cubo y rodamientos del rotor principal & Inspección y reparación según \S\,2.610, devolución a RHC, o nuevo. \\
+A005-6, A005-7, A005-14 & Pala y espiga del rotor principal & Nueva o intercambio A005-7 o A005-14. \\
+A006-1 y -6 & Caja del rotor principal & Nueva o intercambio A006-6. \\
+A007-3, -5 o -6 & Eje del ventilador & Nuevo A007-6. \\
+A008-2 o -4 & Rotor de cola & Desarmar; reemplazar cubo y/o palas según sea necesario; retirar bujes y rodamientos de balanceo; inspeccionar el cubo con penetrantes fluorescentes; reemplazar rodamientos de balanceo y pernos de unión de palas. O A008-4 nuevo. \\
+A014-8 (S/N 0002 a 0487) & Tren de aterrizaje & Nuevo. \\
+A017-2 & Plato oscilante & Overhaul en taller autorizado, o nuevo o intercambio. \\
+A018-1, A018-2 & Embrague & Nuevo o intercambio con overhaul. \\
+A020-2 S/N 0399 y anteriores & Bastidor superior & Nuevo (puede requerir reemplazar la bahía delantera del cono de cola). \\
+A021-1 & Caja del rotor de cola & Nueva o intercambio B021-1. \\
+A031-1 & Control de paso del rotor de cola & Nuevo. \\
+A041-11 o -12 & Rodamiento amortiguador & Nuevo, o eje B224-1 o -3 nuevo. \\
+A044-1 rev.~M y anteriores & Estabilizador horizontal & Nuevo. \\
+A051-1 o -3 & Actuador del embrague & Nuevo o intercambio. \\
+A120-1 & Balancín del rotor de cola & Nuevo. \\
+A121-17 & Tubo de empuje--tracción & Nuevo. \\
+A169-1, -2 o -4 rev.~J y anteriores & Silenciador & Rev.~K o posterior. \\
+A169-6 o -35 (O-320) & Silenciador & Nuevo A169-35. \\
+A169-24 o -37 (O-360) & Silenciador & Nuevo A169-37. \\
+A189-10 & Tuerca de doble bloqueo & Nueva. \\
+A190-1 o -2 & Juego de correas en V & Nuevo A190-2. \\
+A193-2 / A193-3 & Placa flexible & A947-2 / A947-3. \\
+A197-1 a -7 & Eje del rotor de cola & B224-1 nuevo y horquilla B223. \\
+A258-1 & Varilla de paso del rotor principal & Nueva A258-5. \\
+A258-5 & Varilla de paso del rotor principal & Nueva, o inspección según \S\,2.650 y partículas magnéticas del cilindro. \\
+A347-1 & Montante trasero horizontal del eje intermedio & Reemplazar por A347-5 (trasero diagonal). \\
+A426-6 & Tapa del resorte del colectivo & Nueva. \\
+A480-1 & Funda del plato oscilante & Nueva. \\
+A493-1 rev.~H y anteriores & Polea inferior & Rev.~I o posterior. \\
+A615-1 & Junta carburador--caja de aire & Nueva. \\
+A628-6 & Conector del arnés & Nuevo. \\
+A636-2 (O-320) & Soporte & Nuevo. \\
+A649-1 o -2 & Enfriador de aceite & Nuevo o intercambio C649-1. \\
+A650-1 o -3 & Herrajes de montaje de la caja principal & Inspección visual exterior e interior; reemplazar si gastados o corroídos; partículas magnéticas según \S\,23-41. \\
+A723-1 / A723-2 & Líneas de aceite & Nuevas A723-5 / A723-6. \\
+A780-33 & Cable & Nuevo. \\
+A785-1, -2, -6, -7, -26 y -32 & Mangueras de aire & Nuevas. \\
+A792-2, -4 o -5 & Tacómetro doble & Nuevo A792-5. \\
+A947-1, -2 y -3 & Placas flexibles delantera, intermedia y trasera & Nuevas. \\
+B021-1 & Caja del rotor de cola & Nueva o intercambio. \\
+B173-1 & Correa del alternador & Nueva. \\
+B174-1 & Ventilador & Nuevo o intercambio. \\
+B224-1 y B224-3 & Eje del rotor de cola & Nuevo. \\
+B283-1, -2 y -6 & Mangueras de combustible & Nuevas. \\
+B286-2; D270-1 & Controlador del gobernador & Nuevo o intercambio. \\
+B350-2 & Pasador elástico (tuerca del eje del ventilador) & Nuevo. \\
+C636-2 (O-360) & Soporte & Nuevo. \\
+C649-1 & Enfriador de aceite & Nuevo o intercambio. \\
+D756-2 (o A011-2) & Balancín del acelerador & Nuevo. \\
+F628-8 & Hebilla & Nueva. \\
+KI-217-1 & Kit de tanques de combustible con vejiga & Requerido en S/N 0002 a 4620 según R22 SB-109, si no se ha hecho. \\
+KI-2207 & Kit de instalación del plato oscilante A017-1 & Reemplazar las partes existentes por las del kit. \\
+KI-2208 & Kit de instalación de la caja de aire A057-2 & Requerido en S/N 2571M a 2664 si no se ha hecho. \\
+AN320-18 & Tuerca del eje del ventilador & Nueva. \\
+MS16562-15 & Pasador elástico & Nuevo. \\
+MS20002-18; NAS1149F1832P & Arandelas & Nuevas. \\
+NAS630-80; NAS6604-38 & Pernos & Nuevos. \\
+\bottomrule
+\end{longtable}}
+
+\subsection{Motor y accesorios}
+
+Para el mantenimiento del motor, consulte la última revisión de la Lycoming Service Instruction N.º 1009 (TBO) y del Service Bulletin N.º 240. Para los accesorios de la célula y del motor, consulte las instrucciones de aeronavegabilidad continuada de cada fabricante, y retírelos según el MM o según dichas instrucciones.

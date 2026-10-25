@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{avia-editorial}[2026/10/20 Avia Editorial memoir toolkit]
+\RequirePackage{iftex}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{marginnote}
+\RequirePackage{microtype}
+\RequirePackage{tcolorbox}
+\RequirePackage{csquotes}
+\RequirePackage{hyperref}
+\definecolor{AviaInk}{HTML}{111111}
+\definecolor{AviaBlue}{HTML}{222222}
+\definecolor{AviaSand}{HTML}{FFFFFF}
+\definecolor{AviaMuted}{HTML}{444444}
+\hypersetup{hidelinks,pdfcreator={Avia Editorial},pdflang={es-CL}}
+\ifPDFTeX\RequirePackage[T1]{fontenc}\RequirePackage[utf8]{inputenc}\RequirePackage{lmodern}\else
+ \RequirePackage{fontspec}\setmainfont{Latin Modern Roman}\setsansfont{Latin Modern Sans}
+\fi
+\setlength{\parindent}{1.15em}
+\setlength{\parskip}{0pt}
+\setlength{\marginparsep}{10pt}
+\setlength{\marginparpush}{10pt}
+\renewcommand*\marginfont{\footnotesize\sffamily\color{AviaMuted}}
+% Notes use marginpar and may float vertically; not a verbatim reproduction of Tufte.
+\newcommand{\sidenote}[1]{\ifAviaIllustrated\marginpar{\raggedright\footnotesize\sffamily\color{AviaMuted}#1}\else\footnote{#1}\fi}
+\newcommand{\sidecite}[2][]{\sidenote{Fuente: #2\if\relax\detokenize{#1}\relax\else; \emph{#1}\fi}}
+\newcommand{\aviamarginfigure}[3][0.97\marginparwidth]{\ifAviaIllustrated\marginpar{\centering\includegraphics[width=#1]{#2}\par\vspace{3pt}\raggedright\scriptsize\sffamily\color{AviaMuted}#3}\else\begin{figure}[htbp]\centering\includegraphics[width=.65\linewidth]{#2}\caption{#3}\end{figure}\fi}
+\newcommand{\margintext}[1]{\sidenote{#1}}
+% full width includes side margin on outer edge in oneside layout; best for illustration profile.
+\newenvironment{fullwidth}{\begin{adjustwidth}{0pt}{-\dimexpr\marginparsep+\marginparwidth\relax}}{\end{adjustwidth}}
+\newcommand{\widefigure}[3][\linewidth]{\begin{figure}[htbp]\centering\includegraphics[width=#1]{#2}\caption{#3}\end{figure}}
+\newcommand{\fullwidthfigure}[2]{\begin{figure}[htbp]\begin{fullwidth}\centering\includegraphics[width=\linewidth]{#1}\par\smallskip\footnotesize\color{AviaMuted}#2\end{fullwidth}\end{figure}}
+\newcommand{\chapterquote}[2]{\begin{flushright}\begin{minipage}{.78\linewidth}\itshape\large ``#1''\par\smallskip\normalfont\footnotesize --- #2\end{minipage}\end{flushright}\vspace{1em}}
+\newtcolorbox{insightbox}[1][]{colback=white,colframe=AviaMuted,boxrule=.3pt,arc=0mm,left=12pt,right=12pt,top=10pt,bottom=10pt,title={#1},coltitle=AviaInk,colbacktitle=white,fonttitle=\bfseries\sffamily}
+\newtcolorbox{technicalbox}[1][]{colback=white,colframe=AviaBlue,boxrule=.6pt,arc=0mm,left=11pt,right=11pt,title={#1},coltitle=AviaInk,colbacktitle=white,fonttitle=\bfseries\sffamily}
+\newcommand{\opening}[1]{{\noindent\large\itshape\color{AviaBlue}#1\par\vspace{1.25em}}}
+\newcommand{\smallcaps}[1]{{\textsc{#1}}}
+\newcommand{\booksubtitle}[1]{\def\AviaSubtitle{#1}}
+\def\AviaSubtitle{}
+\newcommand{\aviatitlepage}{\begin{titlingpage}\thispagestyle{empty}\vspace*{.22\textheight}\noindent{\rmfamily\Huge\bfseries\color{AviaInk}\thetitle\par}\vspace{1.3em}\noindent{\sffamily\Large\color{AviaBlue}\AviaSubtitle\par}\vfill\noindent{\sffamily\large\theauthor\par}\vspace{3em}\end{titlingpage}}
+\makechapterstyle{avia}{\renewcommand*{\chapnamefont}{\sffamily\small\color{AviaBlue}}\renewcommand*{\chapnumfont}{\sffamily\Huge\color{AviaBlue}}\renewcommand*{\chaptitlefont}{\rmfamily\Huge\bfseries\color{AviaInk}}\renewcommand*{\printchaptername}{}\renewcommand*{\printchapternum}{\chapnumfont\thechapter}\renewcommand*{\afterchapternum}{\par\vskip1.2em}\renewcommand*{\afterchaptertitle}{\par\vskip2em}}
+\chapterstyle{avia}
+\setsecheadstyle{\Large\sffamily\bfseries\color{AviaInk}}
+\setsubsecheadstyle{\large\sffamily\bfseries\color{AviaBlue}}
+\makepagestyle{avia}
+\makeoddhead{avia}{}{}{}
+\makeoddfoot{avia}{}{}{\thepage}\makeevenfoot{avia}{\thepage}{}{}
+\pagestyle{avia}

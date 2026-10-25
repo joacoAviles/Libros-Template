@@ -1,0 +1,21 @@
+% Idioma predeterminado de toda la colección: español. Cambiar a english si hace falta.
+\def\AviaLanguage{spanish}
+% Perfil narrativo: columna amplia y notas a pie. Perfil ilustrado: márgenes laterales.
+\newif\ifAviaIllustrated
+\AviaIllustratedfalse % perfil narrativo comercial por defecto
+% A 6x9 pulgadas: 152.4 x 228.6 mm. Perfil ilustrado sacrifica ancho de texto para margen.
+\setstocksize{9in}{6in}
+\settrimmedsize{9in}{6in}{*}
+\settrims{0pt}{0pt}
+\ifAviaIllustrated
+  \settypeblocksize{7.2in}{3.55in}{*}
+  \setlrmargins{0.67in}{*}{*}
+  \setmarginnotes{10pt}{0.9in}{10pt}
+\else
+  \settypeblocksize{7.15in}{4.35in}{*}
+  \setlrmargins{0.88in}{*}{*}
+  \setmarginnotes{8pt}{0.3in}{10pt}
+\fi
+\setulmargins{0.85in}{*}{*}
+\checkandfixthelayout
+% Impresión a doble cara; verificar margen de encuadernación según número de páginas e imprenta.

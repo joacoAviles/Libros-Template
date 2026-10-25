@@ -1,0 +1,63 @@
+% Manual Completo del Robinson R22 — edición en español sobre Avia Editorial 2.1.
+\documentclass[11pt,twoside,openright]{memoir}
+\input{config.tex}
+\usepackage{avia-editorial}
+% Español predeterminado (títulos, fechas, guionado y tablas). Inglés disponible.
+\usepackage[english,spanish,es-tabla,es-nodecimaldot]{babel}
+\AtBeginDocument{\selectlanguage{\AviaLanguage}}
+\usepackage[backend=biber,style=authoryear,sorting=nyt,autolang=other]{biblatex}
+\addbibresource{references.bib}
+\input{r22-macros.tex}
+
+\title{Manual Completo\\del Robinson R22}
+\booksubtitle{Operación, inspección prevuelo y mantenimiento\\[.4em]\normalsize Compilación clasificada y traducida al español}
+\author{Joaquín Avia}
+
+\begin{document}
+\frontmatter
+\aviatitlepage
+\include{chapters/00-legal}
+\tableofcontents*
+\include{chapters/00-prologo}
+
+\mainmatter
+\part{Generalidades}
+\include{chapters/01-generalidades}
+
+\part{Operación del helicóptero}
+\include{chapters/02-limitaciones}
+\include{chapters/03-emergencias}
+\include{chapters/04-procedimientos-normales}
+\include{chapters/05-performance}
+\include{chapters/06-peso-balance}
+\include{chapters/07-sistemas}
+\include{chapters/08-manejo-servicio}
+\include{chapters/09-suplementos}
+\include{chapters/10-seguridad}
+
+\part{Inspección prevuelo}
+\include{chapters/11-prevuelo-guia}
+\include{chapters/12-prevuelo-lista}
+
+\part{Mantenimiento e instrucciones de aeronavegabilidad continuada}
+\include{chapters/13-mm-general}
+\include{chapters/14-mm-inspecciones}
+\include{chapters/15-mm-vida-limitada}
+\include{chapters/16-mm-estructura-tren}
+\include{chapters/17-mm-motor}
+\include{chapters/18-mm-transmision}
+\include{chapters/19-mm-controles}
+\include{chapters/20-mm-rotores}
+\include{chapters/21-mm-reglaje}
+\include{chapters/22-mm-combustible-ambiente}
+\include{chapters/23-mm-electrico-instrumentos}
+\include{chapters/24-mm-datos-servicio}
+\include{chapters/25-mm-practicas-estandar}
+
+\appendix
+\include{chapters/A1-abreviaturas}
+\include{chapters/A2-conversiones}
+
+\backmatter
+\printbibliography[heading=bibintoc,title={Fuentes}]
+\end{document}

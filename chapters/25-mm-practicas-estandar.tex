@@ -1,0 +1,454 @@
+\chapter{Prácticas estándar, torques y materiales}
+\label{cap:mm-practicas}
+
+\opening{Torques, frenado, pintura de torque, ensayos no destructivos y materiales aprobados: las reglas que aplican a cada trabajo del manual.}
+
+\begin{nota}
+Las páginas antiguas del MM remiten a las secciones 1.300 (torques), 1.320 (torques estándar) y 1.330 (torques especiales). Esa información está hoy en las secciones 23-30, 23-32 y 23-33, resumidas en este capítulo.
+\end{nota}
+
+\section{Limpieza}
+\fuente{MM, capítulo 23}
+
+\begin{precaucion}
+Nunca use agua a alta presión. Nunca sople aire comprimido en los agujeros de drenaje de las puntas de las palas, en el tubo pitot ni en las tomas estáticas. Use solo jabón suave (pH 7--9): abrasivos, jabones alcalinos o detergentes rayan pintura y plásticos y corroen el metal.
+\end{precaucion}
+
+\begin{itemize}
+\item \textbf{Exterior}: enjuagar la suciedad suelta; lavar con jabón suave y agua tibia con paño, esponja o cepillo blando (cuidado con antenas y equipos sensibles); aceite y grasa con nafta alifática; enjuagar; opcionalmente encerar con cera automotriz de buena calidad.
+\item \textbf{Parabrisas y ventanas}: agua limpia; jabón suave y agua tibia o limpiador de plásticos aeronáuticos en movimientos rectos de vaivén, sin frotar fuerte; aceite y grasa con alcohol isopropílico o nafta alifática. \textbf{No use} gasolina, otros alcoholes, benceno, tetracloruro de carbono, diluyente, acetona ni limpiavidrios en aerosol. Luego una capa fina de cera dura, sin movimientos circulares. La superficie debe ser hidrófoba: con un producto nuevo, verifique que el agua forme gotas antes de volar. En acrílico, las rayas se quitan con rojo de joyero y pulimento de plásticos en forma de ocho; \textbf{el policarbonato no puede pulirse}.
+\item \textbf{Asientos}: aspirar y cepillar, paño húmedo y secar de inmediato; limpiador de tapicería adecuado (sin empapar); cuero con jabón de montura o jabón suave. \textbf{Alfombras}: escobilla o aspiradora y limpiador en seco no inflamable.
+\end{itemize}
+
+\section{Lubricación}
+
+La mayoría de los rodamientos son sellados o autolubricados. Los que tienen intervalo de lubricación figuran en la tabla del capítulo~\ref{cap:mm-inspecciones}. La lubricación del motor se rige por el POH, el manual del operador de Lycoming y la SI~1014. Las cajas se sirven según el visor y se cambia el aceite (limpiando el visor) cuando está tan sucio que no se ve el nivel.
+
+\begin{advertencia}
+Use solo aceites de caja aprobados. En una caja nueva o con overhaul, drene y lave \textbf{después de las primeras 4 horas de vuelo o de la primera luz de virutas}, lo que ocurra primero; luego, en los intervalos de la tabla.
+\end{advertencia}
+
+\section{Requisitos de torque}
+
+\subsection{Calibración}
+
+Las dimensiones y tolerancias del manual son críticas. Calibre las herramientas de medición (llaves de torque, micrómetros, calibres, comparadores, balanzas de resorte, transportadores y equipo de balanceo) según el fabricante, \textbf{al menos una vez al año} y cuando se caigan, se usen mal o haya dudas.
+
+\begin{advertencia}
+El torque correcto es crítico. Use llaves calibradas y herrajes en buen estado y lubricados donde corresponda; las superficies de apriete deben estar limpias y ser de metal desnudo o con imprimación húmeda. Un torque incorrecto o superficies sucias o pintadas pueden causar pérdida de apriete, daños y falla prematura.
+\end{advertencia}
+
+\subsection{Reglas generales}
+
+\begin{itemize}
+\item Salvo indicación, se aplican los \textbf{torques estándar en seco} de la tabla. Los valores incluyen el torque de autofrenado de la tuerca, están en in-lb y tienen tolerancia de $\pm$10\,\% salvo que se indique un rango.
+\item \textbf{Si el torque se aplica girando el perno (desde la cabeza), aumente un 10\,\%}. Ejemplo: perno NAS6605 con tuerca remachada MS21075: 240 + 24 = 264~in-lb.
+\item ``Húmedo'' significa rosca lubricada con antiagarrotante A257-9.
+\item Los codos y tes que requieren orientación se aprietan al valor indicado y luego hasta la posición deseada.
+\item Las roscas 8-32 y menores no se usan en estructura primaria y no requieren control de torque, salvo indicación.
+\item \textbf{Nunca sustituya pernos NAS por AN}: los NAS tienen mayor resistencia a la tracción.
+\item Reemplace toda tuerca autofrenante cuyo arrastre se haya reducido apreciablemente y todo herraje dañado. Perno y tuerca limpios y secos salvo que el procedimiento indique antiagarrotante o fijador. Si al apretar hay vibraciones o tirones, desarme y vuelva a apretar.
+\item \textbf{Enganche de rosca}: sin tuerca de chapa, 1 a 4 hilos visibles más allá de la tuerca; con tuerca de chapa, 2 a 4; tornillos B526-8, 1 a 5. Exceder el máximo puede hacer que la tuerca asiente sobre la caña sin rosca y la unión quede floja.
+\end{itemize}
+
+\textbf{Adaptadores que cambian la longitud efectiva de la llave}: con $T$ = torque deseado, $L$ = longitud de la llave y $A$ = longitud del adaptador, el ajuste de la llave es
+\begin{align*}
+Y &= \frac{T \cdot L}{L + A} && \text{(adaptador que alarga)}\\
+Y &= \frac{T \cdot L}{L - A} && \text{(adaptador que acorta)}
+\end{align*}
+Ejemplo: $T = 135$~in-lb, $L = 10$~in, $A = 1{,}5$~in: 117~in-lb al alargar, 159~in-lb al acortar.
+
+\subsection{Sujetadores críticos y frenado secundario}
+
+Un \textbf{sujetador crítico} es aquel cuya pérdida comprometería la operación segura: uniones del sistema de control primario y uniones estructurales no redundantes de la célula, el tren y la transmisión. Todos requieren un \textbf{mecanismo de frenado secundario}; en la mayoría de los casos es la tuerca de chapa B330 (\emph{palnut}), que se aprieta según la tabla y \textbf{se reemplaza siempre que se retira}. El IPC indica el frenado secundario de cada sujetador.
+
+Al desarmar un sujetador crítico, se rearma con \textbf{tuerca de la serie D210}, que reemplaza a las MS21042L y NAS1291 (p.\,ej., MS21042L4 o NAS1291-4 $\rightarrow$ D210-4).
+
+\begin{advertencia}
+El armado de los controles de vuelo es crítico y requiere inspección por una persona calificada; si no hay una segunda persona, tómese 5 minutos de descanso antes de inspeccionar lo que usted mismo armó.
+\end{advertencia}
+
+\textbf{Pintura de torque}: tras instalar la tuerca de chapa, todo sujetador crítico se marca con laca Torque Seal (Dykem Cross-Check 83314 a 83321, excepto la 83316 roja) en una franja que va desde la rosca expuesta, a través de ambas tuercas, hasta el componente; así cualquier giro posterior se detecta a simple vista. Ubíquela de modo que se vea bien en el prevuelo.
+
+\subsection{Torques estándar}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xllr@{}}
+\toprule
+Serie & Rosca & Ejemplo & in-lb \\
+\midrule
+\multirow{6}{=}{Pernos NAS6603--6608 y NAS1303--1308; tornillos NAS623, NAS1351/1352, NAS600--606} & 10-24 y 10-32 & NAS6603 & 50 \\
+ & 1/4-20 y 1/4-28 & NAS6604 & 120 \\
+ & 5/16-18 y 5/16-24 & NAS6605 & 240 \\
+ & 3/8-16 y 3/8-24 & NAS6606 & 350 \\
+ & 7/16-20 & NAS6607 & 665 \\
+ & 1/2-20 & NAS6608 & 995 \\
+\midrule
+\multirow{4}{=}{Tornillos AN502, AN503, AN509, AN525, MS24694, MS27039, A142; pernos AN3, AN4, AN6, AN8} & 10-32 & AN3, A142 & 37 \\
+ & 1/4-28 & AN4 & 90 \\
+ & 3/8-24 & AN6 & 280 \\
+ & 1/2-20 & AN8 & 795 \\
+\midrule
+\multirow{10}{=}{Tuercas de chapa (\emph{palnuts}) B330 / MS27151 --- de un solo uso} & 10-32 & B330-7 & 6 \\
+ & 10-24 & B330-8 & 12 \\
+ & 1/4-20 & B330-12 & 25 \\
+ & 1/4-28 & B330-13 & 18 \\
+ & 5/16-18 & B330-15 & 35 \\
+ & 5/16-24 & B330-16 & 30 \\
+ & 3/8-24 & B330-19 & 45 \\
+ & 7/16-20 & B330-21 & 62 \\
+ & 1/2-20 & B330-24 & 85 \\
+ & 9/16-18 & B330-25 & 75 \\
+\midrule
+\multirow{5}{=}{Roscas cónicas de tubería (recto / codo o te)} & 1/8-27 & --- & 120 / 60 \\
+ & 1/4-18 & --- & 170 / 85 \\
+ & 3/8-18 & --- & 220 / 110 \\
+ & 1/2-14 & --- & 320 / 160 \\
+ & 3/4-14 & --- & 460 / 230 \\
+\midrule
+\multirow{4}{=}{Contratuercas de terminales (AN315, AN316)} & 10-32 & AN315-3 & 15 \\
+ & 1/4-28 & AN316-4 & 40 \\
+ & 5/16-24 & AN316-5 & 80 \\
+ & 3/8-24 & AN316-6 & 110 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Torques especiales}
+
+Estos valores reemplazan a los estándar (mismas notas generales; in-lb salvo indicación).
+
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}>{\raggedright\arraybackslash}p{0.33\linewidth}@{}}
+\toprule
+Sujetador & Torque \\
+\midrule
+\endfirsthead
+\toprule
+Sujetador & Torque \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{2}{l}{\textbf{Rotor principal y su cubo}} \\
+Perno de balanceo NAS630-80 y de conicidad (cubo A154-1) & elongación 0,016--0,017~in (nuevo) o 0,015--0,017~in (usado), húmedo; chatarra si se estira más de 0,019~in \\
+Pernos de conicidad NAS632-82 (cubo B370-1) & elongación 0,011--0,012~in (nuevo) o 0,010--0,012~in (usado), húmedo; chatarra si más de 0,014~in \\
+Tornillos A722-4 de pesos de punta; NAS1351N3-10P de la tapa & 40, húmedo \\
+Pernos autosellantes B289-2 del cuerno de paso & 70 \\
+Contratuerca 21FKF-616 del barril de la bieleta & 100 \\
+\multicolumn{2}{l}{\textbf{Caja principal}} \\
+Tuerca AN320-8 del piñón & 290--410 \\
+Pernos de montaje AN10 con herrajes A650 & 90~ft-lb desde la tuerca \\
+Perno F650-3 con herrajes A650-3 & 50~ft-lb, húmedo \\
+Tornillos de la tapa NAS1352-4 (con o sin freno rotor) & 140 \\
+Tornillos de la tapa MS20074-04 & 60 \\
+Detector de virutas roscado (tuerca grande / chica); alojamiento; tapón de llenado; visor & 150 / 75; 150; 150; 150 \\
+Tuerca del cable del detector & 4--6 \\
+\multicolumn{2}{l}{\textbf{Caja y rotor de cola}} \\
+Retén B549-1 del sello de entrada & 70~ft-lb, húmedo \\
+Tuerca D210-8 de la horquilla B546 (caja B021) & 70~ft-lb, húmedo con B270-11 \\
+Tuerca D210-4 del espárrago del control de paso A031 & 90 \\
+Tuerca D210-4 del retén del tope A119-1 & 120 \\
+Montaje caja--cono de cola (MS20074-04-06 o MS90725-7) & 100 \\
+Pernos MS20074-04-06 de la caja A021 / B021 & 60 / 100 \\
+Perno de balanceo del rotor de cola (NAS1304-38 esférico; NAS6604-38 elastomérico) & 150 \\
+Detector de virutas A021 / B021 & 100 / 60 \\
+Tapón de llenado con venteo & 100 \\
+Visor A021; B563-4 (plano, UV); B563-1 (burbuja) & 150; 150; 100 \\
+\multicolumn{2}{l}{\textbf{Transmisión, ventilador y voluta}} \\
+Tuerca AN320-15 del eje A007-3 (llave de 1~1/2~in) & 183--233~ft-lb, húmedo \\
+Tuerca AN320-18 del eje A007-5/-6 (llave de 1~11/16~in) & 340--400~ft-lb, húmedo; reapretar tras la primera marcha \\
+Pernos NAS6606H23/H24 de la polea inferior (6) & 300 \\
+Pernos del cono al ventilador NAS6603-3/-6 con D210-3 & 70 \\
+Pernos del cubo del ventilador NAS6605-11 a -14 (6) & 300; reapretar tras la primera marcha \\
+Tornillos D216-1 de los soportes A185 & 25 \\
+\multicolumn{2}{l}{\textbf{Sistema de refrigeración}} \\
+Tuercas del motor de las placas A484-3 (8) & 300 \\
+Tornillos NAS1352-4H de los paneles de refrigeración & 96 \\
+Abrazaderas del tubo de retorno de aceite & 10 \\
+\multicolumn{2}{l}{\textbf{Grupo motor}} \\
+Bujías (8) & 35~ft-lb, húmedas con aceite A257-16 \\
+Tuercas de la brida del escape: planas / autofrenantes 21FKF-518 (acercar las 8 por igual antes) & 160--180 / 200--220 \\
+Tuercas carburador--motor (4), en cruz & 96 inicial, 204 final \\
+Pernos caja de aire--carburador MS20074-04-04 & 30 \\
+Perno de tensión de la correa del alternador & 204 \\
+Pernos del adaptador de aceite D723-1 & 90--100 \\
+Válvula termostática del radiador de aceite & 290--310 \\
+Tuercas AN818-8 de líneas del radiador: acero inoxidable / aluminio & 40~ft-lb / 230--260 \\
+Buje AN894D4-3 de la línea de manifold en el cortafuego & 135--150 \\
+Tuercas de la línea de manifold A740-1 & 25--35 \\
+Sonda de temperatura del carburador A058-5 & 36--48 \\
+Sensor de temperatura de aceite A760-1/-3 & 300 \\
+Sensor CHT A760-2 / sonda 3080-38 & 50 / 70--80 \\
+Sensor de efecto Hall C143 & 96 \\
+Tornillos de tapas de válvulas (junta Lycoming 06B26669, limpias y secas) & 35 \\
+Abrazaderas de la toma de calefacción del carburador & 30 \\
+Tuerca del clip B315-1 del arnés de magneto & 60 \\
+\multicolumn{2}{l}{\textbf{Mandos del motor}} \\
+Perno NAS6606-16 / tornillos A142-4 de la palanca D334-5 & 280 / 45 \\
+Tornillo A486 de la rótula superior del resorte de sobrecarrera & 37 \\
+Rótula delantera A933-3 del tubo B364-1 & 15--30 \\
+Tuerca almenada del brazo del acelerador del carburador & 20--60 \\
+Tuercas de los cables de calefacción y mezcla & 25--30 \\
+\multicolumn{2}{l}{\textbf{Plato oscilante}} \\
+Tornillos NAS1352N08-6 del soporte del captador magnético & 35 \\
+Tornillos NAS1352N08-8 (16) & 35, húmedo \\
+Tornillos AN503-8-8 con alambre de 0,020~in (plato rev.~AL y anteriores) & 17 \\
+Perno NAS6605-8 de yugos A203 antiguos & 190 \\
+\multicolumn{2}{l}{\textbf{Combustible}} \\
+Unión de mamparo A457-15 y línea A726-1 bulkhead--gascolador & 285 \\
+Tuerca A657-1 codo de válvula--unión de mamparo & 120 \\
+Uniones del tanque principal: drenaje (-4) / interconexión (-6) & 145 / 200 \\
+Tuerca de la válvula de drenaje (AN924-4D) / del interruptor de bajo combustible (AN924-5D) & 145 / 150 \\
+Filtros B254-3 de las salidas de los tanques & 200, húmedo \\
+Mangueras: B283 gascolador--carburador; D205-32; D205-33 o C595-1 / D205-34 & 120 / 60 \\
+Pernos B289-1 del emisor de cantidad (en cruz) & 37 \\
+Tuerca del espárrago central D252 / tuerca y palnuts de masa & 11 / 9 \\
+Tuerca D210-4 del tapón de montaje del gascolador; tapón MS27769D2 & 70; 60 \\
+Tuercas AN805 y de líneas abocardadas del cebador & 20--30 \\
+Bujes del cebador AN894D4-2 / AN894D6-4 & 50--65 / 110--130 \\
+Tornillos de la válvula de combustible / de la compuerta de aire & 16 / 24 \\
+\multicolumn{2}{l}{\textbf{Sistema eléctrico}} \\
+Terminales del shunt 1465-70-104 & 18 \\
+Tuercas de cables A780 al relé B415-1 / tornillos de terminales & 80 / 10 \\
+Terminal del arrancador: cable -581 / -3245 (con contrallave) & 100 / 60 \\
+Terminal de salida del alternador & 50 \\
+Terminales F1 y F2 del alternador D748-3 / D748-4 & 14 / 20 \\
+Tornillo del alternador D748-3 (con B270-20) & 27 \\
+Terminales del magneto TCM / EIS & 15 / 10 \\
+Correas de masa al motor; cable A780-2 & 96 \\
+Interruptores V3 del colectivo & 4--5 \\
+Portafusibles D262-11 & 8--10 \\
+Tuerca de la sonda OAT & 18 \\
+\multicolumn{2}{l}{\textbf{Célula, tren y parabrisas}} \\
+Tornillos internos NAS1351-8H40P del bastidor & 70--75~ft-lb, húmedos \\
+Pernos NAS6604-3 del montante trasero del bastidor & 120, con B270-1 en la caña \\
+Tuerca D210-5 de la bola de remolque & 240 \\
+Tornillos MS51861-37C de bisagras de puertas & 36 \\
+Pernos del estabilizador B375-2 y del estabilizador vertical (NAS6603) & 70 \\
+Pernos AN4-25A del soporte de ruedas de manejo & 70 \\
+Pernos NAS6604 de flotadores a patines & 50, desde la tuerca \\
+Tornillos B526-6 del parabrisas de policarbonato / AN526C832R12 del refuerzo central & 24 / 16 \\
+Clip del hilo de guiñada B295 & 16 \\
+\end{longtable}
+}
+
+\subsection{Ajuste de rótulas de tubos de empuje}
+
+\begin{pasos}
+\item Afloje palnut y contratuerca; desconecte la rótula.
+\item Enrosque o desenrosque según el reglaje requerido; aplique protector anticorrosivo B270-21 a la rosca expuesta.
+\item Verifique que la espiga roscada \textbf{impida el paso de un alambre de 0,020~in} por el agujero testigo (sin agujero testigo, respete la extensión máxima de la figura 2-1 del MM).
+\item Reconecte; oriente las rótulas para permitir la máxima rotación del tubo sin trabas; contratuerca y palnut con torque estándar y pintura de torque.
+\end{pasos}
+
+\section{Componentes de tubería abocardada A880}
+
+El MM (\S\,23-36) incluye tablas de equivalencias entre los números A880 de RHC y las partes AN/MS/AS de tuercas, manguitos, adaptadores NPT, codos de 90° y 45°, codos de mamparo, tes y uniones, en aluminio (D/W), acero inoxidable (J) y acero, para tubos de 1/8 a 5/8~in. Por ejemplo, A880-104 equivale a AN818-4D/-4W o AS5175W04 (tuerca de aluminio para tubo de 1/4~in) y A880-204 a AN818-4J (inoxidable). Consulte el MM o el IPC para la equivalencia exacta.
+
+\section{Ensayos no destructivos}
+
+\subsection{Partículas magnéticas}
+
+Para piezas de acero ferromagnético, según \textbf{ASTM E1444}, proceso húmedo continuo con luz ultravioleta. La dirección y eficacia del campo se verifican con un penetrámetro o un gaussímetro de 30--60~G; siempre que sea posible se magnetiza circular y longitudinalmente (al menos en dos direcciones a 90°), con aplicación mínima de 1/2~s. Limpieza previa y posterior con PCBTF o similar. Desmagnetizar con CA ($\pm$3~Oe máx.) y verificar que el campo residual no supere 3~G. Registre tamaño y ubicación de toda indicación rechazable.
+
+\begin{itemize}
+\item \textbf{Aceptables}: indicaciones menores de 0,015~in (no evaluables); indicaciones por cambios bruscos de sección o geometría.
+\item \textbf{Rechazables}: grietas, costuras, solapes, pliegues o defectos abiertos a la superficie; indicaciones a más de 15° del eje longitudinal y de más de 0,125~in; circunferenciales en hombros o radios; las que cruzan un borde, hombro, radio, chavetero o estría más de 0,015~in; socavaduras en el pie de una soldadura; grietas en soldadura o metal base; inclusiones en soldadura de más de 0,1~in.
+\end{itemize}
+
+\subsection{Líquidos penetrantes fluorescentes}
+
+Para materiales no magnéticos, según \textbf{ASTM E1417}: tipo 1 (fluorescente), método A (lavable con agua), sensibilidad nivel 2 (media), revelador forma A (polvo seco). Salvo límites específicos, son rechazables grietas, costuras, pliegues o solapes, inclusiones superficiales y, en fundiciones, indicaciones alineadas de más de 3/8~in. Limpie con solvente al terminar. Recuerde: \textbf{toda pala de rotor en cuya unión pegada entre penetrante es chatarra}.
+
+\section{Control de corrosión, imprimación y pintura}
+
+\textbf{Recubrimiento de conversión del aluminio}: lijar levemente con 320; aplicar Bonderite C-IC~33 Aero 2--5~min sin dejar secar; enjuagar; aplicar Bonderite M-CR~1201 Aero 2--5~min (color dorado claro) sin dejar secar; enjuagar y secar. Para retoques, M-CR~1132 con aplicador de fieltro. \textbf{No deje que estos productos toquen uniones pegadas.}
+
+\textbf{No se imprima ni pinta}, salvo indicación: juntas de fricción deslizantes, piezas de acero inoxidable, articulaciones y rótulas ajustables, plásticos, gomas, componentes eléctricos y cables, uniones apernadas donde el torque es requisito de apriete, y ajustes a presión o deslizantes de tolerancia estrecha de rodamientos (salvo que el procedimiento pida imprimación húmeda).
+
+\begin{itemize}
+\item \textbf{Aluminio sin conversión}: limpieza alcalina (o desengrasante aprobado, sin tocar uniones pegadas), escarificar con Scotch-Brite, paño adherente o solvente, secar y no tocar con las manos hasta imprimar.
+\item \textbf{Acero inoxidable}: limpieza alcalina preferida o solvente; \textbf{acero común solo con solvente} (lo alcalino puede corroerlo).
+\item \textbf{Espesor de imprimación}: 0,0005--0,0020~in por mano. Interiores de tubos: imprimación diluida, verter, agitar y escurrir; secar 6~h mínimo. Si queda gruesa, decapar y volver a imprimar. Zonas lijadas hasta el metal requieren conversión e imprimación antes del acabado.
+\item \textbf{Acabado sobre imprimación curada}: lijar con 220 o más fino, Scotch-Brite opcional, solvente, paño adherente y pintar.
+\end{itemize}
+
+\section{Materiales aprobados}
+
+\begin{precaucion}
+Consulte con la autoridad aeronáutica el uso permitido de cada material y siga las instrucciones del fabricante. El uso de decapantes líquidos no aprobados puede provocar fallas de piezas.
+\end{precaucion}
+
+\begin{itemize}
+\item \textbf{Decapantes}: Cee-Bee A-292NC-M (piezas metálicas excepto palas y placas flexibles; no cerca de uniones remachadas o pegadas); chorro de plástico AMMO 301 20/30 tipo II (excepto palas y chapa sin apoyo de menos de 0,040~in; 40--55~psi en bastidores de acero, 30--40~psi en aluminio).
+\item \textbf{Solventes}: QSOL~220, PCBTF, acetona (pueden mezclarse 50/50 con PCBTF), Axalta 220, DuPont Final Klean 3909S, AkzoNobel XP; EM-Citro (residuos de adhesivo; apto en acrílico); lacolene y Plexus (parabrisas y plásticos); Presolve (solo hidráulicos); percloroetileno (desengrasado por vapor); Brulin 815 GD y L\&R SF50 (ultrasonido, 5--20\,\%); limpiadores L\&R \#112/\#222 y enjuague \#194 (solo aviónica); detector de fugas Snoop.
+\item \textbf{Masillas}: 3M 05960, 05860, 31180; SBF1191 con endurecedor FE-351.
+\item \textbf{Imprimaciones sin cromato}: Axalta Corlar 13580S (4:1:1), PPG Desoprime CA7502 y CA7422 (4:4:1); ventana de repintado 48~h. \textbf{Con cromato} (preferidas en las instrucciones de rotores): PPG 44GN007 (3:1:8 con agua destilada) y AkzoNobel 10P20-44 (3:1:1); ventana 24~h.
+\item \textbf{Pintura en polvo}: AkzoNobel Interpon y Pratt \& Lambert Vitralon (epoxi rica en zinc), Tiger Drylac y DuPont (poliéster); vida en estante 12 meses.
+\end{itemize}
+
+\subsection{Códigos de pintura}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}p{0.42\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Código & Material & Aplicación \\
+\midrule
+A1 & Negro mate PPG 18BK006 o AkzoNobel 23T3-90 & Negro de palas \\
+A2 / A3 & Mapaero FR2-55, AkzoNobel Aerofine 8250; Cardinal A-2000, Krylon 1613 (retoque) & Interior, patines, marcos de parabrisas y ventanas \\
+B & Imron AF400/AF700 gris oscuro & Gris oscuro \\
+C & Randolph IE-8948, G-5436, A219 & Esmalte del motor \\
+D / E / L & Imron AF400/AF700 blanco / amarillo / rojo & Blanco, amarillo, rojo \\
+F & Imron AF400/AF700, colores según bitácora & Exterior \\
+G & Imron AF740 transparente; Krylon 1311 mate & Barniz \\
+J & Imron 2.1 blanco & Flotadores \\
+K & Tintas Printcolor & Serigrafía \\
+Q & Everbrite ProtectaClear & Zona desnuda del larguero de pala (opcional) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Los códigos de cada número de serie figuran en la cara interior de la bitácora de la célula; las superficies exteriores son D y F salvo indicación.
+
+\subsection{Lubricantes}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}p{0.36\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+RHC & Tipo & Producto \\
+\midrule
+A257-1 & Grasa de uso general & Southwestern Petroleum 101 \\
+A257-2 & Aceite de engranajes SAE 90 & Southwestern Petroleum 201 \\
+A257-3 & Grasa MIL-G-25537 & AeroShell 14 \\
+A257-4 & Fluido de transmisión automática & Dexron II, II/Mercon, III/Mercon o Dex/Merc \\
+A257-6 & Grasa resistente al combustible & Fuelube; EZ Turn \\
+A257-7 & Lubricante seco & Lubri-Kote tipo A \\
+A257-8 & Lubricante de goma & P-80 \\
+A257-9 & Antiagarrotante & Loctite Silver Grade \\
+A257-12 & Grasa MIL-PRF-81322 & Mobilgrease 28 \\
+A257-16 & Aceite de motor SAE 20W-50 (0--90~°F) & Cualquiera SAE J1966 \\
+A257-19 & Lubricante y sellador de válvulas & Dow Corning 111 \\
+A257-22 & Aceite de engranajes sintético & Mobil SHC 629 \\
+A257-24 & Aceite de motor SAE 50 ($>$60~°F) & Cualquiera SAE J1966 \\
+A257-25 & Fluido de transmisión automática & Dexron VI \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+A257-10 se sustituye por A257-16 y A257-17 por A257-19.
+
+\subsection{Adhesivos y selladores}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}p{0.48\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+RHC & Descripción & Producto \\
+\midrule
+B270-1 & Sellador resistente al combustible, curado con manganeso (2 partes), gris & 3M AC-730 B \\
+B270-5 & Masilla de caucho sintético & Dow Corning Q4-2805 / 94-031 \\
+B270-6 & Sellador y lubricante de roscas & Permatex 80631--33; Titeseal 55 \\
+B270-8 & Adhesivo de caucho nitrilo & Stabond C 160; 3M 847 \\
+B270-9 & Epoxi estructural flexible (2 partes) & 3M 2216 B/A \\
+B270-10 / -11 & Fijador anaeróbico, ajustes estrechos / holgados & Loctite 271 / 277 \\
+B270-12 & Sellador de encapsulado eléctrico & Epoxies Etc.\ 50-3122RGR \\
+B270-13 & Silicona no corrosiva & Dow Corning 3145 \\
+B270-15 & Adhesivo para vinilo & 3M 2262 \\
+B270-17 & Cianoacrilato & Loctite 495 \\
+B270-18 & Adhesivo de burletes & 3M 051135-08008 \\
+B270-19 & Epoxi estructural rígido & 3M 1838 B/A \\
+B270-20 & Fijador anaeróbico no permanente & Loctite 222 / 222MS \\
+B270-21 & Protector anticorrosivo no secante & Max Wax; LPS 3 \\
+B270-22 & Protector anticorrosivo secante & LPS Hardcoat \\
+B270-23 & Sellador de juntas & Loctite 515 \\
+B270-24 & Activador de anaeróbicos & Loctite 7649 \\
+B270-25 & Barniz de retoque automotriz & Automotive Touchup \\
+B270-26 & Polisulfuro para acristalamiento (2 partes), negro & 3M AC-251 B-1 \\
+B270-27 & Epoxi estructural de alta resistencia flexible & Loctite EA 9309NA / 9309.2NA \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Sustituciones: B270-2 $\rightarrow$ B270-1; B270-4 $\rightarrow$ B270-13; B270-7, -14 y -16 $\rightarrow$ B270-8 o -14; B270-28 $\rightarrow$ B270-27.
+
+\section{Prácticas varias}
+
+\textbf{Ajuste térmico de piezas} (o evaluación de piezas recalentadas en servicio):
+\begin{itemize}
+\item \textbf{Aluminio}: no más de \textbf{200~°F durante más de 5 minutos}; deseche toda pieza que se sospeche haya superado \textbf{325~°F}, sin importar el tiempo.
+\item \textbf{Acero desnudo o cadmiado}: máximo \textbf{300~°F} (fragilidad de revenido; fragilización por metal líquido del cadmio).
+\item \textbf{Rodamientos y piezas cementadas} (engranajes, ejes y cajas del embrague): máximo 300~°F.
+\item Caliente siempre en horno con control de temperatura y con pirómetro y termopar en la pieza de aluminio más pequeña. \textbf{No se recomienda enfriar piezas} para montarlas: la condensación introduce agua y corrosión interna.
+\end{itemize}
+
+\textbf{Placas de identificación de reemplazo}: RHC debe recibir la placa vieja legible o, si se perdió, una carta original de la autoridad aeronáutica (no se aceptan copias) que autorice el reemplazo e indique nombre, número de parte y de serie. Las placas se retiran con espátula plástica (con pistola de calor si hace falta) y se reinstalan sobre superficie limpia con acetona (adhesivo B270-9 si es necesario).
+
+\textbf{Inspección de engarces}: hebras visibles en la zona de inspección y sin hebras cortadas o sueltas; hebras y aislante visibles en la zona de transición; sin daño ni deformación en la zona de engarce; boca acampanada visible; lengüetas de bloqueo sin deformar; pestaña de corte visible.
+
+\subsection{Límites de almacenamiento}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Elemento & Límite \\
+\midrule
+Mangueras B283 & 5 años en estante; vida en servicio a condición, máx.\ 12 años \\
+Cordones elásticos & 5 años en estante; en servicio a condición, máx.\ 12 años \\
+Correas en V & 4 años en estante, a menos de 85~°F (30~°C) y 70\,\% de humedad, lejos de solventes, aceites, sol y ozono (motores eléctricos, soldadura, purificadores iónicos) \\
+Aceites y grasas & 5 años sellados en su envase original \\
+Juntas tóricas, sellos y juntas de goma & 20 trimestres (5 años) desde la fecha de curado (Viton y silicona: fecha del fabricante); en servicio a condición, máx.\ 12 años \\
+Vejigas de combustible no instaladas & En su envase, a 70--80~°F y menos de 70\,\% de humedad, cubiertas con aceite mineral limpio sin detergente y sin tensiones ni pliegues \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Fecha de inicio: factura o formulario FAA 8130 (o la fecha de fabricación marcada en el envase).
+
+\section{Herramientas especiales}
+\fuente{MM, capítulo 36}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X@{}}
+\toprule
+Herramienta & Uso \\
+\midrule
+MT016-1, MT548-8 & Grúa del motor y su herraje \\
+MT050-1 / MT050-2 & Accesorios de reglaje del rotor principal / de cola \\
+MT053-1 / MT054-1 & Drenaje de la caja principal (detector roscado / de conexión rápida) \\
+MT068-1 & Reglaje del estabilizador horizontal \\
+MT091-1 & Sujetador de la corona del motor \\
+MT092-1 & Extractor del ventilador \\
+MT122-1 / MT122-15 & Medidor de elongación de pernos (balanceo y conicidad A154-1 / conicidad B370-1) \\
+MT146-1 & Bloques de reglaje del plato oscilante \\
+MT147-1 & Purga del alojamiento de paso de las palas \\
+MT173-4/-7/-8 & Dados de 1~11/16, 1~1/2 y 2~in (cuadradillo de 3/4~in, 12 puntas) \\
+MT179-4 & Barra de balanceo estático del rotor de cola \\
+MT200-1 & Comparador \\
+MT201-1 & Prensado de rodamientos del cubo de cola \\
+MT234-1 & Accesorio de izado del helicóptero \\
+MT260-6 & Medición de excentricidad del eje del rotor de cola \\
+MT294-1 & Retén del resorte del colectivo \\
+MT295-1 & Cambio del sello del eje de salida de la caja de cola \\
+MT303-1/-3 & Extracción e instalación del rodamiento A184 del embrague \\
+MT329-x & Cambio de rodamientos del cubo del rotor principal \\
+MT331-4 & Barra de alineación de poleas \\
+MT352-1 & Medidor de aletas compensadoras \\
+MT354-7 & Medidor de momento de balanceo (R22, R44, R66) \\
+MT357-x & Broca de cobalto de 0,125~in, escariador de 0,375~in, llaves y calibres \\
+MT358-1 & Refrentador de 0,750~in \\
+MT359-1 & Balanza de resorte 0--30~lb \\
+MT376-1 & Bloques para fijar el cíclico en neutro \\
+MT526-1 / MT526-8 & Doblador de aletas (A016-4, obsoleto / A016-6) \\
+MT556-1 / MT556-17 & Cambio de cojinetes elastoméricos del rotor de cola \\
+MT569-1 / MT569-6 & Guía de perforación de pernos del cubo \\
+AN970-4 & Arandela para prueba de golpeteo (o moneda de 25 centavos de EE.\,UU.\ de 1965 o posterior) \\
+2020HR & Analizador ACES Probalancer o equivalente \\
+\bottomrule
+\end{tabularx}
+\end{center}
