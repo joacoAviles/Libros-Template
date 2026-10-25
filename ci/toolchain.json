@@ -1,0 +1,9 @@
+{
+  "version": "2.2.0",
+  "tex_image": "ghcr.io/xu-cheng/texlive-full@sha256:556e2e2caa7d489ce155de0eb3f43e324e6502ed4e9871aa400662b156cf00ad",
+  "tex_tag_informational": "20251002",
+  "checkout": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+  "upload_artifact": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+  "pymupdf": "1.26.7",
+  "note": "The TeX container is pinned by digest. The hosted runner and Python patch release are not an immutable OS image."
+}
