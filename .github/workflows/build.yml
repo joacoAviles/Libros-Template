@@ -2,9 +2,14 @@ name: Compilar libro
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'main.pdf'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: compilar-libro
+  cancel-in-progress: true
 jobs:
   pdf:
     runs-on: ubuntu-latest
@@ -24,3 +29,11 @@ jobs:
           name: avia-editorial-pdf
           path: main.pdf
           if-no-files-found: error
+      - name: Actualizar main.pdf en el repo
+        run: |
+          git config user.name "Avia Editorial"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f main.pdf
+          git diff --cached --quiet && { echo "PDF sin cambios"; exit 0; }
+          git commit -m "PDF compilado de ${GITHUB_SHA::7} [skip ci]"
+          git push
