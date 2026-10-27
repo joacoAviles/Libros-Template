@@ -15,14 +15,7 @@ La plantilla es el **sistema de composición**, no el manuscrito de una obra par
 
 ## Ejemplos publicados
 
-Dos libros independientes muestran cómo puede utilizarse una misma base editorial con manuscritos distintos. Son **ejemplos del resultado final**, no fuentes ni capítulos de la plantilla.
-
-| Proyecto | Enfoque | Leer PDF | Repositorio |
-| --- | --- | --- | --- |
-| **Robinson R22 · Edición GPT** | Fundamentos, sistemas y formación teórica | **[Abrir libro](https://joacoaviles.github.io/Libros-Template/r22/manual-r22.pdf)** | [R22-GPT](https://github.com/joacoAviles/R22-GPT) |
-| **Robinson R22 · Edición Claude** | Operación, inspección y documentación técnica | **[Abrir libro](https://joacoaviles.github.io/Libros-Template/r22-claude/manual-r22.pdf)** | [R22-Claude](https://github.com/joacoAviles/R22-Claude) |
-
-Los PDF se encuentran en la rama `gh-pages` y se actualizan desde sus respectivos repositorios. La edición Claude se distribuye como **PDF de lectura**, con advertencias de composición registradas; su disponibilidad no equivale a aprobación para imprenta. Ambos son documentos de estudio **no oficiales**, no sustitutos de la documentación aeronáutica aprobada.
+Aquí puedes revisar dos ejemplos de libros creados con Avia Editorial: **[Manual 1](https://joacoaviles.github.io/Libros-Template/r22/manual-r22.pdf)** y **[Manual 2](https://joacoaviles.github.io/Libros-Template/r22-claude/manual-r22.pdf)**. Ambos muestran cómo integrar textos extensos, gráficos, tablas, imágenes, notas, referencias y distintos recursos de maquetación en un documento editorial.
 
 ## Características
 
